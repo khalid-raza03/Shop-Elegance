@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+.design-main-wrapper .pb-5{
+   padding-bottom: 5rem !important;
+}
+
 /* Custom container Width  */
 
 @media screen and (max-width: 1400px) {

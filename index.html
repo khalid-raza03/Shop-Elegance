@@ -25,8 +25,8 @@
 
 <body>
     <div class="design-main-wrapper">
-        <header>
-            <div class="header-wrapper pb-5">
+        <header >
+            <div class="header-wrapper ">
                 <!-- mobile menu -->
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvasLg"
                     aria-labelledby="navbarOffcanvasLgLabel">
@@ -56,11 +56,11 @@
                     </div>
                 </div>
                 <!-- top header -->
-                <div class="header-top">
+                <div class="header-top section">
                     <div class="container">
-                        <div class="header-top-wrapper">
+                        <div class="header-top-wrapper sticky-top">
                             <!-- navbar toggler -->
-                            <button class="navbar-toggler d-xl-none d-inline toggle-bar align-self-end" type="button"
+                            <button class="navbar-toggler d-lg-none d-inline toggle-bar align-self-end" type="button"
                                 data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
                                 aria-controls="navbarOffcanvasLg" onclick="changeIcon()">
                                 <img id="menu-icon" src="./public/assets/images/hamburger.svg" alt="Menu" height="25"
@@ -68,6 +68,14 @@
                                 <img id="cancel-icon" src="./public/assets/images/cancel.svg" alt="Close" height="25"
                                     width="25" style="display: none;">
                             </button>
+
+                            <li id="darkMode" class="dark-mode-box  nav-link">
+                                <button class="border-0 bg-transparent " title="dark-mode">
+                                  <img class="off" src="./public/assets/images/darkMode-off.svg" alt="darkMode-off">
+                                  <img class="on " src="./public/assets/images/dark-mode-on.svg" alt="dark-mode-on">
+                                </button>
+                    
+                              </li>
 
                             <div class="header-top-center text-white d-none d-sm-block">
                                 Summer Sale For All Swim Suits And Free Express Delivery - OFF
@@ -100,7 +108,7 @@
                 </div>
 
 
-                <div class="header-middle">
+                <div class="header-middle sub-section dark">
                     <div class="container">
                         <!-- middle header -->
                         <div class="header-middle-wrapper">
@@ -119,7 +127,7 @@
 
                                                 <li>
                                                     <a class="nav-link" target="_blank"
-                                                        href="./contact.html">Contact</a>
+                                                        href="./public/contact.html">Contact</a>
                                                 </li>
                                                 <li>
                                                     <a target="_blank" class="nav-link active" href="#">About</a>
@@ -167,12 +175,10 @@
         </header>
 
         <main>
-            <section id="home" class="home-section pb-5">
+            <section id="home" class="section home-section pt-3 pb-5">
 
                 <div class="container">
                     <div class="row ">
-
-
                         <div class="col-lg-6 col-12 align-self-center">
                             <div class="home-left">
                                 <h2>
@@ -206,9 +212,9 @@
                 </div>
             </section>
 
-            <section class="section-stats pb-5">
+            <section class="section-stats pb-5 section">
                 <div class="container">
-                    <h3 class="section-head fw-bold mb-3 text-center">Our Stats </h3>
+                    <h3 class="section-head fw-bold my-5 text-center">Our Stats </h3>
                     <div class="row g-4 ">
                         <div class="col-lg-3 col-sm-6">
                             <div class="stat-box">
@@ -277,10 +283,10 @@
             </section>
 
 
-            <section class="employee-slider  pb-5">
+            <section class="employee-slider pb-5 section ">
                 <div class="position-relative">
                     <div class="container w-100 overflow-hidden">
-                        <h3 class="section-head fw-bold mb-3 text-center"> The Minds Behind </h3>
+                        <h3 class="section-head fw-bold my-5 text-center"> The Minds Behind </h3>
                         <div class="swiper mySwiper6 mb-0 flex-wrap justify-content-between">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide border-0 slides-employee">
@@ -294,7 +300,7 @@
                                                 elit. Nobis nostrum est, cum temporibus magni ea at aperiam, molestias,
                                                 ad soluta quo odio! Fuga, amet dolore!  </p>
                                         </figure>
-                                        <figcaption class="pt-4 bg-white">
+                                        <figcaption class="p-3 bg-white">
                                             <h3>Tom Cruise</h3>
                                             <p>Founder & Chairman</p>
                                             <span><img src="./public/assets/images/twitter.png" alt="twitter-icon"> <img
@@ -315,7 +321,7 @@
                                                 elit. Nobis nostrum est, cum temporibus magni ea at aperiam, molestias,
                                                 ad soluta quo odio! Fuga, amet dolore!  </p>
                                         </figure>
-                                        <figcaption class="pt-4 bg-white">
+                                        <figcaption class="p-3 bg-white">
                                             <h3>Sam Jason</h3>
                                             <p>CEO</p>
                                             <span><img src="./public/assets/images/twitter.png" alt="twitter-icon"> <img
@@ -336,7 +342,7 @@
                                                 elit. Nobis nostrum est, cum temporibus magni ea at aperiam, molestias,
                                                 ad soluta quo odio! Fuga, amet dolore!  </p>
                                         </figure>
-                                        <figcaption class="pt-4 bg-white">
+                                        <figcaption class="p-3 bg-white">
                                             <h3>Alexa Robert</h3>
                                             <p>Co Fouder</p>
                                             <span><img src="./public/assets/images/twitter.png" alt="twitter-icon"> <img
@@ -357,7 +363,7 @@
                                                 elit. Nobis nostrum est, cum temporibus magni ea at aperiam, molestias,
                                                 ad soluta quo odio! Fuga, amet dolore!  </p>
                                         </figure>
-                                        <figcaption class="pt-4 bg-white">
+                                        <figcaption class="p-3 bg-white">
                                             <h3>Tom Cruise</h3>
                                             <p>Founder & Chairman</p>
                                             <span><img src="./public/assets/images/twitter.png" alt="twitter-icon"> <img
@@ -379,7 +385,7 @@
                                                     elit. Nobis nostrum est, cum temporibus magni ea at aperiam, molestias,
                                                     ad soluta quo odio! Fuga, amet dolore!  </p>
                                         </figure>
-                                        <figcaption class="pt-4 bg-white">
+                                        <figcaption class="p-3 bg-white">
                                             <h3>Tom Cruise</h3>
                                             <p>Founder & Chairman</p>
                                             <span><img src="./public/assets/images/twitter.png" alt="twitter-icon"> <img
@@ -401,7 +407,7 @@
                                                     elit. Nobis nostrum est, cum temporibus magni ea at aperiam, molestias,
                                                     ad soluta quo odio! Fuga, amet dolore!  </p>
                                         </figure>
-                                        <figcaption class="pt-4 bg-white">
+                                        <figcaption class="p-3 bg-white">
                                             <h3>Tom Cruise</h3>
                                             <p>Founder & Chairman</p>
                                             <span><img src="./public/assets/images/twitter.png" alt="twitter-icon"> <img
@@ -418,7 +424,7 @@
                 </div>
             </section>
 
-            <section class="brand-features mt-5 pb-5">
+            <section class="brand-features  pb-5 section">
                 <div class="container w-100 overflow-hidden">
                     <h3 class="section-head fw-bold mb-3 text-center">Why Choose Us ?</h3>
                     <div class="row gx-4 gy-5 justify-content-center pt-5">
@@ -458,7 +464,7 @@
         </main>
 
         <footer>
-            <div class="footer-content-wrapper">
+            <div class="footer-content-wrapper section">
                 <div class="container">
                     <div class="row gy-4 row-cols-xxl-5 row-cols-lg-3 row-cols-md-2 row-cols-1">
                         <div class="col  ">

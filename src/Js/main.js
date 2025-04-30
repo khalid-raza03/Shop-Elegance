@@ -1,5 +1,4 @@
 var swiper6 = new Swiper(".mySwiper6", {
-    slidesPerView: 3.5,
     spaceBetween: 30,
     loop: true, // Enables looping to avoid empty space
     loopFillGroupWithBlank: false,
@@ -7,26 +6,25 @@ var swiper6 = new Swiper(".mySwiper6", {
   
     breakpoints: {
       1200: {
-        slidesPerView: 3.5, // Medium screens (tablets, etc.)
+        slidesPerView:5, // Medium screens (tablets, etc.)
       },
   
       768: {
         slidesPerView: 3, // Medium screens (tablets, etc.)
         spaceBetween: 20,
       },
-      428: {
-        slidesPerView: 2, // Smaller screens (mobile)
+      576: {
+        slidesPerView:2, // Smaller screens (mobile)
         spaceBetween: 10,
       },
       320: {
-        slidesPerView: 1, // Smaller screens (mobile)
-        spaceBetween: 10,
+        spaceBetween: 5,
       },
     },
-    autoplay: {
-      delay: 1500, // 1.5 seconds
-      disableOnInteraction: false, // Keep autoplay active even after user interaction
-    },
+    // autoplay: {
+    //   delay:2000, 
+    //   disableOnInteraction: false, // Keep autoplay active even after user interaction
+    // },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -67,3 +65,16 @@ var swiper6 = new Swiper(".mySwiper6", {
       });
     });
   });
+
+
+//dark mode feature
+var darkModeBtn = document.getElementById("darkMode");
+var sections = document.querySelectorAll(".section"); 
+
+darkModeBtn.addEventListener("click", () => {
+  darkModeBtn.classList.toggle("turn-on");
+
+  sections.forEach((section) => {
+    section.classList.toggle("dark");
+  });
+});
