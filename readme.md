@@ -1,19 +1,18 @@
 # Project Name  
 
-**Nexcent** , a responsive E commerce website template design  **HTML, Sass, and Bootstrap**.  
+**Shop Elegance** , a responsive E commerce website template design  **HTML, Sass, and Bootstrap**.  
 
 ## Features  
 - fully responsive for all screen sizes
 - component based design 
-- coverflow effect using swiper js
 - beautiful optimized animations
 - Well optimised with google insight techniques
 
-<!-- ## Demo  
-👉 [Live Preview](https://khalid-raza03.github.io/Nexcent/)   -->
+## Demo  
+👉 [Live Preview](https://khalid-raza03.github.io/shop-elegance/)  
 
 ## Screenshots
-![Project Screenshot](./images/image.png)
+![Project Screenshot](./public/assets/images/image.png)
 
 ## Technologies  
 - HTML5 
@@ -27,6 +26,6 @@
 1. __Clone the repo:__  
 
    ```bash
-   git clone https://github.com/khalid-raza03/Nexcent.git
+   git clone https://github.com/khalid-raza03/Shop-Elegance.git
    ```
 2. Open `index.html` in a browser.  
