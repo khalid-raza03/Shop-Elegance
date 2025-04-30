@@ -9,7 +9,7 @@
 - Well optimised with google insight techniques
 
 ## Demo  
-👉 [Live Preview](https://khalid-raza03.github.io/shop-elegance/)  
+👉 [Live Preview](https://khalid-raza03.github.io/Shop-Elegance/)  
 
 ## Screenshots
 ![Project Screenshot](./public/assets/images/image.png)
