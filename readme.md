@@ -1,6 +1,6 @@
 # Project Name  
 
-**Shop Elegance** , a responsive E commerce website template design  **HTML, Sass, and Bootstrap**.  
+**Shop Elegance** , a responsive E commerce website template design  **HTML, css, and Bootstrap**.  
 
 ## Features  
 - fully responsive for all screen sizes
