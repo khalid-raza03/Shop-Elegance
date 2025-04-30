@@ -1,0 +1,36 @@
+/* styling header */
+* {
+    font-family: "poppins", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom container Width  */
+
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 100% !important;
+    width: 100%;
+    padding: 0px 25px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1700px;
+    width: 100%;
+    padding: 0px 25px;
+  }
+}
+
+.my-main-wrapper .container-fluid,
+.main-header .container-sm,
+.main-header .container-md,
+.main-header .container-lg,
+.main-header .container-xl,
+.main-header .container-xxl {
+  width: 100% !important;
+  max-width: 1800px !important;
+  padding: 0px 15px !important;
+  margin: 0px auto;
+}
