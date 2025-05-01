@@ -2,7 +2,7 @@ var swiper6 = new Swiper(".mySwiper6", {
     spaceBetween: 30,
     loop: true, 
     loopFillGroupWithBlank: false,
-    speed: 7mmop00,
+    speed: 700,
     centeredSlides: true, 
   
     breakpoints: {
