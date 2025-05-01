@@ -33,7 +33,11 @@
         }
 
         .floating-form {
-            background: rgba(255, 255, 255, 0.95);
+            background: linear-gradient(135deg, rgb(202 110 110 / 66%) 0%, rgb(224 222 222 / 74%) 100%);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: white;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
             padding: 40px;
@@ -52,11 +56,11 @@
         .form-header h2 {
             font-weight: 700;
             margin-bottom: 10px;
-            color: #2c3e50;
+            color: #333333;
         }
 
         .form-header p {
-            color: #7f8c8d;
+            color: #1e1e1e;
         }
 
         .form-group {
@@ -76,7 +80,7 @@
         }
 
         .submit-btn {
-            background: linear-gradient(45deg, #3498db, #2ecc71);
+            background: linear-gradient(45deg, #ca6e6e, #f83f3f);
             border: none;
             color: white;
             padding: 12px 30px;
@@ -122,7 +126,7 @@
 
 <body class="contact-page">
     <div class="contact-container">
-    
+
         <div class="floating-form">
             <div class="form-header">
                 <h2>Get in Touch</h2>
@@ -133,7 +137,7 @@
                 <input type="hidden" name="access_key" value="fd1b64b4-d81d-484d-9d1d-7e4dfcefb7ae">
                 <input type="hidden" name="redirect" value="index.html">
                 <input type="hidden" name="subject" value="New Contact Form Submission">
-                
+
                 <!-- Your form fields -->
                 <div class="form-group">
                     <input name="name" type="text" class="form-control" placeholder="Your Name" required>
@@ -154,39 +158,40 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                    <textarea name="message" class="form-control" rows="4" placeholder="Your Message"
+                        required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
         </div>
     </div>
     <script>
-            document.getElementById('web3form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const submitBtn = this.querySelector('button[type="submit"]');
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
-        
-        fetch(this.action, {
-            method: 'POST',
-            body: new FormData(this)
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                window.location.href = this.querySelector('[name="redirect"]').value;
-            } else {
-                alert('Error: ' + data.message);
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Message';
-            }
-        })
-        .catch(error => {
-            alert('Error: ' + error.message);
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Send Message';
+        document.getElementById('web3form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.href = this.querySelector('[name="redirect"]').value;
+                    } else {
+                        alert('Error: ' + data.message);
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
+                    }
+                })
+                .catch(error => {
+                    alert('Error: ' + error.message);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                });
         });
-    });
     </script>
 </body>
 

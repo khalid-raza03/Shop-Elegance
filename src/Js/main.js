@@ -1,12 +1,13 @@
 var swiper6 = new Swiper(".mySwiper6", {
     spaceBetween: 30,
-    loop: true, // Enables looping to avoid empty space
+    loop: true, 
     loopFillGroupWithBlank: false,
+    speed: 7mmop00,
     centeredSlides: true, 
   
     breakpoints: {
       1200: {
-        slidesPerView:5, // Medium screens (tablets, etc.)
+        slidesPerView:5, //larger screens (tablets, etc.)
       },
   
       768: {
@@ -21,10 +22,10 @@ var swiper6 = new Swiper(".mySwiper6", {
         spaceBetween: 5,
       },
     },
-    // autoplay: {
-    //   delay:2000, 
-    //   disableOnInteraction: false, // Keep autoplay active even after user interaction
-    // },
+    autoplay: {
+      delay:2000, 
+      disableOnInteraction: false, // Keep autoplay active even after user interaction
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
