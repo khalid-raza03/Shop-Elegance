@@ -96,7 +96,7 @@
   }
 
   .figure-stat-box {
-    height: 200px;
+    max-width: 85%;
   }
   .design-main-wrapper .header-top .header-top-center {
     line-height: 25px;

@@ -23,7 +23,7 @@ var swiper6 = new Swiper(".mySwiper6", {
       },
     },
     autoplay: {
-      delay:2000, 
+      delay:2500, 
       disableOnInteraction: false, // Keep autoplay active even after user interaction
     },
     pagination: {
