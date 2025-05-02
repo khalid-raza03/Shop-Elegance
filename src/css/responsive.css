@@ -13,6 +13,7 @@
   }
   .design-main-wrapper .home-section .home-right {
     position: static;
+    padding-top: 80px;
   }
   .design-main-wrapper .home-section .home-right img {
     height: 500px;
@@ -21,6 +22,10 @@
 
 /* For Tablet and ipad screens */
 @media screen and (max-width: 1024px) {
+  .design-main-wrapper .header-top .header-top-center{
+    position: static;
+  }
+
   .design-main-wrapper .header-top .header-top-right .my-menu {
     left: 0;
   }
