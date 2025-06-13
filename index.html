@@ -1,624 +1,1058 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop Elegance</title>
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./public/assets/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./public/assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./public/assets/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./public/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./public/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./public/assets/favicon-16x16.png"
+    />
     <link rel="manifest" href="/site.webmanifest" />
     <!-- for icons and fonts -->
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <!-- Bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
     <!-- swiper slider css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- custom CSS -->
     <link rel="stylesheet" href="./src/css/main.css" />
-    <link rel="stylesheet" href="./src/css/responsive.css">
-</head>
+    <link rel="stylesheet" href="./src/css/responsive.css" />
+  </head>
 
-<body>
+  <body>
     <div class="design-main-wrapper">
-        <button onclick="topFunction()" id="scrollToTop" title="Go to top"><i class="fa-solid fa-angle-up"></i></button>
-        <header>
-            <div class="header-wrapper ">
-                <!-- mobile menu -->
-                <div class="offcanvas offcanvas-start section" tabindex="-1" id="navbarOffcanvasLg"
-                    aria-labelledby="navbarOffcanvasLgLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title fw-bold ms-3 -head" id="navbarOffcanvasLgLabel">
-                            Explore
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav d-flex">
-                            <li class="py-2">
-                                <a class="nav-link" aria-current="page" href="#">Home</a>
-                            </li>
+      <button onclick="topFunction()" id="scrollToTop" title="Go to top">
+        <i class="fa-solid fa-angle-up"></i>
+      </button>
+      <header>
+        <div class="header-wrapper">
+          <!-- mobile menu -->
+          <div
+            class="offcanvas offcanvas-start section"
+            tabindex="-1"
+            id="navbarOffcanvasLg"
+            aria-labelledby="navbarOffcanvasLgLabel"
+          >
+            <div class="offcanvas-header">
+              <h5
+                class="offcanvas-title fw-bold ms-3 -head"
+                id="navbarOffcanvasLgLabel"
+              >
+                Explore
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav d-flex">
+                <li class="py-2">
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
 
-                            <li class="py-2">
-                                <a class="nav-link" href="./public/contact.html">Contact</a>
-                            </li>
-                            <li class="py-2">
-                                <a class="nav-link active" href="#">About</a>
-                            </li>
+                <li class="py-2">
+                  <a class="nav-link" href="./public/contact.html">Contact</a>
+                </li>
+                <li class="py-2">
+                  <a class="nav-link active" href="#">About</a>
+                </li>
 
-                            <li class="py-2">
-                                <a class="nav-link" href="#">Testimonials</a>
-                            </li>
+                <li class="py-2">
+                  <a class="nav-link" href="#">Testimonials</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- top header -->
+          <div class="header-top section">
+            <div class="container">
+              <div class="header-top-wrapper sticky-top">
+                <!-- navbar toggler -->
+                <button
+                  class="navbar-toggler d-lg-none d-inline toggle-bar align-self-end"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#navbarOffcanvasLg"
+                  aria-controls="navbarOffcanvasLg"
+                  onclick="changeIcon()"
+                >
+                  <img
+                    id="menu-icon"
+                    src="./public/assets/images/hamburger.svg"
+                    alt="Menu"
+                    height="25"
+                    width="25"
+                  />
+                  <img
+                    id="cancel-icon"
+                    src="./public/assets/images/cancel.svg"
+                    alt="Close"
+                    height="25"
+                    width="25"
+                    style="display: none"
+                  />
+                </button>
+
+                <li id="darkMode" class="dark-mode-box nav-link">
+                  <button class="border-0 bg-transparent" title="dark-mode">
+                    <img
+                      class="off"
+                      src="./public/assets/images/darkMode-off.svg"
+                      alt="darkMode-off"
+                    />
+                    <img
+                      class="on"
+                      src="./public/assets/images/dark-mode-on.svg"
+                      alt="dark-mode-on"
+                    />
+                  </button>
+                </li>
+
+                <div class="header-top-center text-white d-none d-sm-block">
+                  Summer Sale For All Swim Suits And Free Express Delivery - OFF
+                  50%! <span class="text-underline">ShopNow </span>
+                </div>
+
+                <div class="header-top-right">
+                  <menu>
+                    <li class="position-relative d-inline-block dropdown-list">
+                      <a
+                        href="#"
+                        class="nav-link me-2 text-white my-dropdown-btn"
+                        id="languageDropdown"
+                      >
+                        English <i class="dropdown-icon px-2"></i>
+                      </a>
+                      <ul class="my-menu p-0 m-0">
+                        <li class="my-menu-items">
+                          <a href="#" data-language="English">English</a>
+                        </li>
+                        <li class="my-menu-items">
+                          <a href="#" data-language="Hindi">Hindi</a>
+                        </li>
+                        <li class="my-menu-items">
+                          <a href="#" data-language="Spanish">Spanish</a>
+                        </li>
+                        <li class="my-menu-items">
+                          <a href="#" data-language="Deutsch">Deutsch</a>
+                        </li>
+                        <li class="my-menu-items">
+                          <a href="#" data-language="Arabic">Arabic</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </menu>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-middle sub-section dark">
+            <div class="container">
+              <!-- middle header -->
+              <div class="header-middle-wrapper">
+                <div class="header-middle-left">
+                  <h2>Exclusive</h2>
+                </div>
+                <div class="header-middle-center">
+                  <nav class="navbar navbar-expand bg-transparent">
+                    <div class="container-fluid">
+                      <div
+                        class="collapse navbar-collapse"
+                        id="navbarNavAltMarkup"
+                      >
+                        <ul class="navbar-nav d-none d-lg-flex">
+                          <li>
+                            <a
+                              class="nav-link"
+                              target="_blank"
+                              aria-current="page"
+                              href="#home"
+                              >Home</a
+                            >
+                          </li>
+
+                          <li>
+                            <a
+                              class="nav-link"
+                              target="_blank"
+                              href="./public/contact.html"
+                              >Contact</a
+                            >
+                          </li>
+                          <li>
+                            <a target="_blank" class="nav-link active" href="#"
+                              >About</a
+                            >
+                          </li>
+
+                          <li>
+                            <a target="_blank" class="nav-link" href="#"
+                              >Testimonials</a
+                            >
+                          </li>
                         </ul>
+                      </div>
                     </div>
+                  </nav>
                 </div>
-                <!-- top header -->
-                <div class="header-top section">
-                    <div class="container">
-                        <div class="header-top-wrapper sticky-top">
-                            <!-- navbar toggler -->
-                            <button class="navbar-toggler d-lg-none d-inline toggle-bar align-self-end" type="button"
-                                data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
-                                aria-controls="navbarOffcanvasLg" onclick="changeIcon()">
-                                <img id="menu-icon" src="./public/assets/images/hamburger.svg" alt="Menu" height="25"
-                                    width="25">
-                                <img id="cancel-icon" src="./public/assets/images/cancel.svg" alt="Close" height="25"
-                                    width="25" style="display: none;">
+
+                <div class="header-middle-right">
+                  <div class="input-group d-sm-flex d-none">
+                    <input
+                      name="search here"
+                      type="text"
+                      class="form-control"
+                      placeholder="What are you looking for ?"
+                      aria-label="Search"
+                      aria-describedby="search- addon"
+                    />
+                    <button
+                      class="btn"
+                      type="button"
+                      id="search-addon"
+                      title="search-button"
+                    >
+                      <img
+                        src="./public/assets/images/search-icon.svg"
+                        alt="search-icon"
+                      />
+                    </button>
+                  </div>
+
+                  <span
+                    type="button"
+                    class="ps-3 border-0 btn-transparent"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    ><i class="fa-regular fs-4 fa-heart text-light"></i
+                  ></span>
+                  <span type="button" class="ps-3 border-0 btn-transparent"
+                    ><i class="fa-solid fa-cart-shopping fs-4 text-light"></i
+                  ></span>
+                  <span type="button" class="ps-3 border-0 btn-transparent"
+                    ><i class="fa-regular fa-user fs-4 text-light"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
+                <div class="modal-content">
+                  <div class="modal-header" style="background:linear-gradient(120deg, #ea9898, white);">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Your Wishlist
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div
+                      class="wishlists d-flex flex-column gap-3 align-items-center"
+                    >
+                      <div
+                        class="wishlist-head d-flex justify-content-evenly w-100 py-2 rounded"
+                      >
+                        <p class="wishlist-head-titles text-white fw-bold">
+                          Product
+                        </p>
+                        <p class="wishlist-head-titles text-white fw-bold">
+                          Price
+                        </p>
+                        <p class="wishlist-head-titles text-white fw-bold">
+                          Availability
+                        </p>
+                      </div>
+
+                      <div class="wishlist-content py-3 w-100">
+                        <div class="row">
+                          <div
+                            class="col d-flex align-items-center justify-content-center"
+                          >
+                            <button class="remove-product btn-transparent border-0 bg-transparent">
+                              <i class="fa-solid fa-xmark"></i>
                             </button>
+                          </div>
 
-                            <li id="darkMode" class="dark-mode-box  nav-link">
-                                <button class="border-0 bg-transparent " title="dark-mode">
-                                    <img class="off" src="./public/assets/images/darkMode-off.svg" alt="darkMode-off">
-                                    <img class="on " src="./public/assets/images/dark-mode-on.svg" alt="dark-mode-on">
-                                </button>
-
-                            </li>
-
-                            <div class="header-top-center text-white d-none d-sm-block">
-                                Summer Sale For All Swim Suits And Free
-                                Express Delivery - OFF
-                                50%! <span class="text-underline">ShopNow
-                                </span>
+                          <div class="col-3">
+                            <div
+                              class="product-detail-section d-flex align-items-center justify-content-center flex-xl-row flex-column"
+                            >
+                              <img
+                                src="./public/assets/images/download.jpg"
+                                alt="product-img"
+                                width="60"
+                                height="80"
+                              />
+                              <span class="product-name">Product name</span>
                             </div>
+                          </div>
 
-                            <div class="header-top-right">
-                                <menu>
-                                    <li class="position-relative d-inline-block dropdown-list">
-                                        <a href="#" class="nav-link me-2 text-white my-dropdown-btn"
-                                            id="languageDropdown">
-                                            English <i class="dropdown-icon px-2"></i>
-                                        </a>
-                                        <ul class="my-menu p-0 m-0">
-                                            <li class="my-menu-items"><a href="#" data-language="English">English</a>
-                                            </li>
-                                            <li class="my-menu-items"><a href="#" data-language="Hindi">Hindi</a></li>
-                                            <li class="my-menu-items"><a href="#" data-language="Spanish">Spanish</a>
-                                            </li>
-                                            <li class="my-menu-items"><a href="#" data-language="Deutsch">Deutsch</a>
-                                            </li>
-                                            <li class="my-menu-items"><a href="#" data-language="Arabic">Arabic</a></li>
-                                        </ul>
-                                    </li>
-                                </menu>
-
+                          <div
+                            class="col-3 product-price d-flex align-items-center justify-content-center"
+                          >
+                            ₹ 750/-
+                          </div>
+                          <div class="col-3 d-flex align-items-center justify-content-center">
+                            <div
+                              class="product-stock d-flex flex-column align-items-center gap-2"
+                            >
+                              <span class="stock-status">
+                                <i class="fa-solid fa-check"></i>
+                              </span>
+                              <span class="stock-txt">In stock </span>
                             </div>
+                          </div>
+
+                          <div class="add-to-cart col d-flex justify-content-end align-items-center">
+                            <button class="cart-btn theme-btn btn rounded                                                                                                                                                                               ">
+                              Add to cart
+                            </button>
+                          </div>
                         </div>
-                    </div>
-                </div>
+                      </div>
+                      <div class="wishlist-content py-3 w-100">
+                        <div class="row">
+                          <div
+                            class="col d-flex align-items-center justify-content-center"
+                          >
+                            <button class="remove-product btn-transparent border-0 bg-transparent">
+                              <i class="fa-solid fa-xmark"></i>
+                            </button>
+                          </div>
 
-                <div class="header-middle sub-section dark">
-                    <div class="container">
-                        <!-- middle header -->
-                        <div class="header-middle-wrapper">
-                            <div class="header-middle-left">
-                                <h2>Exclusive</h2>
+                          <div class="col-3">
+                            <div
+                              class="product-detail-section d-flex align-items-center justify-content-center flex-xl-row flex-column"
+                            >
+                              <img
+                                src="./public/assets/images/download.jpg"
+                                alt="product-img"
+                                width="60"
+                                height="80"
+                              />
+                              <span class="product-name">Product name</span>
                             </div>
-                            <div class="header-middle-center">
-                                <nav class="navbar navbar-expand bg-transparent">
-                                    <div class="container-fluid">
-                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                            <ul class="navbar-nav d-none d-lg-flex">
-                                                <li>
-                                                    <a class="nav-link" target="_blank" aria-current="page"
-                                                        href="#home">Home</a>
-                                                </li>
+                          </div>
 
-                                                <li>
-                                                    <a class="nav-link" target="_blank"
-                                                        href="./public/contact.html">Contact</a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" class="nav-link active" href="#">About</a>
-                                                </li>
-
-                                                <li>
-                                                    <a target="_blank" class="nav-link" href="#">Testimonials</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </nav>
+                          <div
+                            class="col-3 product-price d-flex align-items-center justify-content-center"
+                          >
+                            ₹ 750/-
+                          </div>
+                          <div class="col-3 d-flex align-items-center justify-content-center">
+                            <div
+                              class="product-stock d-flex flex-column align-items-center gap-2"
+                            >
+                              <span class="stock-status">
+                                <i class="fa-solid fa-check"></i>
+                              </span>
+                              <span class="stock-txt">In stock </span>
                             </div>
+                          </div>
 
-                            <div class="header-middle-right">
-                                <div class="input-group d-sm-flex d-none">
-                                    <input name="search here" type="text" class="form-control"
-                                        placeholder="What are you looking for ?" aria-label="Search"
-                                        aria-describedby="search- addon" />
-                                    <button class="btn" type="button" id="search-addon" title="search-button">
-                                        <img src="./public/assets/images/search-icon.svg" alt="search-icon">
-                                    </button>
-                                </div>
-
-                                <span class="ps-3"><i class="fa-regular fs-4 fa-heart text-light"></i></span>
-                                <span class="ps-3"><i class="fa-solid fa-cart-shopping fs-4 text-light"></i></span>
-                                <span class="ps-3"><i class="fa-regular fa-user fs-4 text-light"></i></span>
-                            </div>
+                          <div class="add-to-cart col d-flex justify-content-end align-items-center">
+                            <button class="cart-btn theme-btn btn  rounded                                                                                                                                                                                ">
+                              Add to cart
+                            </button>
+                          </div>
                         </div>
+                      </div>
+                      <div class="wishlist-content py-3 w-100">
+                        <div class="row">
+                          <div
+                            class="col d-flex align-items-center justify-content-center"
+                          >
+                            <button class="remove-product btn-transparent border-0 bg-transparent">
+                              <i class="fa-solid fa-xmark"></i>
+                            </button>
+                          </div>
 
-                    </div>
-                </div>
-                <div class="mobile-search d-flex w-100 justify-content-center section ">
-                    <div class="input-group d-sm-none d-flex">
-                        <input name="search here" type="text" class="form-control"
-                            placeholder="What are you looking for ?" aria-label="Search"
-                            aria-describedby="search- addon" />
-                        <button class="btn" type="button" id="search-addon" title="search-button">
-                            <img src="./public/assets/images/search-icon.svg" alt="search-icon">
-                        </button>
-                    </div>
-                </div>
+                          <div class="col-3">
+                            <div
+                              class="product-detail-section d-flex align-items-center justify-content-center flex-xl-row flex-column"
+                            >
+                              <img
+                                src="./public/assets/images/download.jpg"
+                                alt="product-img"
+                                width="60"
+                                height="80"
+                              />
+                              <span class="product-name">Product name</span>
+                            </div>
+                          </div>
 
+                          <div
+                            class="col-3 product-price d-flex align-items-center justify-content-center"
+                          >
+                            ₹ 750/-
+                          </div>
+                          <div class="col-3 d-flex align-items-center justify-content-center">
+                            <div
+                              class="product-stock d-flex flex-column align-items-center gap-2"
+                            >
+                              <span class="stock-status">
+                                <i class="fa-solid fa-check"></i>
+                              </span>
+                              <span class="stock-txt">In stock </span>
+                            </div>
+                          </div>
+
+                          <div class="add-to-cart col d-flex justify-content-end align-items-center">
+                            <button class="cart-btn theme-btn btn rounded                                                                                                                                                                              ">
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="wishlist-content py-3 w-100">
+                        <div class="row">
+                          <div
+                            class="col d-flex align-items-center justify-content-center"
+                          >
+                            <button class="remove-product btn-transparent border-0 bg-transparent">
+                              <i class="fa-solid fa-xmark"></i>
+                            </button>
+                          </div>
+
+                          <div class="col-3">
+                            <div
+                              class="product-detail-section d-flex align-items-center justify-content-center flex-xl-row flex-column"
+                            >
+                              <img
+                                src="./public/assets/images/download.jpg"
+                                alt="product-img"
+                                width="60"
+                                height="80"
+                              />
+                              <span class="product-name">Product name</span>
+                            </div>
+                          </div>
+
+                          <div
+                            class="col-3 product-price d-flex align-items-center justify-content-center"
+                          >
+                            ₹ 750/-
+                          </div>
+                          <div class="col-3 d-flex align-items-center justify-content-center">
+                            <div
+                              class="product-stock d-flex flex-column align-items-center gap-2"
+                            >
+                              <span class="stock-status">
+                                <i class="fa-solid fa-check"></i>
+                              </span>
+                              <span class="stock-txt">In stock </span>
+                            </div>
+                          </div>
+
+                          <div class="add-to-cart col d-flex justify-content-end align-items-center">
+                            <button class="cart-btn theme-btn btn  rounded                                                                                                                                                                               ">
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="wishlist-content py-3 w-100">
+                        <div class="row">
+                          <div
+                            class="col d-flex align-items-center justify-content-center"
+                          >
+                            <button class="remove-product btn-transparent border-0 bg-transparent">
+                              <i class="fa-solid fa-xmark"></i>
+                            </button>
+                          </div>
+
+                          <div class="col-3">
+                            <div
+                              class="product-detail-section d-flex align-items-center justify-content-center flex-xl-row flex-column"
+                            >
+                              <img
+                                src="./public/assets/images/download.jpg"
+                                alt="product-img"
+                                width="60"
+                                height="80"
+                              />
+                              <span class="product-name">Product name</span>
+                            </div>
+                          </div>
+
+                          <div
+                            class="col-3 product-price d-flex align-items-center justify-content-center"
+                          >
+                            ₹ 750/-
+                          </div>
+                          <div class="col-3 d-flex align-items-center justify-content-center">
+                            <div
+                              class="product-stock d-flex flex-column align-items-center gap-2"
+                            >
+                              <span class="stock-status">
+                                <i class="fa-solid fa-check"></i>
+                              </span>
+                              <span class="stock-txt">In stock </span>
+                            </div>
+                          </div>
+
+                          <div class="add-to-cart col d-flex justify-content-end align-items-center">
+                            <button class="cart-btn theme-btn btn rounded                                                                                                                                                                                ">
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>               
+                    </div>
+                  </div>
+                  <div class="modal-footer" style="background:linear-gradient(120deg, rgb(234, 152, 152), white);">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary theme-btn"
+                    >
+                      Save changes
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-        </header>
-
-        <main>
-            <section id="home" class="section home-section pt-3 pb-xl-5">
-
-                <div class="container">
-                    <div class="row ">
-                        <div class="col-lg-6 col-12 align-self-center">
-                            <div class="home-left">
-                                <h2>
-                                    Our Story
-                                </h2>
-                                <p class="text-wrap">
-                                    Launced in 2015, Exclusive is South
-                                    Asia’s premier online shopping
-                                    makterplace with
-                                    an
-                                    active presense in Bangladesh. Supported
-                                    by wide range of tailored marketing,
-                                    data
-                                    and
-                                    service solutions, Exclusive has 10,500
-                                    sallers and 300 brands and serves 3
-                                    millioons
-                                    customers across the region.
-                                </p>
-                                <p class="text-wrap">
-                                    Exclusive has more than 1 Million
-                                    products to offer, growing at a very
-                                    fast.
-                                    Exclusive
-                                    offers a diverse assotment in categories
-                                    ranging from consumer.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-12">
-                            <div class="home-right d-flex justify-content-end ">
-                                <img class="img-fluid" height="600" width="700"
-                                    src="./public/assets/images/about-us.svg" alt="HomePage image">
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-
-            <section class="section-stats pb-5 section">
-                <div class="container">
-                    <h3 class="section-head fw-bold my-5 text-center">Our
-                        Stats </h3>
-                    <div class="row g-4 ">
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="stat-box">
-                                <div class="img-box">
-                                    <img src="./public/assets/images/stats-bg.svg" alt="stats-bg">
-                                    <img src="./public/assets/images/icon_shop.svg" alt="icon_shop">
-                                </div>
-                                <h3>
-                                    10.5k
-                                </h3>
-                                <p>
-                                    Sallers active our site
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="stat-box active">
-                                <div class="img-box">
-                                    <img class="border rounded-circle" src="./public/assets/images/Services.svg"
-                                        alt="service">
-                                </div>
-                                <h3>
-                                    10.5k
-                                </h3>
-                                <p>
-                                    Sallers active our site
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="stat-box">
-                                <div class="img-box">
-                                    <img src="./public/assets/images/stats-bg.svg" alt="stats-bg">
-                                    <img src="./public/assets/images/icon_shop.svg" alt="shop-icon">
-                                </div>
-                                <h3>
-                                    10.5k
-                                </h3>
-                                <p>
-                                    Sallers active our site
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="stat-box">
-                                <div class="img-box">
-                                    <img src="./public/assets/images/stats-bg.svg" alt="stats-bg">
-                                    <img src="./public/assets/images/icon_shop.svg" alt="shop-icon">
-                                </div>
-                                <h3>
-                                    10.5k
-                                </h3>
-                                <p>
-                                    Sallers active our site
-                                </p>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="employee-slider pb-5 section ">
-                <div class="position-relative">
-                    <div class="container w-100 overflow-hidden">
-                        <h3 class="section-head fw-bold my-5 text-center">
-                            The Minds Behind </h3>
-                        <div class="swiper mySwiper6 mb-0 flex-wrap justify-content-between">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide border-0 slides-employee">
-                                    <div class="content-wrapper">
-                                        <figure class="figure-stat-box">
-                                            <img src="./public/assets/images/image 46.png" alt="Chairman"
-                                                class=" figure-stat" />
-                                            <p class="details text-start p-3 text-white ">Lorem
-                                                ipsum dolor sit amet
-                                                consectetur adipisicing
-                                                elit. Nobis nostrum est, cum
-                                                temporibus magni ea at
-                                                aperiam, molestias,
-                                                ad soluta quo odio! Fuga,
-                                                amet dolore!
-                                                Lorem ipsum dolor sit amet
-                                                consectetur adipisicing
-                                                elit. Nobis nostrum est, cum
-                                                temporibus magni ea at
-                                                aperiam, molestias,
-                                                ad soluta quo odio! Fuga,
-                                                amet dolore! </p>
-                                        </figure>
-                                        <figcaption class="p-3 bg-white">
-                                            <h3>Tom Cruise</h3>
-                                            <p>Founder & Chairman</p>
-                                            <span><i class="fa-brands fa-x-twitter"></i>
-                                                <i class="fa-brands fa-instagram"></i>
-                                               <i class="fa-brands fa-linkedin-in"></i></span>
-                                        </figcaption>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide border-0 slides-employee">
-                                    <div class="content-wrapper">
-                                        <figure class="figure-stat-box">
-                                            <img src="./public/assets/images/image 47.png" alt="CEO"
-                                                class=" figure-stat" />
-                                            <p class="details text-start p-3 text-white ">Lorem
-                                                ipsum dolor sit amet
-                                                consectetur adipisicing
-                                                elit. Nobis nostrum est, cum
-                                                temporibus magni ea at
-                                                aperiam, molestias,
-                                                ad soluta quo odio! Fuga,
-                                                amet dolore!
-                                                Lorem ipsum dolor sit amet
-                                                consectetur adipisicing
-                                                elit. Nobis nostrum est, cum
-                                                temporibus magni ea at
-                                                aperiam, molestias,
-                                                ad soluta quo odio! Fuga,
-                                                amet dolore! </p>
-                                        </figure>
-                                        <figcaption class="p-3 bg-white">
-                                            <h3>Sam Jason</h3>
-                                            <p>CEO</p>
-                                            <span><i class="fa-brands fa-x-twitter"></i>
-                                                <i class="fa-brands fa-instagram"></i>
-                                               <i class="fa-brands fa-linkedin-in"></i></span>
-                                        </figcaption>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide border-0 slides-employee">
-                                    <div class="content-wrapper">
-                                        <figure class="figure-stat-box">
-                                            <img src="./public/assets/images/image 51.png" alt="co-founder"
-                                                class="figure-stat" />
-                                            <p class="details text-start p-3 text-white ">Lorem
-                                                ipsum dolor sit amet
-                                                consectetur adipisicing
-                                                elit. Nobis nostrum est, cum
-                                                temporibus magni ea at
-                                                aperiam, molestias,
-                                                ad soluta quo odio! Fuga,
-                                                amet dolore!
-                                                Lorem ipsum dolor sit amet
-                                                consectetur adipisicing
-                                                elit. Nobis nostrum est, cum
-                                                temporibus magni ea at
-                                                aperiam, molestias,
-                                                ad soluta quo odio! Fuga,
-                                                amet dolore! </p>
-                                        </figure>
-                                        <figcaption class="p-3 bg-white">
-                                            <h3>Alexa Robert</h3>
-                                            <p>Co Fouder</p>
-                                            <span><i class="fa-brands fa-x-twitter"></i>
-                                                <i class="fa-brands fa-instagram"></i>
-                                                <img src="./public/assets/images/Icon-Linkedin.svg"
-                                                    alt=";Icon-Linkedin"></span>
-                                        </figcaption>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide border-0 slides-employee">
-                                    <div class="content-wrapper">
-                                        <figure class="figure-stat-box">
-                                            <img src="./public/assets/images/image 46.png" alt="founder-chairman"
-                                                class=" figure-stat" />
-                                            <p class="details text-start p-3 text-white ">Lorem
-                                                ipsum dolor sit amet
-                                                consectetur adipisicing
-                                                elit. Nobis nostrum est, cum
-                                                temporibus magni ea at
-                                                aperiam, molestias,
-                                                ad soluta quo odio! Fuga,
-                                                amet dolore!
-                                                Lorem ipsum dolor sit amet
-                                                consectetur adipisicing
-                                                elit. Nobis nostrum est, cum
-                                                temporibus magni ea at
-                                                aperiam, molestias,
-                                                ad soluta quo odio! Fuga,
-                                                amet dolore! </p>
-                                        </figure>
-                                        <figcaption class="p-3 bg-white">
-                                            <h3>Tom Cruise</h3>
-                                            <p>Founder & Chairman</p>
-                                            <span><i class="fa-brands fa-x-twitter"></i>
-                                                <i class="fa-brands fa-instagram"></i>
-                                               <i class="fa-brands fa-linkedin-in"></i></span>
-                                        </figcaption>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide border-0 slides-employee">
-                                    <div class="content-wrapper">
-                                        <figure class="figure-stat-box">
-                                            <img src="./public/assets/images/image 47.png" alt="Chairman"
-                                                class=" img-fluid figure-stat" />
-                                            <p class="details text-start p-3 text-white ">Lorem
-                                                ipsum dolor sit amet
-                                                consectetur adipisicing
-                                                elit. Nobis nostrum est, cum
-                                                temporibus magni ea at
-                                                aperiam, molestias,
-                                                ad soluta quo odio! Fuga,
-                                                amet dolore!
-                                                Lorem ipsum dolor sit amet
-                                                consectetur adipisicing
-                                                elit. Nobis nostrum est, cum
-                                                temporibus magni ea at
-                                                aperiam, molestias,
-                                                ad soluta quo odio! Fuga,
-                                                amet dolore! </p>
-                                        </figure>
-                                        <figcaption class="p-3 bg-white">
-                                            <h3>Tom Cruise</h3>
-                                            <p>Founder & Chairman</p>
-                                            <span><i class="fa-brands fa-x-twitter"></i>
-                                                <i class="fa-brands fa-instagram"></i>
-                                               <i class="fa-brands fa-linkedin-in"></i></span>
-                                        </figcaption>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide border-0 slides-employee">
-                                    <div class="content-wrapper">
-                                        <figure class="figure-stat-box">
-                                            <img src="./public/assets/images/image 51.png" alt="founder-chairman"
-                                                class="img-fluid figure-stat" />
-                                            <p class="details text-start p-3 text-white ">Lorem
-                                                ipsum dolor sit amet
-                                                consectetur adipisicing
-                                                elit. Nobis nostrum est, cum
-                                                temporibus magni ea at
-                                                aperiam, molestias,
-                                                ad soluta quo odio! Fuga,
-                                                amet dolore!
-                                                Lorem ipsum dolor sit amet
-                                                consectetur adipisicing
-                                                elit. Nobis nostrum est, cum
-                                                temporibus magni ea at
-                                                aperiam, molestias,
-                                                ad soluta quo odio! Fuga,
-                                                amet dolore! </p>
-                                        </figure>
-                                        <figcaption class="p-3 bg-white">
-                                            <h3>Tom Cruise</h3>
-                                            <p>Founder & Chairman</p>
-                                            <span><i class="fa-brands fa-x-twitter"></i>
-                                                <i class="fa-brands fa-instagram"></i>
-                                               <i class="fa-brands fa-linkedin-in"></i></span>
-                                        </figcaption>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-pagination pb-2"></div>
-                </div>
-            </section>
-
-            <section class="brand-features  pb-5 section">
-                <div class="container w-100 overflow-hidden">
-                    <h3 class="section-head fw-bold mb-3 text-center">Why
-                        Choose Us ?</h3>
-                    <div class="row gx-4 gy-5 justify-content-center pt-5">
-                        <div class="col-md-4">
-                            <div class="features">
-                                <div class="img-box">
-                                    <img src="./public/assets/images/stats-bg.svg" alt="stats-bg">
-                                    <img src="./public/assets/images/icon-delivery.svg" alt="icon-delivery">
-                                </div>
-                                <h4> FREE AND FAST DELIVERY</h4>
-                                <p class="mb-0">Free delivery for all orders
-                                    over $140 </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="features">
-                                <div class="img-box">
-                                    <img src="./public/assets/images/stats-bg.svg" alt="stats-bg">
-                                    <img src="./public/assets/images/Icon-Customer service.svg" alt="customer-service">
-                                </div>
-                                <h4> 24/7 CUSTOMER SERVICE</h4>
-                                <p class="mb-0"> Friendly 24/7 customer
-                                    support</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="features">
-                                <div class="img-box">
-                                    <img src="./public/assets/images/stats-bg.svg" alt="stats-bg">
-                                    <img src="./public/assets/images/Icon-secure.svg" alt="icon-secure">
-                                </div>
-                                <h4>MONEY BACK GUARANTEE </h4>
-                                <p class="mb-0">We reurn money within 30
-                                    days </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="footer-content-wrapper section">
-                <div class="container">
-                    <div class="row gy-4 row-cols-xxl-5 row-cols-lg-3 row-cols-md-2 row-cols-1">
-                        <div class="col  ">
-                            <div class="footer-content">
-                                <h3>
-                                    Exclusive
-                                </h3>
-                                <h4>
-                                    Subscribe
-                                </h4>
-                                <p>Get 10% off your first order</p>
-                                <form action>
-                                    <input type="email" placeholder="Enter your email">
-                                    <span class="m-0 mx-sm-2"><img src="./public/assets/images/send.svg"
-                                            alt="Send-icon"></span>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col  ">
-                            <div class="footer-content">
-                                <h4>Support</h4>
-                                <p>111 Bijoy sarani, Dhaka, DH 1515,
-                                    Bangladesh.</p>
-                                <p>exclusive@gmail.com</p>
-                                <p>+88015-88888-9999</p>
-                            </div>
-                        </div>
-                        <div class="col  ">
-                            <div class="footer-content">
-                                <h4>Account</h4>
-                                <p>My Account</p>
-                                <p>Login / Register</p>
-                                <p>Cart</p>
-                                <p>Wishlist</p>
-                                <p>Shop</p>
-                            </div>
-                        </div>
-                        <div class="col  ">
-                            <div class="footer-content">
-                                <h4>Quick Link</h4>
-                                <p>Privacy Policy</p>
-                                <p>Terms Of Use</p>
-                                <p>FAQ</p>
-                                <p>Contact</p>
-                            </div>
-                        </div>
-                        <div class="col  ">
-                            <div class="footer-content">
-                                <h4>Download App</h4>
-                                <span class="mb-2">Save $3 with App New User
-                                    Only</span>
-                                <div class="img-box">
-                                    <div class="left"><img src="./public/assets/images/Qr Code.svg" alt="qr-code-icon">
-                                    </div>
-                                    <div class="right"><img src="./public/assets/images/AppStore.svg"
-                                            alt="AppStore-icon"> <img src="./public/assets/images/google-play.svg"
-                                            alt="google-play"></div>
-                                </div>
-                                <div class="icon-box text-white">
-                                    <img src="./public/assets/images/Icon-Facebook.svg" alt="Icon-Facebook">
-                                    <img class="ps-2" src="./public/assets/images/twitter-white.png" alt="twitter-icon">
-                                    <img class="ps-2" src="./public/assets/images/instgaram-white.svg"
-                                        alt="icon-instagram">
-                                    <img class="ps-2" src="./public/assets/images/linkedin-white.svg"
-                                        alt="Icon-Linkedin">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="copyright-section d-flex justify-content-center pt-4">
-                        <span>
-                            &copy; Copyright Raza 2025. All right reserved
-                        </span>
-                    </div>
-                </div>
+          </div>
+          <div
+            class="mobile-search d-flex w-100 justify-content-center section"
+          >
+            <div class="input-group d-sm-none d-flex">
+              <input
+                name="search here"
+                type="text"
+                class="form-control"
+                placeholder="What are you looking for ?"
+                aria-label="Search"
+                aria-describedby="search- addon"
+              />
+              <button
+                class="btn"
+                type="button"
+                id="search-addon"
+                title="search-button"
+              >
+                <img
+                  src="./public/assets/images/search-icon.svg"
+                  alt="search-icon"
+                />
+              </button>
             </div>
-        </footer>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section id="home" class="section home-section pt-3 pb-xl-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-12 align-self-center">
+                <div class="home-left">
+                  <h2>Our Story</h2>
+                  <p class="text-wrap">
+                    Launced in 2015, Exclusive is South Asia’s premier online
+                    shopping makterplace with an active presense in Bangladesh.
+                    Supported by wide range of tailored marketing, data and
+                    service solutions, Exclusive has 10,500 sallers and 300
+                    brands and serves 3 millioons customers across the region.
+                  </p>
+                  <p class="text-wrap">
+                    Exclusive has more than 1 Million products to offer, growing
+                    at a very fast. Exclusive offers a diverse assotment in
+                    categories ranging from consumer.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="home-right d-flex justify-content-end">
+                  <img
+                    class="img-fluid"
+                    height="600"
+                    width="700"
+                    src="./public/assets/images/about-us.svg"
+                    alt="HomePage image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-stats pb-5 section">
+          <div class="container">
+            <h3 class="section-head fw-bold my-5 text-center">Our Stats</h3>
+            <div class="row g-4">
+              <div class="col-lg-3 col-sm-6">
+                <div class="stat-box">
+                  <div class="img-box">
+                    <img
+                      src="./public/assets/images/stats-bg.svg"
+                      alt="stats-bg"
+                    />
+                    <img
+                      src="./public/assets/images/icon_shop.svg"
+                      alt="icon_shop"
+                    />
+                  </div>
+                  <h3>10.5k</h3>
+                  <p>Sallers active our site</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="stat-box active">
+                  <div class="img-box">
+                    <img
+                      class="border rounded-circle"
+                      src="./public/assets/images/Services.svg"
+                      alt="service"
+                    />
+                  </div>
+                  <h3>10.5k</h3>
+                  <p>Sallers active our site</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="stat-box">
+                  <div class="img-box">
+                    <img
+                      src="./public/assets/images/stats-bg.svg"
+                      alt="stats-bg"
+                    />
+                    <img
+                      src="./public/assets/images/icon_shop.svg"
+                      alt="shop-icon"
+                    />
+                  </div>
+                  <h3>10.5k</h3>
+                  <p>Sallers active our site</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="stat-box">
+                  <div class="img-box">
+                    <img
+                      src="./public/assets/images/stats-bg.svg"
+                      alt="stats-bg"
+                    />
+                    <img
+                      src="./public/assets/images/icon_shop.svg"
+                      alt="shop-icon"
+                    />
+                  </div>
+                  <h3>10.5k</h3>
+                  <p>Sallers active our site</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="employee-slider pb-5 section">
+          <div class="position-relative">
+            <div class="container w-100 overflow-hidden">
+              <h3 class="section-head fw-bold my-5 text-center">
+                The Minds Behind
+              </h3>
+              <div
+                class="swiper mySwiper6 mb-0 flex-wrap justify-content-between"
+              >
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide border-0 slides-employee">
+                    <div class="content-wrapper">
+                      <figure class="figure-stat-box">
+                        <img
+                          src="./public/assets/images/image 46.png"
+                          alt="Chairman"
+                          class="figure-stat"
+                        />
+                        <p class="details text-start p-3 text-white">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Nobis nostrum est, cum temporibus magni ea at
+                          aperiam, molestias, ad soluta quo odio! Fuga, amet
+                          dolore! Lorem ipsum dolor sit amet consectetur
+                          adipisicing elit. Nobis nostrum est, cum temporibus
+                          magni ea at aperiam, molestias, ad soluta quo odio!
+                          Fuga, amet dolore!
+                        </p>
+                      </figure>
+                      <figcaption class="p-3 bg-white">
+                        <h3>Tom Cruise</h3>
+                        <p>Founder & Chairman</p>
+                        <span
+                          ><i class="fa-brands fa-x-twitter"></i>
+                          <i class="fa-brands fa-instagram"></i>
+                          <i class="fa-brands fa-linkedin-in"></i
+                        ></span>
+                      </figcaption>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide border-0 slides-employee">
+                    <div class="content-wrapper">
+                      <figure class="figure-stat-box">
+                        <img
+                          src="./public/assets/images/image 47.png"
+                          alt="CEO"
+                          class="figure-stat"
+                        />
+                        <p class="details text-start p-3 text-white">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Nobis nostrum est, cum temporibus magni ea at
+                          aperiam, molestias, ad soluta quo odio! Fuga, amet
+                          dolore! Lorem ipsum dolor sit amet consectetur
+                          adipisicing elit. Nobis nostrum est, cum temporibus
+                          magni ea at aperiam, molestias, ad soluta quo odio!
+                          Fuga, amet dolore!
+                        </p>
+                      </figure>
+                      <figcaption class="p-3 bg-white">
+                        <h3>Sam Jason</h3>
+                        <p>CEO</p>
+                        <span
+                          ><i class="fa-brands fa-x-twitter"></i>
+                          <i class="fa-brands fa-instagram"></i>
+                          <i class="fa-brands fa-linkedin-in"></i
+                        ></span>
+                      </figcaption>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide border-0 slides-employee">
+                    <div class="content-wrapper">
+                      <figure class="figure-stat-box">
+                        <img
+                          src="./public/assets/images/image 51.png"
+                          alt="co-founder"
+                          class="figure-stat"
+                        />
+                        <p class="details text-start p-3 text-white">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Nobis nostrum est, cum temporibus magni ea at
+                          aperiam, molestias, ad soluta quo odio! Fuga, amet
+                          dolore! Lorem ipsum dolor sit amet consectetur
+                          adipisicing elit. Nobis nostrum est, cum temporibus
+                          magni ea at aperiam, molestias, ad soluta quo odio!
+                          Fuga, amet dolore!
+                        </p>
+                      </figure>
+                      <figcaption class="p-3 bg-white">
+                        <h3>Alexa Robert</h3>
+                        <p>Co Fouder</p>
+                        <span
+                          ><i class="fa-brands fa-x-twitter"></i>
+                          <i class="fa-brands fa-instagram"></i>
+                          <img
+                            src="./public/assets/images/Icon-Linkedin.svg"
+                            alt=";Icon-Linkedin"
+                        /></span>
+                      </figcaption>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide border-0 slides-employee">
+                    <div class="content-wrapper">
+                      <figure class="figure-stat-box">
+                        <img
+                          src="./public/assets/images/image 46.png"
+                          alt="founder-chairman"
+                          class="figure-stat"
+                        />
+                        <p class="details text-start p-3 text-white">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Nobis nostrum est, cum temporibus magni ea at
+                          aperiam, molestias, ad soluta quo odio! Fuga, amet
+                          dolore! Lorem ipsum dolor sit amet consectetur
+                          adipisicing elit. Nobis nostrum est, cum temporibus
+                          magni ea at aperiam, molestias, ad soluta quo odio!
+                          Fuga, amet dolore!
+                        </p>
+                      </figure>
+                      <figcaption class="p-3 bg-white">
+                        <h3>Tom Cruise</h3>
+                        <p>Founder & Chairman</p>
+                        <span
+                          ><i class="fa-brands fa-x-twitter"></i>
+                          <i class="fa-brands fa-instagram"></i>
+                          <i class="fa-brands fa-linkedin-in"></i
+                        ></span>
+                      </figcaption>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide border-0 slides-employee">
+                    <div class="content-wrapper">
+                      <figure class="figure-stat-box">
+                        <img
+                          src="./public/assets/images/image 47.png"
+                          alt="Chairman"
+                          class="img-fluid figure-stat"
+                        />
+                        <p class="details text-start p-3 text-white">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Nobis nostrum est, cum temporibus magni ea at
+                          aperiam, molestias, ad soluta quo odio! Fuga, amet
+                          dolore! Lorem ipsum dolor sit amet consectetur
+                          adipisicing elit. Nobis nostrum est, cum temporibus
+                          magni ea at aperiam, molestias, ad soluta quo odio!
+                          Fuga, amet dolore!
+                        </p>
+                      </figure>
+                      <figcaption class="p-3 bg-white">
+                        <h3>Tom Cruise</h3>
+                        <p>Founder & Chairman</p>
+                        <span
+                          ><i class="fa-brands fa-x-twitter"></i>
+                          <i class="fa-brands fa-instagram"></i>
+                          <i class="fa-brands fa-linkedin-in"></i
+                        ></span>
+                      </figcaption>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide border-0 slides-employee">
+                    <div class="content-wrapper">
+                      <figure class="figure-stat-box">
+                        <img
+                          src="./public/assets/images/image 51.png"
+                          alt="founder-chairman"
+                          class="img-fluid figure-stat"
+                        />
+                        <p class="details text-start p-3 text-white">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Nobis nostrum est, cum temporibus magni ea at
+                          aperiam, molestias, ad soluta quo odio! Fuga, amet
+                          dolore! Lorem ipsum dolor sit amet consectetur
+                          adipisicing elit. Nobis nostrum est, cum temporibus
+                          magni ea at aperiam, molestias, ad soluta quo odio!
+                          Fuga, amet dolore!
+                        </p>
+                      </figure>
+                      <figcaption class="p-3 bg-white">
+                        <h3>Tom Cruise</h3>
+                        <p>Founder & Chairman</p>
+                        <span
+                          ><i class="fa-brands fa-x-twitter"></i>
+                          <i class="fa-brands fa-instagram"></i>
+                          <i class="fa-brands fa-linkedin-in"></i
+                        ></span>
+                      </figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination pb-2"></div>
+          </div>
+        </section>
+
+        <section class="brand-features pb-5 section">
+          <div class="container w-100 overflow-hidden">
+            <h3 class="section-head fw-bold mb-3 text-center">
+              Why Choose Us ?
+            </h3>
+            <div class="row gx-4 gy-5 justify-content-center pt-5">
+              <div class="col-md-4">
+                <div class="features">
+                  <div class="img-box">
+                    <img
+                      src="./public/assets/images/stats-bg.svg"
+                      alt="stats-bg"
+                    />
+                    <img
+                      src="./public/assets/images/icon-delivery.svg"
+                      alt="icon-delivery"
+                    />
+                  </div>
+                  <h4>FREE AND FAST DELIVERY</h4>
+                  <p class="mb-0">Free delivery for all orders over $140</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="features">
+                  <div class="img-box">
+                    <img
+                      src="./public/assets/images/stats-bg.svg"
+                      alt="stats-bg"
+                    />
+                    <img
+                      src="./public/assets/images/Icon-Customer service.svg"
+                      alt="customer-service"
+                    />
+                  </div>
+                  <h4>24/7 CUSTOMER SERVICE</h4>
+                  <p class="mb-0">Friendly 24/7 customer support</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="features">
+                  <div class="img-box">
+                    <img
+                      src="./public/assets/images/stats-bg.svg"
+                      alt="stats-bg"
+                    />
+                    <img
+                      src="./public/assets/images/Icon-secure.svg"
+                      alt="icon-secure"
+                    />
+                  </div>
+                  <h4>MONEY BACK GUARANTEE</h4>
+                  <p class="mb-0">We reurn money within 30 days</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-content-wrapper section">
+          <div class="container">
+            <div
+              class="row gy-4 row-cols-xxl-5 row-cols-lg-3 row-cols-md-2 row-cols-1"
+            >
+              <div class="col">
+                <div class="footer-content">
+                  <h3>Exclusive</h3>
+                  <h4>Subscribe</h4>
+                  <p>Get 10% off your first order</p>
+                  <form action>
+                    <input type="email" placeholder="Enter your email" />
+                    <span class="m-0 mx-sm-2"
+                      ><img
+                        src="./public/assets/images/send.svg"
+                        alt="Send-icon"
+                    /></span>
+                  </form>
+                </div>
+              </div>
+              <div class="col">
+                <div class="footer-content">
+                  <h4>Support</h4>
+                  <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
+                  <p>exclusive@gmail.com</p>
+                  <p>+88015-88888-9999</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="footer-content">
+                  <h4>Account</h4>
+                  <p>My Account</p>
+                  <p>Login / Register</p>
+                  <p>Cart</p>
+                  <p>Wishlist</p>
+                  <p>Shop</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="footer-content">
+                  <h4>Quick Link</h4>
+                  <p>Privacy Policy</p>
+                  <p>Terms Of Use</p>
+                  <p>FAQ</p>
+                  <p>Contact</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="footer-content">
+                  <h4>Download App</h4>
+                  <span class="mb-2">Save $3 with App New User Only</span>
+                  <div class="img-box">
+                    <div class="left">
+                      <img
+                        src="./public/assets/images/Qr Code.svg"
+                        alt="qr-code-icon"
+                      />
+                    </div>
+                    <div class="right">
+                      <img
+                        src="./public/assets/images/AppStore.svg"
+                        alt="AppStore-icon"
+                      />
+                      <img
+                        src="./public/assets/images/google-play.svg"
+                        alt="google-play"
+                      />
+                    </div>
+                  </div>
+                  <div class="icon-box text-white">
+                    <img
+                      src="./public/assets/images/Icon-Facebook.svg"
+                      alt="Icon-Facebook"
+                    />
+                    <img
+                      class="ps-2"
+                      src="./public/assets/images/twitter-white.png"
+                      alt="twitter-icon"
+                    />
+                    <img
+                      class="ps-2"
+                      src="./public/assets/images/instgaram-white.svg"
+                      alt="icon-instagram"
+                    />
+                    <img
+                      class="ps-2"
+                      src="./public/assets/images/linkedin-white.svg"
+                      alt="Icon-Linkedin"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="copyright-section d-flex justify-content-center pt-4">
+              <span> &copy; Copyright Raza 2025. All right reserved </span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./src/Js/main.js"></script>
-</body>
-
+  </body>
 </html>

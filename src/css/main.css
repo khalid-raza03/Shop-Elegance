@@ -186,6 +186,35 @@
   color: #1e1e1e;
 }
 
+
+/* .header-middle .modal-header, .header-middle .modal-footer{
+    background: linear-gradient(60deg,#cd7e7e  0%, #f5f3f3 100%);
+} */
+
+.header-middle .modal-title{
+  font-weight: 700;
+}
+.header-middle .theme-btn{
+  background:linear-gradient(60deg, #db4444, #f7adad);
+  border-color: transparent;
+  color: #ffffff;
+  transition: background-color 0.3s ease-in-out, border 0.5s ease-in;
+
+  &:hover{
+    color: var(--btn-color1);
+    background:#ffffff;
+    border-color: var(--btn-color1);
+  }
+}
+
+.wishlists .wishlist-head{
+  background-color: #db444483;
+
+}
+.wishlists .wishlist-content{
+  border-bottom: 0.8px solid #fc030317;
+}
+
 /* dark mode design */
 .design-main-wrapper .header-top .dark-mode-box {
   position: relative;
