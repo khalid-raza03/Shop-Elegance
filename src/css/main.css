@@ -1,8 +1,6 @@
 @import url(./resets.css);
 @import url(./components.css);
 
-
-
 /* global css */
 :root {
   --primary-color: #000000;
@@ -23,7 +21,6 @@
   --spacing-unit1: 6px 18px;
 }
 
-
 .design-main-wrapper #scrollToTop {
   position: fixed;
   bottom: 20px;
@@ -31,7 +28,7 @@
   z-index: 999;
   font-size: 18px;
   outline: none;
-  border: 1px solid #db4444;
+  border: 1px solid #ffffff;
   background-color: #db4444;
   color: black;
   cursor: pointer;
@@ -42,10 +39,10 @@
 
 /* header top styles */
 
-.design-main-wrapper .header-wrapper .offcanvas{
+.design-main-wrapper .header-wrapper .offcanvas {
   background-color: #f06e69;
-background-image: url("https://www.transparenttextures.com/patterns/flowers.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-image: url("https://www.transparenttextures.com/patterns/flowers.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 .design-main-wrapper .header-wrapper .offcanvas-body .navbar-nav .nav-link {
   padding-left: 10px;
@@ -71,7 +68,8 @@ background-image: url("https://www.transparenttextures.com/patterns/flowers.png"
 }
 
 .design-main-wrapper .header-top {
-  background-color: var(--primary-color);
+  background-color: #db4444;
+  background-image: url("https://www.transparenttextures.com/patterns/flowers.png");
   position: relative;
   z-index: 999;
 }
@@ -82,10 +80,14 @@ background-image: url("https://www.transparenttextures.com/patterns/flowers.png"
   padding: 12px 0;
 }
 
-.design-main-wrapper main{
-background-color: #f08f8b;
-background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+.design-main-wrapper main {
+  background-color: #e2928f;
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  background-attachment: fixed;
+}
+
+.design-main-wrapper .header-middle {
+  background-color: #ef7a76;
 }
 
 .design-main-wrapper .header-top .header-top-center {
@@ -204,57 +206,52 @@ background-image: url("https://www.transparenttextures.com/patterns/natural-pape
   color: #1e1e1e;
 }
 
-
-.design-main-wrapper .header-middle .brand-name{
+.design-main-wrapper .header-middle .brand-name {
   font-weight: var(--font-weight1);
-  font-size: var(--font-size1);
   line-height: 24px;
   font-style: italic;
 }
 
-.header-middle .modal-title{
+.header-middle .modal-title {
   font-weight: 700;
 }
 
-
-
-.header-middle .theme-btn{
-  background:linear-gradient(60deg, #db4444, #f7adad);
+.header-middle .theme-btn {
+  background: linear-gradient(60deg, #db4444, #f7adad);
   border-color: transparent;
   color: #ffffff;
   transition: background 0.5s ease-in-out, border 0.5s ease-in;
 
-  &:hover{
+  &:hover {
     color: var(--btn-color1);
-    background:#ffffff;
+    background: #ffffff;
     border-color: var(--btn-color1);
   }
 }
 
-.wishlists .wishlist-head{
-  border-bottom:1px solid #db444483;
-
+.wishlists .wishlist-head {
+  border-bottom: 1px solid #db444483;
 }
-.wishlists .wishlist-content{
+.wishlists .wishlist-content {
   border-bottom: 0.8px solid #fc030317;
 }
 
 .truncate {
-  width: 200px;              
-  white-space: nowrap;      
-  overflow: hidden;         
-  text-overflow: ellipsis;  
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.wishlists .product-name{
+.wishlists .product-name {
   font-size: 14px;
   font-weight: 600;
 }
 
-.wishlists .product-desc{
- font-size: 12px;
+.wishlists .product-desc {
+  font-size: 12px;
 }
-.wishlists .product-price{
+.wishlists .product-price {
   font-size: 14px;
   font-weight: 600;
 }
@@ -288,7 +285,6 @@ background-image: url("https://www.transparenttextures.com/patterns/natural-pape
 
 .section.dark {
   background-color: #121212 !important;
-  border-bottom: 1px solid #e0e0e0;
   padding-top: 1rem;
 }
 
@@ -312,9 +308,6 @@ section.dark h4,
   color: #e0e0e0;
 }
 
-.section.dark .footer-content form input::placeholder {
-  background-color: #121212 !important;
-}
 
 .section.dark .swiper-pagination-bullet {
   background: #ffffff;
@@ -348,8 +341,6 @@ section.dark h4,
   align-items: center;
   padding: 28px 0px 9px 0px;
 }
-
-
 
 .design-main-wrapper .header-middle-center .navbar .navbar-toggler:focus {
   box-shadow: none;
@@ -400,9 +391,6 @@ section.dark h4,
   overflow: hidden;
   display: flex;
 }
-
-
-
 
 .design-main-wrapper .mobile-search .input-group {
   background-color: var(--tertiary-color);
@@ -469,6 +457,7 @@ section.dark h4,
 /* Home section design */
 .design-main-wrapper .home-section {
   display: flex;
+  padding: 10px 0;
   align-items: center;
   justify-content: space-between;
 }
@@ -540,8 +529,6 @@ section.dark h4,
   text-align: start;
 }
 
-
-
 /* stats section */
 .design-main-wrapper .section-stats {
   display: flex;
@@ -559,18 +546,18 @@ section.dark h4,
 }
 
 .design-main-wrapper .section-stats .stat-box {
-     position: relative;
-    display: flex;
-    border: 1px solid #db44446b;
-    border-bottom: 6px solid #db44446b;
-    border-right: 10px solid #db44446b;
-    border-radius: 20px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 50px;
-    gap: 15px;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  position: relative;
+  display: flex;
+  border: 1px solid #db44446b;
+  border-bottom: 6px solid #db44446b;
+  border-right: 10px solid #db44446b;
+  border-radius: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 50px;
+  gap: 15px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .design-main-wrapper .section-stats .stat-box .img-box {
@@ -657,11 +644,11 @@ section.dark h4,
 }
 
 .slides-employee .content-wrapper {
-    width: 100%;
-        border: 1px solid #db44446b;
-    border-bottom: 6px solid #db44446b;
-    border-right: 10px solid #db44446b;
-    border-radius: 20px;
+  width: 100%;
+  border: 1px solid #db44446b;
+  border-bottom: 6px solid #db44446b;
+  border-right: 10px solid #db44446b;
+  border-radius: 20px;
 }
 
 .slides-employee .content-wrapper .figure-stat-box:hover .details {
@@ -784,7 +771,9 @@ section.dark h4,
 
 /* footer section styling */
 .design-main-wrapper .footer-content-wrapper {
-  background-color: var(--primary-color);
+  background-color: #db4444;
+  background-attachment: fixed;
+  background-image: url("https://www.transparenttextures.com/patterns/flowers.png");
   padding: 50px;
 }
 
@@ -830,7 +819,7 @@ section.dark h4,
 }
 
 .design-main-wrapper .footer-content-wrapper .footer-content form input:focus {
-  background-color: var(--primary-color);
+  background-color:transparent;
   outline: none;
   border: none;
   color: var(--secondary-color);
@@ -843,7 +832,7 @@ section.dark h4,
   font-weight: 400;
   font-size: var(--font-size3);
   color: var(--tertiary-color);
-  background-color: var(--primary-color);
+  background-color: transparent;
 }
 .design-main-wrapper .footer-content-wrapper .footer-content span {
   font-weight: var(--font-weight3);
@@ -854,7 +843,7 @@ section.dark h4,
 .design-main-wrapper .footer-content-wrapper .copyright-section span {
   font-weight: var(--font-weight4);
   font-size: var(--font-size3);
-  color: #f9f9f933;
+  color: #f9f9f98c;
 }
 
 .design-main-wrapper .footer-content-wrapper .footer-content .img-box {

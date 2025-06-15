@@ -11,7 +11,7 @@ var swiper6 = new Swiper(".mySwiper6", {
       },
   
       768: {
-        slidesPerView: 3, // Medium screens (tablets, etc.)
+        slidesPerView: 2, // Medium screens (tablets, etc.)
         spaceBetween: 20,
       },
       576: {

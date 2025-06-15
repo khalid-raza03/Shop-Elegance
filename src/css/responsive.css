@@ -72,9 +72,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .design-main-wrapper .mobile-search {
-  padding: 15px 0;
-}
+
   .design-main-wrapper .header-top .header-top-center {
     font-size: var(--font-size5);
   }
@@ -97,7 +95,10 @@
   .design-main-wrapper .footer-content-wrapper{
     padding: 30px 20px;
   }
-
+.design-main-wrapper .mobile-search{
+    padding: 15px 0;
+    background-color: #ef7a76;
+}
   .figure-stat-box {
     max-width: 85%;
   }
