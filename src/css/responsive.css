@@ -72,6 +72,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .design-main-wrapper .mobile-search {
+  padding: 15px 0;
+}
   .design-main-wrapper .header-top .header-top-center {
     font-size: var(--font-size5);
   }

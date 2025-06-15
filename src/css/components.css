@@ -1,0 +1,14 @@
+@import url(./resets.css);
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.heading-text{
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    
+}
+
+.para-txt{
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+}

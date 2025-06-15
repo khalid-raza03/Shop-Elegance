@@ -59,9 +59,9 @@
             id="navbarOffcanvasLg"
             aria-labelledby="navbarOffcanvasLgLabel"
           >
-            <div class="offcanvas-header">
+            <div class="offcanvas-header border-bottom">
               <h5
-                class="offcanvas-title fw-bold ms-3 -head"
+                class="offcanvas-title fw-bold ms-s fs-3 "
                 id="navbarOffcanvasLgLabel"
               >
                 Explore
@@ -76,18 +76,18 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav d-flex">
                 <li class="py-2">
-                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                  <a class="nav-link para-txt" aria-current="page" href="#">Home</a>
                 </li>
 
                 <li class="py-2">
-                  <a class="nav-link" href="./public/contact.html">Contact</a>
+                  <a class="nav-link para-txt" href="./public/contact.html">Contact</a>
                 </li>
                 <li class="py-2">
-                  <a class="nav-link active" href="#">About</a>
+                  <a class="nav-link active para-txt" href="#">About</a>
                 </li>
 
                 <li class="py-2">
-                  <a class="nav-link" href="#">Testimonials</a>
+                  <a class="nav-link para-txt" href="#">Testimonials</a>
                 </li>
               </ul>
             </div>
@@ -137,36 +137,36 @@
                   </button>
                 </li>
 
-                <div class="header-top-center text-white d-none d-sm-block">
+                <div class="header-top-center text-white d-none d-sm-block para-txt">
                   Summer Sale For All Swim Suits And Free Express Delivery - OFF
                   50%! <span class="text-underline">ShopNow </span>
                 </div>
 
                 <div class="header-top-right">
                   <menu>
-                    <li class="position-relative d-inline-block dropdown-list">
+                    <li class="position-relative d-inline-block dropdown-list ">
                       <a
                         href="#"
-                        class="nav-link me-2 text-white my-dropdown-btn"
+                        class="nav-link me-2 text-white my-dropdown-btn para-txt"
                         id="languageDropdown"
                       >
                         English <i class="dropdown-icon px-2"></i>
                       </a>
-                      <ul class="my-menu p-0 m-0">
+                      <ul class="my-menu p-0 m-0 ">
                         <li class="my-menu-items">
-                          <a href="#" data-language="English">English</a>
+                          <a class="para-txt" href="#" data-language="English">English</a>
                         </li>
                         <li class="my-menu-items">
-                          <a href="#" data-language="Hindi">Hindi</a>
+                          <a class="para-txt" href="#" data-language="Hindi">Hindi</a>
                         </li>
                         <li class="my-menu-items">
-                          <a href="#" data-language="Spanish">Spanish</a>
+                          <a class="para-txt" href="#" data-language="Spanish">Spanish</a>
                         </li>
                         <li class="my-menu-items">
-                          <a href="#" data-language="Deutsch">Deutsch</a>
+                          <a class="para-txt" href="#" data-language="Deutsch">Deutsch</a>
                         </li>
                         <li class="my-menu-items">
-                          <a href="#" data-language="Arabic">Arabic</a>
+                          <a class="para-txt" href="#" data-language="Arabic">Arabic</a>
                         </li>
                       </ul>
                     </li>
@@ -181,7 +181,7 @@
               <!-- middle header -->
               <div class="header-middle-wrapper">
                 <div class="header-middle-left">
-                  <h2>Exclusive</h2>
+                  <h2 class="brand-name heading-text">Shop Elegance</h2>
                 </div>
                 <div class="header-middle-center">
                   <nav class="navbar navbar-expand bg-transparent">
@@ -193,7 +193,7 @@
                         <ul class="navbar-nav d-none d-lg-flex">
                           <li>
                             <a
-                              class="nav-link"
+                              class="nav-link para-txt"
                               target="_blank"
                               aria-current="page"
                               href="#home"
@@ -203,20 +203,20 @@
 
                           <li>
                             <a
-                              class="nav-link"
+                              class="nav-link para-txt"
                               target="_blank"
                               href="./public/contact.html"
                               >Contact</a
                             >
                           </li>
                           <li>
-                            <a target="_blank" class="nav-link active" href="#"
+                            <a  class="nav-link active para-txt" href="#"
                               >About</a
                             >
                           </li>
 
                           <li>
-                            <a target="_blank" class="nav-link" href="#"
+                            <a target="_blank" class="nav-link para-txt" href="#"
                               >Testimonials</a
                             >
                           </li>
@@ -231,7 +231,7 @@
                     <input
                       name="search here"
                       type="text"
-                      class="form-control"
+                      class="form-control para-txt"
                       placeholder="What are you looking for ?"
                       aria-label="Search"
                       aria-describedby="search- addon"
@@ -293,13 +293,13 @@
                       <div
                         class="wishlist-head d-flex justify-content-evenly w-100 py-2 rounded"
                       >
-                        <p class="wishlist-head-titles text-white fw-bold">
+                        <p class="wishlist-head-titles fw-bold">
                           Product
                         </p>
-                        <p class="wishlist-head-titles text-white fw-bold">
+                        <p class="wishlist-head-titles  fw-bold">
                           Price
                         </p>
-                        <p class="wishlist-head-titles text-white fw-bold">
+                        <p class="wishlist-head-titles  fw-bold">
                           Availability
                         </p>
                       </div>
@@ -316,7 +316,7 @@
 
                           <div class="col-3">
                             <div
-                              class="product-detail-section d-flex align-items-center justify-content-center flex-xl-row flex-column"
+                              class="product-detail-section d-flex align-items-end justify-content-center flex-xl-row flex-column"
                             >
                               <img
                                 src="./public/assets/images/download.jpg"
@@ -324,7 +324,12 @@
                                 width="60"
                                 height="80"
                               />
-                              <span class="product-name">Product name</span>
+
+                              <div class="product-details">
+                               <span class="product-name mb-2">Product name</span>
+                              <p class="product-desc truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, fugiat.</p>
+                              </div>
+                              
                             </div>
                           </div>
 
@@ -363,7 +368,7 @@
 
                           <div class="col-3">
                             <div
-                              class="product-detail-section d-flex align-items-center justify-content-center flex-xl-row flex-column"
+                              class="product-detail-section d-flex align-items-end justify-content-center flex-xl-row flex-column"
                             >
                               <img
                                 src="./public/assets/images/download.jpg"
@@ -371,7 +376,10 @@
                                 width="60"
                                 height="80"
                               />
-                              <span class="product-name">Product name</span>
+                               <div class="product-details">
+                               <span class="product-name mb-2">Product name</span>
+                              <p class="product-desc truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, fugiat.</p>
+                              </div>
                             </div>
                           </div>
 
@@ -410,7 +418,7 @@
 
                           <div class="col-3">
                             <div
-                              class="product-detail-section d-flex align-items-center justify-content-center flex-xl-row flex-column"
+                              class="product-detail-section d-flex align-items-end justify-content-center flex-xl-row flex-column"
                             >
                               <img
                                 src="./public/assets/images/download.jpg"
@@ -418,7 +426,10 @@
                                 width="60"
                                 height="80"
                               />
-                              <span class="product-name">Product name</span>
+                                <div class="product-details">
+                               <span class="product-name mb-2">Product name</span>
+                               <p class="product-desc truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, fugiat.</p>
+                              </div>
                             </div>
                           </div>
 
@@ -457,7 +468,7 @@
 
                           <div class="col-3">
                             <div
-                              class="product-detail-section d-flex align-items-center justify-content-center flex-xl-row flex-column"
+                              class="product-detail-section d-flex align-items-end justify-content-center flex-xl-row flex-column"
                             >
                               <img
                                 src="./public/assets/images/download.jpg"
@@ -465,7 +476,10 @@
                                 width="60"
                                 height="80"
                               />
-                              <span class="product-name">Product name</span>
+                                <div class="product-details">
+                               <span class="product-name mb-2">Product name</span>
+                              <p class="product-desc truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, fugiat.</p>
+                              </div>
                             </div>
                           </div>
 
@@ -504,7 +518,7 @@
 
                           <div class="col-3">
                             <div
-                              class="product-detail-section d-flex align-items-center justify-content-center flex-xl-row flex-column"
+                              class="product-detail-section d-flex align-items-end justify-content-center flex-xl-row flex-column"
                             >
                               <img
                                 src="./public/assets/images/download.jpg"
@@ -512,7 +526,10 @@
                                 width="60"
                                 height="80"
                               />
-                              <span class="product-name">Product name</span>
+                               <div class="product-details ">
+                               <span class="product-name mb-2">Product name</span>
+                              <p class="product-desc truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, fugiat.</p>
+                              </div>
                             </div>
                           </div>
 
@@ -594,15 +611,15 @@
             <div class="row">
               <div class="col-lg-6 col-12 align-self-center">
                 <div class="home-left">
-                  <h2>Our Story</h2>
-                  <p class="text-wrap">
+                  <h2 class="heading-text">Our Story</h2>
+                  <p class="text-wrap para-txt">
                     Launced in 2015, Exclusive is South Asia’s premier online
                     shopping makterplace with an active presense in Bangladesh.
                     Supported by wide range of tailored marketing, data and
                     service solutions, Exclusive has 10,500 sallers and 300
                     brands and serves 3 millioons customers across the region.
                   </p>
-                  <p class="text-wrap">
+                  <p class="text-wrap para-txt">
                     Exclusive has more than 1 Million products to offer, growing
                     at a very fast. Exclusive offers a diverse assotment in
                     categories ranging from consumer.
@@ -626,7 +643,7 @@
 
         <section class="section-stats pb-5 section">
           <div class="container">
-            <h3 class="section-head fw-bold my-5 text-center">Our Stats</h3>
+            <h3 class="section-head fw-bold fs-1 my-5 text-center heading-text">Our Stats</h3>
             <div class="row g-4">
               <div class="col-lg-3 col-sm-6">
                 <div class="stat-box">
@@ -640,8 +657,8 @@
                       alt="icon_shop"
                     />
                   </div>
-                  <h3>10.5k</h3>
-                  <p>Sallers active our site</p>
+                  <h3 class="heading-text">10.5k</h3>
+                  <p class="para-txt">Sallers active our site</p>
                 </div>
               </div>
               <div class="col-lg-3 col-sm-6">
@@ -653,8 +670,8 @@
                       alt="service"
                     />
                   </div>
-                  <h3>10.5k</h3>
-                  <p>Sallers active our site</p>
+                  <h3 class="heading-text">10.5k</h3>
+                  <p class="para-txt">Sallers active our site</p>
                 </div>
               </div>
               <div class="col-lg-3 col-sm-6">
@@ -669,8 +686,8 @@
                       alt="shop-icon"
                     />
                   </div>
-                  <h3>10.5k</h3>
-                  <p>Sallers active our site</p>
+                  <h3 class="heading-text">10.5k</h3>
+                  <p class="para-txt">Sallers active our site</p>
                 </div>
               </div>
               <div class="col-lg-3 col-sm-6">
@@ -685,8 +702,8 @@
                       alt="shop-icon"
                     />
                   </div>
-                  <h3>10.5k</h3>
-                  <p>Sallers active our site</p>
+                  <h3 class="heading-text">10.5k</h3>
+                  <p class="para-txt">Sallers active our site</p>
                 </div>
               </div>
             </div>
@@ -696,7 +713,7 @@
         <section class="employee-slider pb-5 section">
           <div class="position-relative">
             <div class="container w-100 overflow-hidden">
-              <h3 class="section-head fw-bold my-5 text-center">
+              <h3 class="section-head fw-bold my-5 text-center heading-text fs-1">
                 The Minds Behind
               </h3>
               <div
@@ -711,7 +728,7 @@
                           alt="Chairman"
                           class="figure-stat"
                         />
-                        <p class="details text-start p-3 text-white">
+                        <p class="details text-start p-3 text-white para-txt">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Nobis nostrum est, cum temporibus magni ea at
                           aperiam, molestias, ad soluta quo odio! Fuga, amet
@@ -721,9 +738,9 @@
                           Fuga, amet dolore!
                         </p>
                       </figure>
-                      <figcaption class="p-3 bg-white">
-                        <h3>Tom Cruise</h3>
-                        <p>Founder & Chairman</p>
+                      <figcaption class="p-3 ">
+                        <h3 class="heading-text">Tom Cruise</h3>
+                        <p class="para-txt">Founder & Chairman</p>
                         <span
                           ><i class="fa-brands fa-x-twitter"></i>
                           <i class="fa-brands fa-instagram"></i>
@@ -741,7 +758,7 @@
                           alt="CEO"
                           class="figure-stat"
                         />
-                        <p class="details text-start p-3 text-white">
+                        <p class="details text-start p-3 text-white para-txt">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Nobis nostrum est, cum temporibus magni ea at
                           aperiam, molestias, ad soluta quo odio! Fuga, amet
@@ -751,9 +768,9 @@
                           Fuga, amet dolore!
                         </p>
                       </figure>
-                      <figcaption class="p-3 bg-white">
-                        <h3>Sam Jason</h3>
-                        <p>CEO</p>
+                      <figcaption class="p-3 ">
+                        <h3 class="heading-text">Sam Jason</h3>
+                        <p class="para-txt"> CEO</p>
                         <span
                           ><i class="fa-brands fa-x-twitter"></i>
                           <i class="fa-brands fa-instagram"></i>
@@ -771,7 +788,7 @@
                           alt="co-founder"
                           class="figure-stat"
                         />
-                        <p class="details text-start p-3 text-white">
+                        <p class="details text-start p-3 text-white para-txt">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Nobis nostrum est, cum temporibus magni ea at
                           aperiam, molestias, ad soluta quo odio! Fuga, amet
@@ -781,9 +798,9 @@
                           Fuga, amet dolore!
                         </p>
                       </figure>
-                      <figcaption class="p-3 bg-white">
-                        <h3>Alexa Robert</h3>
-                        <p>Co Fouder</p>
+                      <figcaption class="p-3">
+                        <h3 class="heading-text">Alexa Robert</h3>
+                        <p class="para-txt">Co Fouder</p>
                         <span
                           ><i class="fa-brands fa-x-twitter"></i>
                           <i class="fa-brands fa-instagram"></i>
@@ -803,7 +820,7 @@
                           alt="founder-chairman"
                           class="figure-stat"
                         />
-                        <p class="details text-start p-3 text-white">
+                        <p class="details text-start p-3 text-white para-txt">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Nobis nostrum est, cum temporibus magni ea at
                           aperiam, molestias, ad soluta quo odio! Fuga, amet
@@ -813,9 +830,9 @@
                           Fuga, amet dolore!
                         </p>
                       </figure>
-                      <figcaption class="p-3 bg-white">
-                        <h3>Tom Cruise</h3>
-                        <p>Founder & Chairman</p>
+                      <figcaption class="p-3 ">
+                        <h3 class="heading-text">Tom Cruise</h3>
+                        <p class="para-txt">Founder & Chairman</p>
                         <span
                           ><i class="fa-brands fa-x-twitter"></i>
                           <i class="fa-brands fa-instagram"></i>
@@ -833,7 +850,7 @@
                           alt="Chairman"
                           class="img-fluid figure-stat"
                         />
-                        <p class="details text-start p-3 text-white">
+                        <p class="details text-start p-3 text-white para-txt">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Nobis nostrum est, cum temporibus magni ea at
                           aperiam, molestias, ad soluta quo odio! Fuga, amet
@@ -843,9 +860,9 @@
                           Fuga, amet dolore!
                         </p>
                       </figure>
-                      <figcaption class="p-3 bg-white">
-                        <h3>Tom Cruise</h3>
-                        <p>Founder & Chairman</p>
+                      <figcaption class="p-3">
+                        <h3 class="heading-text">Tom Cruise</h3>
+                        <p class="para-txt">Founder & Chairman</p>
                         <span
                           ><i class="fa-brands fa-x-twitter"></i>
                           <i class="fa-brands fa-instagram"></i>
@@ -863,7 +880,7 @@
                           alt="founder-chairman"
                           class="img-fluid figure-stat"
                         />
-                        <p class="details text-start p-3 text-white">
+                        <p class="details text-start p-3 text-white para-txt">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Nobis nostrum est, cum temporibus magni ea at
                           aperiam, molestias, ad soluta quo odio! Fuga, amet
@@ -873,9 +890,9 @@
                           Fuga, amet dolore!
                         </p>
                       </figure>
-                      <figcaption class="p-3 bg-white">
-                        <h3>Tom Cruise</h3>
-                        <p>Founder & Chairman</p>
+                      <figcaption class="p-3">
+                        <h3 class="heading-text">Tom Cruise</h3>
+                        <p class="para-txt">Founder & Chairman</p>
                         <span
                           ><i class="fa-brands fa-x-twitter"></i>
                           <i class="fa-brands fa-instagram"></i>
@@ -893,7 +910,7 @@
 
         <section class="brand-features pb-5 section">
           <div class="container w-100 overflow-hidden">
-            <h3 class="section-head fw-bold mb-3 text-center">
+            <h3 class="section-head fs-1 fw-bold mb-3 text-center heading-text">
               Why Choose Us ?
             </h3>
             <div class="row gx-4 gy-5 justify-content-center pt-5">
@@ -909,8 +926,8 @@
                       alt="icon-delivery"
                     />
                   </div>
-                  <h4>FREE AND FAST DELIVERY</h4>
-                  <p class="mb-0">Free delivery for all orders over $140</p>
+                  <h4 class="heading-text">FREE AND FAST DELIVERY</h4>
+                  <p class="mb-0 para-txt">Free delivery for all orders over $140</p>
                 </div>
               </div>
               <div class="col-md-4">
@@ -925,8 +942,8 @@
                       alt="customer-service"
                     />
                   </div>
-                  <h4>24/7 CUSTOMER SERVICE</h4>
-                  <p class="mb-0">Friendly 24/7 customer support</p>
+                  <h4 class="heading-text">24/7 CUSTOMER SERVICE</h4>
+                  <p class="mb-0 para-txt">Friendly 24/7 customer support</p>
                 </div>
               </div>
               <div class="col-md-4">
@@ -941,8 +958,8 @@
                       alt="icon-secure"
                     />
                   </div>
-                  <h4>MONEY BACK GUARANTEE</h4>
-                  <p class="mb-0">We reurn money within 30 days</p>
+                  <h4 class="heading-text">MONEY BACK GUARANTEE</h4>
+                  <p class="mb-0 para-txt">We reurn money within 30 days</p>
                 </div>
               </div>
             </div>
@@ -958,11 +975,11 @@
             >
               <div class="col">
                 <div class="footer-content">
-                  <h3>Exclusive</h3>
-                  <h4>Subscribe</h4>
-                  <p>Get 10% off your first order</p>
+                  <h3 class="heading-text">Exclusive</h3>
+                  <h4 class="heading-text">Subscribe</h4>
+                  <p class="para-txt">Get 10% off your first order</p>
                   <form action>
-                    <input type="email" placeholder="Enter your email" />
+                    <input class="para-txt" type="email" placeholder="Enter your email" />
                     <span class="m-0 mx-sm-2"
                       ><img
                         src="./public/assets/images/send.svg"
@@ -973,35 +990,35 @@
               </div>
               <div class="col">
                 <div class="footer-content">
-                  <h4>Support</h4>
-                  <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
-                  <p>exclusive@gmail.com</p>
-                  <p>+88015-88888-9999</p>
+                  <h4 class="heading-text">Support</h4>
+                  <p class="para-txt">111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
+                  <p class="para-txt">exclusive@gmail.com</p>
+                  <p class="para-txt">+88015-88888-9999</p>
                 </div>
               </div>
               <div class="col">
                 <div class="footer-content">
-                  <h4>Account</h4>
-                  <p>My Account</p>
-                  <p>Login / Register</p>
-                  <p>Cart</p>
-                  <p>Wishlist</p>
-                  <p>Shop</p>
+                  <h4 class="heading-text">Account</h4>
+                  <p class="para-txt">My Account</p>
+                  <p class="para-txt">Login / Register</p>
+                  <p class="para-txt">Cart</p>
+                  <p class="para-txt">Wishlist</p>
+                  <p class="para-txt">Shop</p>
                 </div>
               </div>
               <div class="col">
                 <div class="footer-content">
-                  <h4>Quick Link</h4>
-                  <p>Privacy Policy</p>
-                  <p>Terms Of Use</p>
-                  <p>FAQ</p>
-                  <p>Contact</p>
+                  <h4 class="heading-text">Quick Link</h4>
+                  <p class="para-txt">Privacy Policy</p>
+                  <p class="para-txt">Terms Of Use</p>
+                  <p class="para-txt">FAQ</p>
+                  <p class="para-txt">Contact</p>
                 </div>
               </div>
               <div class="col">
                 <div class="footer-content">
-                  <h4>Download App</h4>
-                  <span class="mb-2">Save $3 with App New User Only</span>
+                  <h4 class="heading-text">Download App</h4>
+                  <span class="mb-2 para-txt">Save $3 with App New User Only</span>
                   <div class="img-box">
                     <div class="left">
                       <img
@@ -1045,7 +1062,7 @@
               </div>
             </div>
             <div class="copyright-section d-flex justify-content-center pt-4">
-              <span> &copy; Copyright Raza 2025. All right reserved </span>
+              <span class="para-txt"> &copy; Copyright Raza 2025. All right reserved </span>
             </div>
           </div>
         </div>

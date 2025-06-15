@@ -7,7 +7,7 @@ var swiper6 = new Swiper(".mySwiper6", {
   
     breakpoints: {
       1200: {
-        slidesPerView:5, //larger screens (tablets, etc.)
+        slidesPerView:4, //larger screens (tablets, etc.)
       },
   
       768: {
@@ -104,3 +104,5 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// For removing wishlist products
