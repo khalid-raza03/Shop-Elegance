@@ -12,7 +12,9 @@
 👉 [Live Preview](https://khalid-raza03.github.io/Shop-Elegance/)  
 
 ## Screenshots
-![Project Screenshot](./public/assets/images/image.png)
+![Project Screenshot](./public/assets/images/preview-1.png)
+
+![Project Screenshot](./public/assets/images/preview-2.png)
 
 ## Technologies  
 - HTML5 
