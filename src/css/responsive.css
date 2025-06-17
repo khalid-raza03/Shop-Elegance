@@ -7,13 +7,17 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media  (max-width: 1200px) {
   .design-main-wrapper .home-section {
     height: auto;
   }
   .design-main-wrapper .home-section .home-right {
     position: static;
     padding-top: 80px;
+  }
+
+   .header-middle .theme-btn{
+    font-size: 14px;
   }
   .design-main-wrapper .home-section .home-right img {
     height: 500px;
@@ -72,6 +76,13 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .design-main-wrapper .wishlist-head{
+    display: none !important;
+  }
+  .truncate{
+    max-width: 320px;
+  }
 
   .design-main-wrapper .header-top .header-top-center {
     font-size: var(--font-size5);

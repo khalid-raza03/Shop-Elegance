@@ -8,6 +8,13 @@
     
 }
 
+.truncate {
+  width:100%;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .para-txt{
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
@@ -16,3 +23,8 @@
 .section-head{
   cursor: pointer;
 }
+
+
+
+
+

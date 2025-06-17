@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+body{
+  cursor: none;
+
+}
+
 .design-main-wrapper .pb-5{
    padding-bottom: 5rem !important;
 }

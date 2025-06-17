@@ -105,4 +105,9 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-// For removing wishlist products
+//cursor effect
+
+  new kursor({
+    type: 1,
+    color: "#db4444",
+  });

@@ -216,6 +216,18 @@
   font-weight: 700;
 }
 
+.design-main-wrapper .modal-header,
+.design-main-wrapper .modal-footer
+{
+   background-color: #ea5c5c;
+  background-image: url("https://www.transparenttextures.com/patterns/flowers.png");
+}
+
+.design-main-wrapper .modal-content{
+   background-color: #e2928f;
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+}
+
 .header-middle .theme-btn {
   background: linear-gradient(60deg, #db4444, #f7adad);
   border-color: transparent;
@@ -236,12 +248,6 @@
   border-bottom: 0.8px solid #fc030317;
 }
 
-.truncate {
-  width: 200px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 .wishlists .product-name {
   font-size: 14px;
@@ -771,8 +777,8 @@ section.dark h4,
 
 /* footer section styling */
 .design-main-wrapper .footer-content-wrapper {
-  background-color: #db4444;
   background-attachment: fixed;
+  background-color: #db4444;
   background-image: url("https://www.transparenttextures.com/patterns/flowers.png");
   padding: 50px;
 }
