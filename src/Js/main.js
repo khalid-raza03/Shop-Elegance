@@ -3,7 +3,7 @@ var swiper6 = new Swiper(".mySwiper6", {
     loop: true, 
     loopFillGroupWithBlank: false,
     speed: 700,
-    centeredSlides: true, 
+    centeredSlides: false, 
   
     breakpoints: {
       1200: {
@@ -79,9 +79,6 @@ darkModeBtn.addEventListener("click", () => {
     section.classList.toggle("dark");
   });
 });
-
-
-
 
 
 // scroll to top button
