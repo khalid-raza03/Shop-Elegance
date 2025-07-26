@@ -109,5 +109,8 @@ function topFunction() {
 
   new kursor({
     type: 1,
-    color: "#db4444",
+    color: "#ffffff",
   });
+
+  // animate.css overriding
+  document.documentElement.style.setProperty('--animate-duration', '3s');

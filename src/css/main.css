@@ -746,6 +746,13 @@ section.dark h4,
   white-space: nowrap;
   padding: 30px 50px;
   position: relative;
+
+  img{
+    transition: transform 0.4s ease-in-out;
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
 }
 
 .design-main-wrapper .brand-features .features::after {
