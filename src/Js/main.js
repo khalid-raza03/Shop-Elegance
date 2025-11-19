@@ -1,4 +1,6 @@
-var swiper6 = new Swiper(".mySwiper6", {
+// Initialize Swiper only if it exists and the element is present
+if (typeof Swiper !== 'undefined' && document.querySelector('.mySwiper6')) {
+  var swiper6 = new Swiper(".mySwiper6", {
     spaceBetween: 30,
     loop: true, 
     loopFillGroupWithBlank: false,
@@ -24,7 +26,7 @@ var swiper6 = new Swiper(".mySwiper6", {
     },
     autoplay: {
       delay:2500, 
-      disableOnInteraction: false, // Keep autoplay active even after user interaction
+      disableOnInteraction: false, 
     },
     pagination: {
       el: '.swiper-pagination',
@@ -32,23 +34,34 @@ var swiper6 = new Swiper(".mySwiper6", {
         dynamicBullets: false,
       }
   });
+}
 
 
 
-  // menu open and close script
-  const menu = document.getElementById("menu-icon");
-  const cancel = document.getElementById("cancel-icon");
-  const offcanvas = document.getElementById("navbarOffcanvasLg");
+  // menu open and close script - wait for DOM to be ready
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+      const menu = document.getElementById("menu-icon");
+      const cancel = document.getElementById("cancel-icon");
+      const offcanvas = document.getElementById("navbarOffcanvasLg");
 
-  function changeIcon() {
-      menu.style.display = "none";
-      cancel.style.display = "inline";
-  }
+      window.changeIcon = function() {
+          if (menu && cancel) {
+            menu.style.display = "none";
+            cancel.style.display = "inline";
+          }
+      }
 
-  // Listen for when the offcanvas is closed and reset the icons
-  offcanvas.addEventListener("hidden.bs.offcanvas", function () {
-      menu.style.display = "inline";
-      cancel.style.display = "none";
+      // Listen for when the offcanvas is closed and reset the icons
+      if (offcanvas) {
+        offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+            if (menu && cancel) {
+              menu.style.display = "inline";
+              cancel.style.display = "none";
+            }
+        });
+      }
+    }, 100);
   });
 
 
@@ -57,27 +70,48 @@ var swiper6 = new Swiper(".mySwiper6", {
     const menuItems = document.querySelectorAll('.my-menu-items a');
     
     // Handle click on dropdown items
-    menuItems.forEach(item => {
-      item.addEventListener('click', function(e) {
-        e.preventDefault();
-        const selectedLanguage = this.getAttribute('data-language');
-        dropdownBtn.innerHTML = selectedLanguage + ' <i class="dropdown-icon px-2"></i>';
-      
+    if (dropdownBtn && menuItems.length > 0) {
+      menuItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          const selectedLanguage = this.getAttribute('data-language');
+          dropdownBtn.innerHTML = selectedLanguage + ' <i class="dropdown-icon px-2"></i>';
+        
+        });
       });
-    });
+    }
   });
 
 
-//dark mode feature
-var darkModeBtn = document.getElementById("darkMode");
-var sections = document.querySelectorAll(".section"); 
+//dark mode feature - wait for components to load
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(() => {
+    var darkModeBtn = document.getElementById("darkMode");
+    var sections = document.querySelectorAll(".section"); 
 
-darkModeBtn.addEventListener("click", () => {
-  darkModeBtn.classList.toggle("turn-on");
+    if (darkModeBtn) {
+      // Load saved dark mode preference
+      const isDarkMode = localStorage.getItem('darkMode') === 'true';
+      if (isDarkMode) {
+        darkModeBtn.classList.add("turn-on");
+        sections.forEach((section) => {
+          section.classList.add("dark");
+        });
+      }
 
-  sections.forEach((section) => {
-    section.classList.toggle("dark");
-  });
+      darkModeBtn.addEventListener("click", () => {
+        darkModeBtn.classList.toggle("turn-on");
+        const isNowDark = darkModeBtn.classList.contains("turn-on");
+        
+        sections.forEach((section) => {
+          section.classList.toggle("dark");
+        });
+        
+        // Save preference to localStorage
+        localStorage.setItem('darkMode', isNowDark);
+      });
+    }
+  }, 100);
 });
 
 
@@ -85,16 +119,18 @@ darkModeBtn.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", function () {
   let mybutton = document.getElementById("scrollToTop");
 
-  window.onscroll = function () {
-    if (
-      document.body.scrollTop > 200 ||
-      document.documentElement.scrollTop > 200
-    ) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  };
+  if (mybutton) {
+    window.onscroll = function () {
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    };
+  }
 });
 
 function topFunction() {
@@ -103,11 +139,23 @@ function topFunction() {
 }
 
 //cursor effect
-
+document.addEventListener("DOMContentLoaded", function () {
   new kursor({
     type: 1,
     color: "#ffffff",
   });
+});
 
   // animate.css overriding
   document.documentElement.style.setProperty('--animate-duration', '3s');
+
+// Login/Signup toggle function
+function toggleLogin() {
+  const loginForm = document.getElementById('loginForm');
+  const signupForm = document.getElementById('signupForm');
+  
+  if (loginForm && signupForm) {
+    loginForm.classList.toggle('d-none');
+    signupForm.classList.toggle('d-none');
+  }
+}

@@ -1,4 +1,3 @@
-@import url(./resets.css);
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 .heading-text{
@@ -26,5 +25,21 @@
 
 
 
+.text-custom-small{
+  font-size: calc(
+  12px + (16 - 12) * ((100vw - 320px) / (1920 - 320))
+);
+}
 
 
+.text-custom-medium{
+  font-size: calc(
+  12px + (20 - 14) * ((100vw - 320px) / (1920 - 320))
+);
+}
+
+.text-custom-large{
+  font-size: calc(
+  16px + (26 - 16) * ((100vw - 320px) / (1920 - 320))
+);
+}

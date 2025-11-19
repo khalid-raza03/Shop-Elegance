@@ -82,7 +82,7 @@
 
 .design-main-wrapper main {
   background-color: #e2928f;
-  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+
   background-attachment: fixed;
 }
 
@@ -152,8 +152,12 @@
   display: block;
   text-align: left;
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--secondary-color) ;
   transition: all 0.3s ease-in-out;
+
+  &:hover{
+    color: var(--primary-color) !important;
+  }
 }
 
 .design-main-wrapper
@@ -217,20 +221,18 @@
 }
 
 .design-main-wrapper .modal-header,
-.design-main-wrapper .modal-footer
-{
-   background-color: #ea5c5c;
+.design-main-wrapper .modal-footer {
+  background-color: #ea5c5c;
   background-image: url("https://www.transparenttextures.com/patterns/flowers.png");
 }
 
-.design-main-wrapper .modal-content{
-   background-color: #e2928f;
-  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+.design-main-wrapper .modal-content {
+  background-color: #e2928f;
 }
 
-.header-middle .theme-btn {
+.design-main-wrapper .theme-btn {
   background: linear-gradient(60deg, #db4444, #f7adad);
-  border-color: transparent;
+  border-color: white;
   color: #ffffff;
   transition: background 0.5s ease-in-out, border 0.5s ease-in;
 
@@ -247,7 +249,6 @@
 .wishlists .wishlist-content {
   border-bottom: 0.8px solid #fc030317;
 }
-
 
 .wishlists .product-name {
   font-size: 14px;
@@ -308,12 +309,14 @@
 
 .section.dark p,
 .section.dark h2,
-section.dark h3,
-section.dark h4,
+.section.dark h3,
+.section.dark h4,
+.section.dark a,
+.section.dark button,
+.section.dark button::after,
 .section.dark .fa-brands {
-  color: #e0e0e0;
+  color: #e0e0e0 !important;
 }
-
 
 .section.dark .swiper-pagination-bullet {
   background: #ffffff;
@@ -345,7 +348,7 @@ section.dark h4,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 0px 9px 0px;
+  padding: 9px 0;
 }
 
 .design-main-wrapper .header-middle-center .navbar .navbar-toggler:focus {
@@ -747,9 +750,9 @@ section.dark h4,
   padding: 30px 50px;
   position: relative;
 
-  img{
+  img {
     transition: transform 0.4s ease-in-out;
-    &:hover{
+    &:hover {
       transform: scale(1.2);
     }
   }
@@ -832,7 +835,7 @@ section.dark h4,
 }
 
 .design-main-wrapper .footer-content-wrapper .footer-content form input:focus {
-  background-color:transparent;
+  background-color: transparent;
   outline: none;
   border: none;
   color: var(--secondary-color);
@@ -869,4 +872,13 @@ section.dark h4,
   flex-direction: column;
   gap: 8px;
   padding-left: 10px;
+}
+
+/* Glass effect for contact page */
+.contact-info,
+.contact-form {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }

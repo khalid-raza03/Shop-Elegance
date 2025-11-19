@@ -4,7 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-display: swap !important;
 }
+
+/* Font optimization with font-display swap */
+.fa, .fas, .far, .fab {
+  font-display: swap !important;
+}
+
 
 body{
   cursor: none;
@@ -49,4 +56,9 @@ p{
   max-width: 1800px !important;
   padding: 0px 15px !important;
   margin: 0px auto;
+}
+
+/* bootstrap form reset */
+.form-control:focus {
+  box-shadow: none !important;
 }

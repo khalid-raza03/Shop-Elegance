@@ -4,33 +4,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop Elegance</title>
+  <title>Shop Elegance : Login-Signup</title>
+
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="./public/assets/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="./public/assets/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./public/assets/favicon-16x16.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <!-- for icons and fonts -->
-  <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <!-- Bootstrap cdn -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    crossorigin="anonymous" />
-  <!-- swiper slider css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <!-- Cursor css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kursor/dist/kursor.css" />
 
-  <!-- custom CSS -->
-  <link rel="stylesheet" href="./src/css/main.css" />
-  <link rel="stylesheet" href="./src/css/responsive.css" />
+  <!-- font awesome -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/webfonts/fa-solid-900.woff2"
+    as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print"
+    onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </noscript>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    crossorigin="anonymous" />
+
+  <!-- kursor css  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kursor/dist/kursor.css" media="print"
+    onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kursor/dist/kursor.css" />
+  </noscript>
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="../src/css/main.css" />
+
+  <style>
+    .design-main-wrapper .side-navbar .accordion-item {
+      background: transparent !important;
+      border: none !important;
+    }
+
+    .design-main-wrapper .side-navbar .accordion-button:focus {
+      box-shadow: none !important;
+    }
+
+    .accordion-button::after {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      content: "\f078";
+      background-image: none !important;
+    }
+
+
+    @media (max-width: 992px) {
+
+      /* lg */
+      .border-lg {
+        border: none !important;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../src/css/responsive.css" />
 </head>
 
 <body>
   <div class="design-main-wrapper">
-
     <button onclick="topFunction()" id="scrollToTop" title="Go to top">
       <i class="fa-solid fa-angle-up"></i>
     </button>
@@ -40,7 +75,7 @@
         <div class="offcanvas offcanvas-start section" tabindex="-1" id="navbarOffcanvasLg"
           aria-labelledby="navbarOffcanvasLgLabel">
           <div class="offcanvas-header border-bottom">
-            <h5 class="offcanvas-title fw-bold ms-s fs-3 " id="navbarOffcanvasLgLabel">
+            <h5 class="offcanvas-title fw-bold ms-s text-custom-large" id="navbarOffcanvasLgLabel">
               Explore
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -48,18 +83,18 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav d-flex">
               <li class="py-2">
-                <a class="nav-link para-txt" aria-current="page" href="#">Home</a>
+                <a class="nav-link para-txt" aria-current="page" href="../index.html">Home</a>
               </li>
 
               <li class="py-2">
-                <a class="nav-link para-txt" href="./public/contact.html">Contact</a>
+                <a class="nav-link para-txt" href="../public/contact.html">Contact</a>
               </li>
               <li class="py-2">
-                <a class="nav-link active para-txt" href="#">About</a>
+                <a class="nav-link active para-txt" href="./public/about-us.html">About</a>
               </li>
 
               <li class="py-2">
-                <a class="nav-link para-txt" href="#">Testimonials</a>
+                <a class="nav-link para-txt" href="#testimonials">Testimonials</a>
               </li>
             </ul>
           </div>
@@ -72,15 +107,16 @@
               <button class="navbar-toggler d-lg-none d-inline toggle-bar align-self-end" type="button"
                 data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg"
                 onclick="changeIcon()">
-                <img id="menu-icon" src="./public/assets/images/hamburger.svg" alt="Menu" height="25" width="25" />
+                <img id="menu-icon" src="./public/assets/images/hamburger.svg" alt="Menu" height="25" width="25"
+                  loading="lazy" />
                 <img id="cancel-icon" src="./public/assets/images/cancel.svg" alt="Close" height="25" width="25"
-                  style="display: none" />
+                  style="display: none" loading="lazy" />
               </button>
 
               <li id="darkMode" class="dark-mode-box nav-link">
                 <button class="border-0 bg-transparent" title="dark-mode">
-                  <img class="off" src="./public/assets/images/darkMode-off.svg" alt="darkMode-off" />
-                  <img class="on" src="./public/assets/images/dark-mode-on.svg" alt="dark-mode-on" />
+                  <img class="off" src="./public/assets/images/darkMode-off.svg" alt="darkMode-off" loading="lazy" />
+                  <img class="on" src="./public/assets/images/dark-mode-on.svg" alt="dark-mode-on" loading="lazy" />
                 </button>
               </li>
 
@@ -91,11 +127,11 @@
 
               <div class="header-top-right">
                 <menu>
-                  <li class="position-relative d-inline-block dropdown-list ">
+                  <li class="position-relative d-inline-block dropdown-list">
                     <a href="#" class="nav-link me-2 text-white my-dropdown-btn para-txt" id="languageDropdown">
                       English <i class="dropdown-icon px-2"></i>
                     </a>
-                    <ul class="my-menu p-0 m-0 ">
+                    <ul class="my-menu p-0 m-0">
                       <li class="my-menu-items">
                         <a class="para-txt" href="#" data-language="English">English</a>
                       </li>
@@ -122,7 +158,7 @@
         <div class="header-middle sub-section">
           <div class="container">
             <!-- middle header -->
-            <div class="header-middle-wrapper">
+            <div class="header-middle-wrapper py-3">
               <div class="header-middle-left">
                 <h2 class="brand-name heading-text fs-2">Shop Elegance</h2>
               </div>
@@ -132,18 +168,18 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                       <ul class="navbar-nav d-none d-lg-flex">
                         <li>
-                          <a class="nav-link para-txt" target="_blank" aria-current="page" href="#home">Home</a>
+                          <a class="nav-link para-txt" aria-current="page" href="../index.html">Home</a>
                         </li>
 
                         <li>
                           <a class="nav-link para-txt" target="_blank" href="./public/contact.html">Contact</a>
                         </li>
                         <li>
-                          <a class="nav-link active para-txt" href="#">About</a>
+                          <a class="nav-link active para-txt" href="./public/about-us.html">About</a>
                         </li>
 
                         <li>
-                          <a target="_blank" class="nav-link para-txt" href="#">Testimonials</a>
+                          <a class="nav-link para-txt" href="#testimonials">Testimonials</a>
                         </li>
                       </ul>
                     </div>
@@ -156,265 +192,16 @@
                   <input name="search here" type="text" class="form-control para-txt"
                     placeholder="What are you looking for ?" aria-label="Search" aria-describedby="search- addon" />
                   <button class="btn" type="button" id="search-addon" title="search-button">
-                    <img src="./public/assets/images/search-icon.svg" alt="search-icon" />
+                    <img src="./public/assets/images/search-icon.svg" alt="search-icon" loading="lazy" />
                   </button>
                 </div>
 
-                <span type="button" class="ps-3 border-0 btn-transparent" data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"><i class="fa-regular fs-4 fa-heart text-light"></i></span>
+                <span type="button" class="ps-3 border-0 btn-transparent"><i
+                    class="fa-regular fs-4 fa-heart text-light"></i></span>
                 <span type="button" class="ps-3 border-0 btn-transparent"><i
                     class="fa-solid fa-cart-shopping fs-4 text-light"></i></span>
                 <span type="button" class="ps-3 border-0 btn-transparent"><i
                     class="fa-regular fa-user fs-4 text-light"></i></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">
-                    Your Wishlist
-                  </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="wishlists d-flex flex-column gap-3 align-items-center">
-                    <div class="wishlist-head d-flex justify-content-evenly w-100 py-2 rounded">
-                      <p class="wishlist-head-titles fw-bold">
-                        Product
-                      </p>
-                      <p class="wishlist-head-titles  fw-bold">
-                        Price
-                      </p>
-                      <p class="wishlist-head-titles  fw-bold">
-                        Availability
-                      </p>
-                    </div>
-
-                    <div class="wishlist-content py-3 w-100 border-bottom">
-                      <div class="row flex-md-row flex-column align-items-start align-items-md-center gap-2">
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                          <button class="remove-product btn-transparent border-0 bg-transparent">
-                            <i class="fa-solid fa-xmark d-md-inline d-none"></i>
-                          </button>
-                        </div>
-
-                        <div class="col-3">
-                          <div
-                            class="product-detail-section gap-2 d-flex align-items-xl-end align-items-start justify-content-center flex-xl-row flex-column">
-                            <img src="./public/assets/images/download.jpg" alt="product-img" width="60" height="80"
-                              class="rounded" />
-                            <div class="product-details">
-                              <span class="product-name mb-2">Product name</span>
-                              <p class="product-desc truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Corporis, fugiat.</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-3 product-price d-flex align-items-center justify-content-md-center">
-                          <span class="price"> ₹ 750/- </span>
-
-                        </div>
-                        <div class="col-3 d-flex align-items-center justify-content-md-center">
-                          <div class="product-stock d-flex flex-column align-items-center gap-md-2 ">
-                            <span class="stock-status">
-                              <i class="fa-solid fa-check d-none d-md-inline"></i>
-                            </span>
-                            <span class="stock-txt">In stock </span>
-                          </div>
-                        </div>
-
-                        <div class="add-to-cart col d-flex justify-content-md-end align-items-center">
-                          <button
-                            class="cart-btn border theme-btn btn  rounded                                                                                                                                                                                ">
-                            Add to cart
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="wishlist-content py-3 w-100 border-bottom">
-                      <div class="row flex-md-row flex-column align-items-start align-items-md-center gap-2">
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                          <button class="remove-product btn-transparent border-0 bg-transparent">
-                            <i class="fa-solid fa-xmark d-md-inline d-none"></i>
-                          </button>
-                        </div>
-
-                        <div class="col-3">
-                          <div
-                            class="product-detail-section gap-2 d-flex align-items-xl-end align-items-start justify-content-center flex-xl-row flex-column">
-                            <img src="./public/assets/images/download.jpg" alt="product-img" width="60" height="80"
-                              class="rounded" />
-                            <div class="product-details">
-                              <span class="product-name mb-2">Product name</span>
-                              <p class="product-desc truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Corporis, fugiat.</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-3 product-price d-flex align-items-center justify-content-md-center">
-                          <span class="price"> ₹ 750/- </span>
-
-                        </div>
-                        <div class="col-3 d-flex align-items-center justify-content-md-center">
-                          <div class="product-stock d-flex flex-column align-items-center gap-md-2 ">
-                            <span class="stock-status">
-                              <i class="fa-solid fa-check d-none d-md-inline"></i>
-                            </span>
-                            <span class="stock-txt">In stock </span>
-                          </div>
-                        </div>
-
-                        <div class="add-to-cart col d-flex justify-content-md-end align-items-center">
-                          <button
-                            class="cart-btn border theme-btn btn  rounded                                                                                                                                                                                ">
-                            Add to cart
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="wishlist-content py-3 w-100 border-bottom">
-                      <div class="row flex-md-row flex-column align-items-start align-items-md-center gap-2">
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                          <button class="remove-product btn-transparent border-0 bg-transparent">
-                            <i class="fa-solid fa-xmark d-md-inline d-none"></i>
-                          </button>
-                        </div>
-
-                        <div class="col-3">
-                          <div
-                            class="product-detail-section gap-2 d-flex align-items-xl-end align-items-start justify-content-center flex-xl-row flex-column">
-                            <img src="./public/assets/images/download.jpg" alt="product-img" width="60" height="80"
-                              class="rounded" />
-                            <div class="product-details">
-                              <span class="product-name mb-2">Product name</span>
-                              <p class="product-desc truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Corporis, fugiat.</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-3 product-price d-flex align-items-center justify-content-md-center">
-                          <span class="price"> ₹ 750/- </span>
-
-                        </div>
-                        <div class="col-3 d-flex align-items-center justify-content-md-center">
-                          <div class="product-stock d-flex flex-column align-items-center gap-md-2 ">
-                            <span class="stock-status">
-                              <i class="fa-solid fa-check d-none d-md-inline"></i>
-                            </span>
-                            <span class="stock-txt">In stock </span>
-                          </div>
-                        </div>
-
-                        <div class="add-to-cart col d-flex justify-content-md-end align-items-center">
-                          <button
-                            class="cart-btn border theme-btn btn  rounded                                                                                                                                                                                ">
-                            Add to cart
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="wishlist-content py-3 w-100 border-bottom">
-                      <div class="row flex-md-row flex-column align-items-start align-items-md-center gap-2">
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                          <button class="remove-product btn-transparent border-0 bg-transparent">
-                            <i class="fa-solid fa-xmark d-md-inline d-none"></i>
-                          </button>
-                        </div>
-
-                        <div class="col-3">
-                          <div
-                            class="product-detail-section gap-2 d-flex align-items-xl-end align-items-start justify-content-center flex-xl-row flex-column">
-                            <img src="./public/assets/images/download.jpg" alt="product-img" width="60" height="80"
-                              class="rounded" />
-                            <div class="product-details">
-                              <span class="product-name mb-2">Product name</span>
-                              <p class="product-desc truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Corporis, fugiat.</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-3 product-price d-flex align-items-center justify-content-md-center">
-                          <span class="price"> ₹ 750/- </span>
-
-                        </div>
-                        <div class="col-3 d-flex align-items-center justify-content-md-center">
-                          <div class="product-stock d-flex flex-column align-items-center gap-md-2 ">
-                            <span class="stock-status">
-                              <i class="fa-solid fa-check d-none d-md-inline"></i>
-                            </span>
-                            <span class="stock-txt">In stock </span>
-                          </div>
-                        </div>
-
-                        <div class="add-to-cart col d-flex justify-content-md-end align-items-center">
-                          <button
-                            class="cart-btn border theme-btn btn  rounded                                                                                                                                                                                ">
-                            Add to cart
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="wishlist-content py-3 w-100 border-bottom">
-                      <div class="row flex-md-row flex-column align-items-start align-items-md-center gap-2">
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                          <button class="remove-product btn-transparent border-0 bg-transparent">
-                            <i class="fa-solid fa-xmark d-md-inline d-none"></i>
-                          </button>
-                        </div>
-
-                        <div class="col-3">
-                          <div
-                            class="product-detail-section gap-2 d-flex align-items-xl-end align-items-start justify-content-center flex-xl-row flex-column">
-                            <img src="./public/assets/images/download.jpg" alt="product-img" width="60" height="80"
-                              class="rounded" />
-                            <div class="product-details">
-                              <span class="product-name mb-2">Product name</span>
-                              <p class="product-desc truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Corporis, fugiat.</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-3 product-price d-flex align-items-center justify-content-md-center">
-                          <span class="price"> ₹ 750/- </span>
-
-                        </div>
-                        <div class="col-3 d-flex align-items-center justify-content-md-center">
-                          <div class="product-stock d-flex flex-column align-items-center gap-md-2 ">
-                            <span class="stock-status">
-                              <i class="fa-solid fa-check d-none d-md-inline"></i>
-                            </span>
-                            <span class="stock-txt">In stock </span>
-                          </div>
-                        </div>
-
-                        <div class="add-to-cart col d-flex justify-content-md-end align-items-center">
-                          <button
-                            class="cart-btn border theme-btn btn  rounded                                                                                                                                                                                ">
-                            Add to cart
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                    Close
-                  </button>
-                  <button type="button" class="btn btn-primary theme-btn border">
-                    Save changes
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -430,283 +217,149 @@
         </div>
       </div>
     </header>
-
     <main>
-      <section id="home" class="section home-section pt-3 pb-xl-5">
+      <div class="hero-section py-5 section">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-12 align-self-center">
-              <div class="home-left">
-                <h2 class="heading-text animate__animated animate__lightSpeedInLeft">Our Story</h2>
-                <p class="text-wrap para-txt animate__animated animate__fadeInUp">
-                  Launced in 2015, Exclusive is South Asia’s premier online
-                  shopping makterplace with an active presense in Bangladesh.
-                  Supported by wide range of tailored marketing, data and
-                  service solutions, Exclusive has 10,500 sallers and 300
-                  brands and serves 3 millioons customers across the region.
-                </p>
-                <p class="text-wrap para-txt animate__animated animate__fadeInUp">
-                  Exclusive has more than 1 Million products to offer, growing
-                  at a very fast. Exclusive offers a diverse assotment in
-                  categories ranging from consumer.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-12">
-              <div class="home-right d-flex justify-content-end">
-                <img class="img-fluid" height="600" width="700" src="./public/assets/images/about-us.svg"
-                  alt="HomePage image" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-stats pb-5 section">
-        <div class="container">
-          <h3 class="section-head fw-bold fs-1 my-5 text-center heading-text">Our Stats</h3>
-          <div class="row g-4">
-            <div class="col-lg-3 col-sm-6 ">
-              <div class="stat-box">
-                <div class="img-box">
-                  <img src="./public/assets/images/stats-bg.svg" alt="stats-bg" />
-                  <img src="./public/assets/images/icon_shop.svg" alt="icon_shop" />
-                </div>
-                <h3 class="heading-text">10.5k</h3>
-                <p class="para-txt">Sallers active our site</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <div class="stat-box active">
-                <div class="img-box">
-                  <img class="border rounded-circle" src="./public/assets/images/Services.svg" alt="service" />
-                </div>
-                <h3 class="heading-text">10.5k</h3>
-                <p class="para-txt">Sallers active our site</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <div class="stat-box">
-                <div class="img-box">
-                  <img src="./public/assets/images/stats-bg.svg" alt="stats-bg" />
-                  <img src="./public/assets/images/icon_shop.svg" alt="shop-icon" />
-                </div>
-                <h3 class="heading-text">10.5k</h3>
-                <p class="para-txt">Sallers active our site</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <div class="stat-box">
-                <div class="img-box">
-                  <img src="./public/assets/images/stats-bg.svg" alt="stats-bg" />
-                  <img src="./public/assets/images/icon_shop.svg" alt="shop-icon" />
-                </div>
-                <h3 class="heading-text">10.5k</h3>
-                <p class="para-txt">Sallers active our site</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="employee-slider pb-5 section">
-        <div class="position-relative">
-          <div class="container w-100 overflow-hidden">
-            <h3 class="section-head fw-bold my-5 text-center heading-text fs-1">
-              The Minds Behind
-            </h3>
-            <div class="swiper mySwiper6 mb-0 flex-wrap justify-content-between">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide border-0 slides-employee">
-                  <div class="content-wrapper">
-                    <figure class="figure-stat-box">
-                      <img src="./public/assets/images/image 46.png" alt="Chairman" class="figure-stat" />
-                      <p class="details text-start p-3 text-white para-txt">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Nobis nostrum est, cum temporibus magni ea at
-                        aperiam, molestias, ad soluta quo odio! Fuga, amet
-                        dolore! Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Nobis nostrum est, cum temporibus
-                        magni ea at aperiam, molestias, ad soluta quo odio!
-                        Fuga, amet dolore!
-                      </p>
-                    </figure>
-                    <figcaption class="p-3 ">
-                      <h3 class="heading-text">Tom Cruise</h3>
-                      <p class="para-txt">Founder & Chairman</p>
-                      <span><i class="fa-brands fa-x-twitter"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-linkedin-in"></i></span>
-                    </figcaption>
+          <div class="row row-gap-2">
+            <div class="side-navbar col-lg-3 d-flex flex-column pe-2 pe-lg-4 border-end border-dark border-lg">
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                      aria-controls="flush-collapseOne">
+                      Women's Fashion
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body d-flex flex-column row-gap-3">
+                      <a href="#" class="text-dark py-2 border-bottom border-dark px-2" target="_blank"
+                        rel="noopener noreferrer">Clothes</a>
+                      <a href="#" class="text-dark py-2 border-bottom border-dark px-2" target="_blank"
+                        rel="noopener noreferrer">Footwears</a>
+                      <a href="#" class="text-dark py-2 border-bottom border-dark px-2" target="_blank"
+                        rel="noopener noreferrer">Jewelleries</a>
+                      <a href="#" class="text-dark py-2 border-bottom border-dark px-2" target="_blank"
+                        rel="noopener noreferrer">Accessories</a>
+                    </div>
                   </div>
                 </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                      aria-controls="flush-collapseTwo">
+                      Men's Fashion
+                    </button>
+                  </h2>
 
-                <div class="swiper-slide border-0 slides-employee">
-                  <div class="content-wrapper">
-                    <figure class="figure-stat-box">
-                      <img src="./public/assets/images/image 47.png" alt="CEO" class="figure-stat" />
-                      <p class="details text-start p-3 text-white para-txt">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Nobis nostrum est, cum temporibus magni ea at
-                        aperiam, molestias, ad soluta quo odio! Fuga, amet
-                        dolore! Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Nobis nostrum est, cum temporibus
-                        magni ea at aperiam, molestias, ad soluta quo odio!
-                        Fuga, amet dolore!
-                      </p>
-                    </figure>
-                    <figcaption class="p-3 ">
-                      <h3 class="heading-text">Sam Jason</h3>
-                      <p class="para-txt"> CEO</p>
-                      <span><i class="fa-brands fa-x-twitter"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-linkedin-in"></i></span>
-                    </figcaption>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body d-flex flex-column row-gap-3">
+                      <a href="#" class="text-dark py-2 border-bottom border-dark px-2" target="_blank"
+                        rel="noopener noreferrer">Clothes</a>
+                      <a href="#" class="text-dark py-2 border-bottom border-dark px-2" target="_blank"
+                        rel="noopener noreferrer">Footwears</a>
+                      <a href="#" class="text-dark py-2 border-bottom border-dark px-2" target="_blank"
+                        rel="noopener noreferrer">Fashion</a>
+                      <a href="#" class="text-dark py-2 border-bottom border-dark px-2" target="_blank"
+                        rel="noopener noreferrer">Accessories</a>
+                    </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="swiper-slide border-0 slides-employee">
-                  <div class="content-wrapper">
-                    <figure class="figure-stat-box">
-                      <img src="./public/assets/images/image 51.png" alt="co-founder" class="figure-stat" />
-                      <p class="details text-start p-3 text-white para-txt">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Nobis nostrum est, cum temporibus magni ea at
-                        aperiam, molestias, ad soluta quo odio! Fuga, amet
-                        dolore! Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Nobis nostrum est, cum temporibus
-                        magni ea at aperiam, molestias, ad soluta quo odio!
-                        Fuga, amet dolore!
-                      </p>
-                    </figure>
-                    <figcaption class="p-3">
-                      <h3 class="heading-text">Alexa Robert</h3>
-                      <p class="para-txt">Co Fouder</p>
-                      <span><i class="fa-brands fa-x-twitter"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <img src="./public/assets/images/Icon-Linkedin.svg" alt=";Icon-Linkedin" /></span>
-                    </figcaption>
-                  </div>
+              <a class="text-dark py-3 px-4 fw-bold" href="#">Electronics</a>
+              <a class="text-dark py-3 px-4 fw-bold" href="#">Home & Lifestyle</a>
+              <a class="text-dark py-3 px-4 fw-bold" href="#">Medicine</a>
+              <a class="text-dark py-3 px-4 fw-bold" href="#">Sports & Outdoor</a>
+              <a class="text-dark py-3 px-4 fw-bold" href="#">Baby’s & Toys</a>
+              <a class="text-dark py-3 px-4 fw-bold" href="#">Groceries & Pets</a>
+              <a class="text-dark py-3 px-4 fw-bold" href="#">Health & Beauty</a>
+            </div>
+
+            <div class="hero-slider col-lg-9 ps-2 ps-lg-5">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
                 </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="content flex-sm-row flex-column row-gap-3 bg-black rounded-3 d-flex justify-content-between py-3 px-4 align-items-center">
+                      <div class="slide-info d-flex flex-column row-gap-3 align-items-start">
+                        <div class="slide-title gap-2 d-flex align-items-center">
+                          <img src="./public/assets/images/apple-icon.svg" alt="apple-icon" class="img-fluid" />
+                          <span class="title-txt text-light">iPhone 14 Series</span>
+                        </div>
 
-                <div class="swiper-slide border-0 slides-employee">
-                  <div class="content-wrapper">
-                    <figure class="figure-stat-box">
-                      <img src="./public/assets/images/image 46.png" alt="founder-chairman" class="figure-stat" />
-                      <p class="details text-start p-3 text-white para-txt">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Nobis nostrum est, cum temporibus magni ea at
-                        aperiam, molestias, ad soluta quo odio! Fuga, amet
-                        dolore! Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Nobis nostrum est, cum temporibus
-                        magni ea at aperiam, molestias, ad soluta quo odio!
-                        Fuga, amet dolore!
-                      </p>
-                    </figure>
-                    <figcaption class="p-3 ">
-                      <h3 class="heading-text">Tom Cruise</h3>
-                      <p class="para-txt">Founder & Chairman</p>
-                      <span><i class="fa-brands fa-x-twitter"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-linkedin-in"></i></span>
-                    </figcaption>
+                        <p class="slide-details text-white text-custom-large fw-bold">
+                          Up to 10% off Voucher
+                        </p>
+
+                        <a href="#" class="text-light d-flex gap-3 text-decoration-underline link-offset-3">Shop Now
+                          <img src="./public/assets/images/right-arrow-icon.svg" alt="right-arrow-icon" /></a>
+                      </div>
+
+                      <div class="img-box">
+                        <img src="./public/assets/images/hero-img-1.svg" class="img-fluid" alt="hero-slide" />
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <div class="carousel-item">
+                    <div class="content flex-sm-row flex-column row-gap-3 bg-black rounded-3 d-flex justify-content-between py-3 px-4 align-items-center">
+                      <div class="slide-info d-flex flex-column row-gap-3 align-items-start">
+                        <div class="slide-title gap-2 d-flex align-items-center">
+                          <img src="./public/assets/images/apple-icon.svg" alt="apple-icon" class="img-fluid" />
+                          <span class="title-txt text-light">iPhone 15 Series</span>
+                        </div>
 
-                <div class="swiper-slide border-0 slides-employee">
-                  <div class="content-wrapper">
-                    <figure class="figure-stat-box">
-                      <img src="./public/assets/images/image 47.png" alt="Chairman" class="img-fluid figure-stat" />
-                      <p class="details text-start p-3 text-white para-txt">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Nobis nostrum est, cum temporibus magni ea at
-                        aperiam, molestias, ad soluta quo odio! Fuga, amet
-                        dolore! Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Nobis nostrum est, cum temporibus
-                        magni ea at aperiam, molestias, ad soluta quo odio!
-                        Fuga, amet dolore!
-                      </p>
-                    </figure>
-                    <figcaption class="p-3">
-                      <h3 class="heading-text">Tom Cruise</h3>
-                      <p class="para-txt">Founder & Chairman</p>
-                      <span><i class="fa-brands fa-x-twitter"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-linkedin-in"></i></span>
-                    </figcaption>
+                        <p class="slide-details text-white text-custom-large fw-bold">
+                          Up to 30% off Voucher
+                        </p>
+
+                        <a href="#" class="text-white d-flex gap-3 text-decoration-underline link-offset-3">Shop Now
+                          <img src="./public/assets/images/right-arrow-icon.svg" alt="right-arrow-icon" /></a>
+                      </div>
+
+                      <div class="img-box">
+                        <img src="./public/assets/images/hero-img-1.svg" class="img-fluid" alt="hero-slide" />
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <div class="carousel-item">
+                    <div class="content flex-sm-row flex-column row-gap-3 bg-black rounded-3 d-flex justify-content-between py-3 px-4 align-items-center">
+                      <div class="slide-info d-flex flex-column row-gap-3 align-items-start">
+                        <div class="slide-title gap-2 d-flex align-items-center">
+                          <img src="./public/assets/images/apple-icon.svg" alt="apple-icon" class="img-fluid" />
+                          <span class="title-txt text-light">iPhone 16 Series</span>
+                        </div>
 
-                <div class="swiper-slide border-0 slides-employee">
-                  <div class="content-wrapper">
-                    <figure class="figure-stat-box">
-                      <img src="./public/assets/images/image 51.png" alt="founder-chairman"
-                        class="img-fluid figure-stat" />
-                      <p class="details text-start p-3 text-white para-txt">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Nobis nostrum est, cum temporibus magni ea at
-                        aperiam, molestias, ad soluta quo odio! Fuga, amet
-                        dolore! Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Nobis nostrum est, cum temporibus
-                        magni ea at aperiam, molestias, ad soluta quo odio!
-                        Fuga, amet dolore!
-                      </p>
-                    </figure>
-                    <figcaption class="p-3">
-                      <h3 class="heading-text">Tom Cruise</h3>
-                      <p class="para-txt">Founder & Chairman</p>
-                      <span><i class="fa-brands fa-x-twitter"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-linkedin-in"></i></span>
-                    </figcaption>
+                        <p class="slide-details text-white text-custom-large fw-bold">
+                          Up to 40% off Voucher
+                        </p>
+
+                        <a href="#" class="text-white d-flex gap-3 text-decoration-underline link-offset-3">Shop Now
+                          <img src="./public/assets/images/right-arrow-icon.svg" alt="right-arrow-icon" /></a>
+                      </div>
+
+                      <div class="img-box">
+                        <img src="./public/assets/images/hero-img-1.svg" class="img-fluid" alt="hero-slide" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-pagination pb-2"></div>
         </div>
-      </section>
+      </div>
 
-      <section class="brand-features pb-5 section">
-        <div class="container w-100 overflow-hidden">
-          <h3 class="section-head fs-1 fw-bold mb-3 text-center heading-text">
-            Why Choose Us ?
-          </h3>
-          <div class="row gx-4 gy-5 justify-content-center pt-5">
-            <div class="col-md-4">
-              <div class="features">
-                <div class="img-box">
-                  <img src="./public/assets/images/stats-bg.svg" alt="stats-bg" />
-                  <img src="./public/assets/images/icon-delivery.svg" alt="icon-delivery" />
-                </div>
-                <h4 class="heading-text">FREE AND FAST DELIVERY</h4>
-                <p class="mb-0 para-txt">Free delivery for all orders over $140</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="features">
-                <div class="img-box">
-                  <img src="./public/assets/images/stats-bg.svg" alt="stats-bg" />
-                  <img src="./public/assets/images/Icon-Customer service.svg" alt="customer-service" />
-                </div>
-                <h4 class="heading-text">24/7 CUSTOMER SERVICE</h4>
-                <p class="mb-0 para-txt">Friendly 24/7 customer support</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="features">
-                <div class="img-box">
-                  <img src="./public/assets/images/stats-bg.svg" alt="stats-bg" />
-                  <img src="./public/assets/images/Icon-secure.svg" alt="icon-secure" />
-                </div>
-                <h4 class="heading-text">MONEY BACK GUARANTEE</h4>
-                <p class="mb-0 para-txt">We reurn money within 30 days</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer>
@@ -718,7 +371,7 @@
                 <h3 class="heading-text">Exclusive</h3>
                 <h4 class="heading-text">Subscribe</h4>
                 <p class="para-txt">Get 10% off your first order</p>
-                <form action>
+                <form action="">
                   <input id="emailing" class="para-txt" type="email" placeholder="Enter your email" />
                   <span class="m-0 mx-sm-2"><img src="./public/assets/images/send.svg" alt="Send-icon" /></span>
                 </form>
@@ -727,9 +380,9 @@
             <div class="col">
               <div class="footer-content">
                 <h4 class="heading-text">Support</h4>
-                <a href="#" class="text-white para-txt">111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</a>
-                <a href="#" class="text-white para-txt">exclusive@gmail.com</a>
-                <a href="#" class="text-white para-txt">+88015-88888-9999</a>
+                <a href="#" class="text-white para-txt">111 Bijoy sarani, West Bengal, DH 1515, India.</a>
+                <a href="#" class="text-white para-txt">ShopElegance@gmail.com</a>
+                <a href="#" class="text-white para-txt">+91 015-88888-9999</a>
               </div>
             </div>
             <div class="col">
@@ -760,7 +413,6 @@
                     <a href="#">
                       <img src="./public/assets/images/Qr Code.svg" alt="qr-code-icon" />
                     </a>
-
                   </div>
                   <div class="right">
                     <a href="#">
@@ -769,7 +421,6 @@
                     <a href="#">
                       <img src="./public/assets/images/google-play.svg" alt="google-play" />
                     </a>
-
                   </div>
                 </div>
                 <div class="icon-box text-white">
@@ -785,7 +436,6 @@
                     <img class="ps-2" src="./public/assets/images/instgaram-white.svg" alt="icon-instagram" />
                   </a>
 
-
                   <a href="#">
                     <img class="ps-2" src="./public/assets/images/linkedin-white.svg" alt="Icon-Linkedin" />
                   </a>
@@ -794,16 +444,19 @@
             </div>
           </div>
           <div class="copyright-section d-flex justify-content-center pt-4">
-            <span class="para-txt"> &copy; Copyright Raza 2025. All right reserved </span>
+            <span class="para-txt">
+              © Copyright Raza 2025. All right reserved
+            </span>
           </div>
         </div>
       </div>
     </footer>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/kursor"></script>
-  <script src="./src/Js/main.js"></script>
+  <script src="../src/Js/components.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/kursor" defer></script>
+  <script src="../src/Js/main.js"></script>
 </body>
 
 </html>
