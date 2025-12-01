@@ -1,1117 +1,786 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop Elegance : About Us</title>
 
-    <!-- Critical CSS inline for LCP optimization -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Elegance : About Us</title>
 
-      body {
-        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, sans-serif;
-        line-height: 1.6;
-      }
+  <!-- Critical CSS inline for LCP optimization -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      .header-wrapper {
-        position: relative;
-        z-index: 1000;
-      }
+    body {
+      font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      line-height: 1.6;
+    }
 
-      .header-top {
-        background: #000;
-        padding: 0.5rem 0;
-      }
+    .header-wrapper {
+      position: relative;
+      z-index: 1000;
+    }
 
-      .header-middle {
-        background: #000;
-        padding: 1rem 0;
-      }
+    .header-top {
+      background: #000;
+      padding: 0.5rem 0;
+    }
 
-      .brand-name {
-        color: #fff;
-        font-weight: 700;
-        font-size: 1.5rem;
+    .header-middle {
+      background: #000;
+      padding: 1rem 0;
+    }
+
+    .brand-name {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .home-section {
+      min-height: 60vh;
+      padding: 2rem 0;
+    }
+
+    .heading-text {
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 1rem;
+    }
+
+    .para-txt {
+      color: #e9e3e3;
+      line-height: 1.6;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+
+    .col-lg-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 0 15px;
+    }
+
+    .col-12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0 15px;
+    }
+
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 991px) {
+      .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
       }
 
       .home-section {
-        min-height: 60vh;
-        padding: 2rem 0;
+        text-align: center;
       }
+    }
 
-      .heading-text {
-        font-weight: 700;
-        color: #000;
-        margin-bottom: 1rem;
-      }
+    .d-flex {
+      display: flex;
+    }
 
-      .para-txt {
-        color: #e9e3e3;
-        line-height: 1.6;
-        text-decoration: none;
-      }
+    .justify-content-end {
+      justify-content: flex-end;
+    }
 
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-      }
+    .align-self-center {
+      align-self: center;
+    }
 
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -15px;
-      }
+    .text-white {
+      color: #fff;
+    }
 
-      .col-lg-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-        padding: 0 15px;
-      }
+    .fw-bold {
+      font-weight: 700;
+    }
 
-      .col-12 {
-        flex: 0 0 100%;
-        max-width: 100%;
-        padding: 0 15px;
-      }
+    .fs-2 {
+      font-size: 1.5rem;
+    }
 
-      .img-fluid {
-        max-width: 100%;
-        height: auto;
-      }
+    .fa,
+    .fas,
+    .far,
+    .fab {
+      font-display: swap;
+    }
+  </style>
 
-      @media (max-width: 991px) {
-        .col-lg-6 {
-          flex: 0 0 100%;
-          max-width: 100%;
-        }
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
-        .home-section {
-          text-align: center;
-        }
-      }
+  <!-- DNS prefetch for external domains -->
+  <link rel="dns-prefetch" href="https://fonts.cdnfonts.com" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 
-      .d-flex {
-        display: flex;
-      }
+  <!-- Preconnect for critical resources -->
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 
-      .justify-content-end {
-        justify-content: flex-end;
-      }
+  <!-- Preload critical resources -->
+  <link rel="preload" href="../src/css/main.css" as="style" />
+  <link rel="preload" href="./assets/images/about-us.svg" as="image" fetchpriority="high" />
+  <link rel="preload" href="https://fonts.cdnfonts.com/css/poppins" as="style" crossorigin />
+  <link rel="preload" href="../src/js/performance.js" as="script" />
 
-      .align-self-center {
-        align-self: center;
-      }
+  <!-- Optimized font loading -->
+  <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
+  </noscript>
 
-      .text-white {
-        color: #fff;
-      }
+  <!-- Non-critical CSS with media attribute -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" media="print"
+    onload="this.media='all'" crossorigin="anonymous" />
+  <noscript>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      crossorigin="anonymous" />
+  </noscript>
 
-      .fw-bold {
-        font-weight: 700;
-      }
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/webfonts/fa-solid-900.woff2"
+    as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print"
+    onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </noscript>
 
-      .fs-2 {
-        font-size: 1.5rem;
-      }
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print"
+    onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </noscript>
 
-      .fa,
-      .fas,
-      .far,
-      .fab {
-        font-display: swap;
-      }
-    </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print"
+    onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  </noscript>
 
-    <!-- favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kursor/dist/kursor.css" media="print"
+    onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kursor/dist/kursor.css" />
+  </noscript>
 
-    <!-- DNS prefetch for external domains -->
-    <link rel="dns-prefetch" href="https://fonts.cdnfonts.com" />
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <!-- Critical CSS inline or high priority -->
+  <link rel="stylesheet" href="../src/css/main.css" />
+  <link rel="stylesheet" href="../src/css/responsive.css" />
+</head>
 
-    <!-- Preconnect for critical resources -->
-    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<body>
+  <div class="design-main-wrapper">
+    <button onclick="topFunction()" id="scrollToTop" title="Go to top">
+      <i class="fa-solid fa-angle-up"></i>
+    </button>
+    <header>
+      <div class="header-wrapper">
+        <!-- mobile menu -->
+        <div class="offcanvas offcanvas-start section" tabindex="-1" id="navbarOffcanvasLg"
+          aria-labelledby="navbarOffcanvasLgLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold ms-s fs-3" id="navbarOffcanvasLgLabel">
+              Explore
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav d-flex">
+              <li class="py-2">
+                <a class="nav-link para-txt" aria-current="page" href="#">Home</a>
+              </li>
 
-    <!-- Preload critical resources -->
-    <link rel="preload" href="../src/css/main.css" as="style" />
-    <link
-      rel="preload"
-      href="./assets/images/about-us.svg"
-      as="image"
-      fetchpriority="high"
-    />
-    <link
-      rel="preload"
-      href="https://fonts.cdnfonts.com/css/poppins"
-      as="style"
-      crossorigin
-    />
-    <link rel="preload" href="../src/js/performance.js" as="script" />
+              <li class="py-2">
+                <a class="nav-link para-txt" href="./contact.html">Contact</a>
+              </li>
+              <li class="py-2">
+                <a class="nav-link active para-txt" href="./about-us.html">About</a>
+              </li>
 
-    <!-- Optimized font loading -->
-    <link
-      href="https://fonts.cdnfonts.com/css/poppins"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
-    </noscript>
+              <li class="py-2">
+                <a class="nav-link para-txt" href="#testimonials">Testimonials</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- top header -->
+        <div class="header-top section">
+          <div class="container">
+            <div class="header-top-wrapper sticky-top animate__animated animate__fadeInDown">
+              <!-- navbar toggler -->
+              <button class="navbar-toggler d-lg-none d-inline toggle-bar align-self-end" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg"
+                onclick="changeIcon()">
+                <img id="menu-icon" src="./assets/images/hamburger.svg" alt="Menu" height="25" width="25"
+                  loading="lazy" />
+                <img id="cancel-icon" src="./assets/images/cancel.svg" alt="Close" height="25" width="25"
+                  style="display: none" loading="lazy" />
+              </button>
 
-    <!-- Non-critical CSS with media attribute -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      media="print"
-      onload="this.media='all'"
-      crossorigin="anonymous"
-    />
-    <noscript>
-      <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        crossorigin="anonymous"
-      />
-    </noscript>
+              <li id="darkMode" class="dark-mode-box nav-link">
+                <button class="border-0 bg-transparent" title="dark-mode">
+                  <img class="off" src="./assets/images/darkMode-off.svg" alt="darkMode-off" loading="lazy" />
+                  <img class="on" src="./assets/images/dark-mode-on.svg" alt="dark-mode-on" loading="lazy" />
+                </button>
+              </li>
 
-    <link
-      rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/webfonts/fa-solid-900.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      />
-    </noscript>
+              <div class="header-top-center text-white d-none d-sm-block para-txt">
+                Summer Sale For All Swim Suits And Free Express Delivery - OFF
+                50%! <span class="text-underline">ShopNow </span>
+              </div>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-      />
-    </noscript>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-      />
-    </noscript>
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/kursor/dist/kursor.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/kursor/dist/kursor.css"
-      />
-    </noscript>
-
-    <!-- Critical CSS inline or high priority -->
-    <link rel="stylesheet" href="../src/css/main.css" />
-    <link rel="stylesheet" href="../src/css/responsive.css" />
-  </head>
-
-  <body>
-    <div class="design-main-wrapper">
-      <button onclick="topFunction()" id="scrollToTop" title="Go to top">
-        <i class="fa-solid fa-angle-up"></i>
-      </button>
-      <header>
-        <div class="header-wrapper">
-          <!-- mobile menu -->
-          <div
-            class="offcanvas offcanvas-start section"
-            tabindex="-1"
-            id="navbarOffcanvasLg"
-            aria-labelledby="navbarOffcanvasLgLabel"
-          >
-            <div class="offcanvas-header border-bottom">
-              <h5
-                class="offcanvas-title fw-bold ms-s fs-3"
-                id="navbarOffcanvasLgLabel"
-              >
-                Explore
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav d-flex">
-                <li class="py-2">
-                  <a class="nav-link para-txt" aria-current="page" href="#"
-                    >Home</a
-                  >
-                </li>
-
-                <li class="py-2">
-                  <a class="nav-link para-txt" href="./contact.html"
-                    >Contact</a
-                  >
-                </li>
-                <li class="py-2">
-                  <a class="nav-link active para-txt" href="./about-us.html">About</a>
-                </li>
-
-                <li class="py-2">
-                  <a class="nav-link para-txt" href="#testimonials"
-                    >Testimonials</a
-                  >
-                </li>
-              </ul>
+              <div class="header-top-right">
+                <menu>
+                  <li class="position-relative d-inline-block dropdown-list">
+                    <a href="#" class="nav-link me-2 text-white my-dropdown-btn para-txt" id="languageDropdown">
+                      English <i class="dropdown-icon px-2"></i>
+                    </a>
+                    <ul class="my-menu p-0 m-0">
+                      <li class="my-menu-items">
+                        <a class="para-txt" href="#" data-language="English">English</a>
+                      </li>
+                      <li class="my-menu-items">
+                        <a class="para-txt" href="#" data-language="Hindi">Hindi</a>
+                      </li>
+                      <li class="my-menu-items">
+                        <a class="para-txt" href="#" data-language="Spanish">Spanish</a>
+                      </li>
+                      <li class="my-menu-items">
+                        <a class="para-txt" href="#" data-language="Deutsch">Deutsch</a>
+                      </li>
+                      <li class="my-menu-items">
+                        <a class="para-txt" href="#" data-language="Arabic">Arabic</a>
+                      </li>
+                    </ul>
+                  </li>
+                </menu>
+              </div>
             </div>
           </div>
-          <!-- top header -->
-          <div class="header-top section">
-            <div class="container">
-              <div
-                class="header-top-wrapper sticky-top animate__animated animate__fadeInDown"
-              >
-                <!-- navbar toggler -->
-                <button
-                  class="navbar-toggler d-lg-none d-inline toggle-bar align-self-end"
-                  type="button"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#navbarOffcanvasLg"
-                  aria-controls="navbarOffcanvasLg"
-                  onclick="changeIcon()"
-                >
-                  <img
-                    id="menu-icon"
-                    src="./assets/images/hamburger.svg"
-                    alt="Menu"
-                    height="25"
-                    width="25"
-                    loading="lazy"
-                  />
-                  <img
-                    id="cancel-icon"
-                    src="./assets/images/cancel.svg"
-                    alt="Close"
-                    height="25"
-                    width="25"
-                    style="display: none"
-                    loading="lazy"
-                  />
-                </button>
+        </div>
 
-                <li id="darkMode" class="dark-mode-box nav-link">
-                  <button class="border-0 bg-transparent" title="dark-mode">
-                    <img
-                      class="off"
-                      src="./assets/images/darkMode-off.svg"
-                      alt="darkMode-off"
-                      loading="lazy"
-                    />
-                    <img
-                      class="on"
-                      src="./assets/images/dark-mode-on.svg"
-                      alt="dark-mode-on"
-                      loading="lazy"
-                    />
-                  </button>
-                </li>
+        <div class="header-middle sub-section">
+          <div class="container">
+            <!-- middle header -->
+            <div class="header-middle-wrapper">
+              <div class="header-middle-left">
+                <h2 class="brand-name heading-text fs-2">Shop Elegance</h2>
+              </div>
+              <div class="header-middle-center">
+                <nav class="navbar navbar-expand bg-transparent">
+                  <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <ul class="navbar-nav d-none d-lg-flex">
+                        <li>
+                          <a class="nav-link para-txt" aria-current="page" href="#home">Home</a>
+                        </li>
 
-                <div
-                  class="header-top-center text-white d-none d-sm-block para-txt"
-                >
-                  Summer Sale For All Swim Suits And Free Express Delivery - OFF
-                  50%! <span class="text-underline">ShopNow </span>
-                </div>
+                        <li>
+                          <a class="nav-link para-txt" target="_blank" href="./contact.html">Contact</a>
+                        </li>
+                        <li>
+                          <a class="nav-link active para-txt" href="#about-us">About</a>
+                        </li>
 
-                <div class="header-top-right">
-                  <menu>
-                    <li class="position-relative d-inline-block dropdown-list">
-                      <a
-                        href="#"
-                        class="nav-link me-2 text-white my-dropdown-btn para-txt"
-                        id="languageDropdown"
-                      >
-                        English <i class="dropdown-icon px-2"></i>
-                      </a>
-                      <ul class="my-menu p-0 m-0">
-                        <li class="my-menu-items">
-                          <a class="para-txt" href="#" data-language="English"
-                            >English</a
-                          >
-                        </li>
-                        <li class="my-menu-items">
-                          <a class="para-txt" href="#" data-language="Hindi"
-                            >Hindi</a
-                          >
-                        </li>
-                        <li class="my-menu-items">
-                          <a class="para-txt" href="#" data-language="Spanish"
-                            >Spanish</a
-                          >
-                        </li>
-                        <li class="my-menu-items">
-                          <a class="para-txt" href="#" data-language="Deutsch"
-                            >Deutsch</a
-                          >
-                        </li>
-                        <li class="my-menu-items">
-                          <a class="para-txt" href="#" data-language="Arabic"
-                            >Arabic</a
-                          >
+                        <li>
+                          <a class="nav-link para-txt" href="#testimonials">Testimonials</a>
                         </li>
                       </ul>
-                    </li>
-                  </menu>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="header-middle sub-section">
-            <div class="container">
-              <!-- middle header -->
-              <div class="header-middle-wrapper">
-                <div class="header-middle-left">
-                  <h2 class="brand-name heading-text fs-2">Shop Elegance</h2>
-                </div>
-                <div class="header-middle-center">
-                  <nav class="navbar navbar-expand bg-transparent">
-                    <div class="container-fluid">
-                      <div
-                        class="collapse navbar-collapse"
-                        id="navbarNavAltMarkup"
-                      >
-                        <ul class="navbar-nav d-none d-lg-flex">
-                          <li>
-                            <a
-                              class="nav-link para-txt"
-                              aria-current="page"
-                              href="#home"
-                              >Home</a
-                            >
-                          </li>
-
-                          <li>
-                            <a
-                              class="nav-link para-txt"
-                              target="_blank"
-                              href="./contact.html"
-                              >Contact</a
-                            >
-                          </li>
-                          <li>
-                            <a class="nav-link active para-txt" href="#about-us"
-                              >About</a
-                            >
-                          </li>
-
-                          <li>
-                            <a class="nav-link para-txt" href="#testimonials"
-                              >Testimonials</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
                     </div>
-                  </nav>
-                </div>
-
-                <div class="header-middle-right">
-                  <div class="input-group d-sm-flex d-none">
-                    <input
-                      name="search here"
-                      type="text"
-                      class="form-control para-txt"
-                      placeholder="What are you looking for ?"
-                      aria-label="Search"
-                      aria-describedby="search- addon"
-                    />
-                    <button
-                      class="btn"
-                      type="button"
-                      id="search-addon"
-                      title="search-button"
-                    >
-                      <img
-                        src="./assets/images/search-icon.svg"
-                        alt="search-icon"
-                        loading="lazy"
-                      />
-                    </button>
                   </div>
-
-                  <span type="button" class="ps-3 border-0 btn-transparent"
-                    ><i class="fa-regular fs-4 fa-heart text-light"></i
-                  ></span>
-                  <span type="button" class="ps-3 border-0 btn-transparent"
-                    ><i class="fa-solid fa-cart-shopping fs-4 text-light"></i
-                  ></span>
-                  <a href="./login-signup.html" class="ps-3 text-decoration-none border-0 btn-transparent"
-                    ><i class="fa-regular fa-user fs-4 text-light"></i
-                  ></a>
-                </div>
+                </nav>
               </div>
-            </div>
-          </div>
-          <div
-            class="mobile-search d-flex w-100 justify-content-center section"
-          >
-            <div class="input-group d-sm-none d-flex">
-              <input
-                name="search here"
-                type="text"
-                id="search-content"
-                class="form-control"
-                placeholder="What are you looking for ?"
-                aria-label="Search"
-                aria-describedby="search- addon"
-              />
-              <button
-                class="btn"
-                type="button"
-                id="search-addon"
-                title="search-button"
-              >
-                <img
-                  src="./assets/images/search-icon.svg"
-                  alt="search-icon"
-                />
-              </button>
+
+              <div class="header-middle-right">
+                <div class="input-group d-sm-flex d-none">
+                  <input name="search here" type="text" class="form-control para-txt"
+                    placeholder="What are you looking for ?" aria-label="Search" aria-describedby="search- addon" />
+                  <button class="btn" type="button" id="search-addon" title="search-button">
+                    <img src="./assets/images/search-icon.svg" alt="search-icon" loading="lazy" />
+                  </button>
+                </div>
+
+                <span type="button" class="ps-3 border-0 btn-transparent"><i
+                    class="fa-regular fs-4 fa-heart text-light"></i></span>
+                <span type="button" class="ps-3 border-0 btn-transparent"><i
+                    class="fa-solid fa-cart-shopping fs-4 text-light"></i></span>
+                <a href="./login-signup.html" class="ps-3 text-decoration-none border-0 btn-transparent"><i
+                    class="fa-regular fa-user fs-4 text-light"></i></a>
+              </div>
             </div>
           </div>
         </div>
-      </header>
+        <div class="mobile-search d-flex w-100 justify-content-center section">
+          <div class="input-group d-sm-none d-flex">
+            <input name="search here" type="text" id="search-content" class="form-control"
+              placeholder="What are you looking for ?" aria-label="Search" aria-describedby="search- addon" />
+            <button class="btn" type="button" id="search-addon" title="search-button">
+              <img src="./assets/images/search-icon.svg" alt="search-icon" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
 
-      <main>
-        <section id="home" class="section home-section pt-3 pb-xl-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 col-12 align-self-center">
-                <div class="home-left px-md-0 px-3">
-                  <h2
-                    class="heading-text animate__animated animate__lightSpeedInLeft"
-                  >
-                    Our Story
-                  </h2>
-                  <p class="text-wrap animate__animated animate__fadeInUp">
-                    Launced in 2015, Exclusive is South Asia’s premier online
-                    shopping makterplace with an active presense in India.
-                    Supported by wide range of tailored marketing, data and
-                    service solutions, Exclusive has 10,500 sallers and 300
-                    brands and serves 3 millioons customers across the region.
-                  </p>
-                  <p class="text-wrap animate__animated animate__fadeInUp">
-                    Exclusive has more than 1 Million products to offer, growing
-                    at a very fast. Exclusive offers a diverse assotment in
-                    categories ranging from consumer.
-                  </p>
-                </div>
+    <main>
+      <section id="home" class="section home-section pt-3 pb-xl-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-12 align-self-center">
+              <div class="home-left px-md-0 px-3">
+                <h2 class="heading-text animate__animated animate__lightSpeedInLeft">
+                  Our Story
+                </h2>
+                <p class="text-wrap animate__animated animate__fadeInUp">
+                  Launced in 2015, Exclusive is South Asia’s premier online
+                  shopping makterplace with an active presense in India.
+                  Supported by wide range of tailored marketing, data and
+                  service solutions, Exclusive has 10,500 sallers and 300
+                  brands and serves 3 millioons customers across the region.
+                </p>
+                <p class="text-wrap animate__animated animate__fadeInUp">
+                  Exclusive has more than 1 Million products to offer, growing
+                  at a very fast. Exclusive offers a diverse assotment in
+                  categories ranging from consumer.
+                </p>
               </div>
-              <div class="col-lg-6 col-12">
-                <div class="home-right d-flex justify-content-end">
-                  <img
-                    class="img-fluid"
-                    height="600"
-                    width="700"
-                    src="./assets/images/about-us.svg"
-                    alt="HomePage image"
-                    loading="eager"
-                    fetchpriority="high"
-                    decoding="sync"
-                  />
-                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+              <div class="home-right d-flex justify-content-end">
+                <img class="img-fluid" height="600" width="700" src="./assets/images/about-us.svg" alt="HomePage image"
+                  loading="eager" fetchpriority="high" decoding="sync" />
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="about-us" class="section-stats pb-5 section">
-          <div class="container">
-            <h3 class="section-head fw-bold fs-1 my-5 text-center heading-text">
-              Our Stats
-            </h3>
-            <div class="row g-4">
-              <div class="col-lg-3 col-sm-6">
-                <div class="stat-box">
-                  <div class="img-box">
-                    <img
-                      src="./assets/images/stats-bg.svg"
-                      alt="stats-bg"
-                      loading="lazy"
-                    />
-                    <img
-                      src="./assets/images/icon_shop.svg"
-                      alt="icon_shop"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 class="heading-text">10.5k</h3>
-                  <p class="text-light">Sallers active our site</p>
+      <section id="about-us" class="section-stats pb-5 section">
+        <div class="container">
+          <h3 class="section-head fw-bold fs-1 my-5 text-center heading-text">
+            Our Stats
+          </h3>
+          <div class="row g-4">
+            <div class="col-lg-3 col-sm-6">
+              <div class="stat-box">
+                <div class="img-box">
+                  <img src="./assets/images/stats-bg.svg" alt="stats-bg" loading="lazy" />
+                  <img src="./assets/images/icon_shop.svg" alt="icon_shop" loading="lazy" />
                 </div>
+                <h3 class="heading-text">10.5k</h3>
+                <p class="text-light">Sallers active our site</p>
               </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="stat-box active">
-                  <div class="img-box">
-                    <img
-                      class="border rounded-circle"
-                      src="./assets/images/Services.svg"
-                      alt="service"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 class="heading-text">10.5k</h3>
-                  <p class="text-light">Sallers active our site</p>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="stat-box active">
+                <div class="img-box">
+                  <img class="border rounded-circle" src="./assets/images/Services.svg" alt="service" loading="lazy" />
                 </div>
+                <h3 class="heading-text">10.5k</h3>
+                <p class="text-light">Sallers active our site</p>
               </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="stat-box">
-                  <div class="img-box">
-                    <img
-                      src="./assets/images/stats-bg.svg"
-                      alt="stats-bg"
-                    />
-                    <img
-                      src="./assets/images/icon_shop.svg"
-                      alt="shop-icon"
-                    />
-                  </div>
-                  <h3 class="heading-text">10.5k</h3>
-                  <p class="text-light">Sallers active our site</p>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="stat-box">
+                <div class="img-box">
+                  <img src="./assets/images/stats-bg.svg" alt="stats-bg" />
+                  <img src="./assets/images/icon_shop.svg" alt="shop-icon" />
                 </div>
+                <h3 class="heading-text">10.5k</h3>
+                <p class="text-light">Sallers active our site</p>
               </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="stat-box">
-                  <div class="img-box">
-                    <img
-                      src="./assets/images/stats-bg.svg"
-                      alt="stats-bg"
-                    />
-                    <img
-                      src="./assets/images/icon_shop.svg"
-                      alt="shop-icon"
-                    />
-                  </div>
-                  <h3 class="heading-text">10.5k</h3>
-                  <p class="text-light">Sallers active our site</p>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="stat-box">
+                <div class="img-box">
+                  <img src="./assets/images/stats-bg.svg" alt="stats-bg" />
+                  <img src="./assets/images/icon_shop.svg" alt="shop-icon" />
                 </div>
+                <h3 class="heading-text">10.5k</h3>
+                <p class="text-light">Sallers active our site</p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="testimonials" class="employee-slider pb-5 section">
-          <div class="position-relative">
-            <div class="container w-100 overflow-hidden">
-              <h3
-                class="section-head fw-bold my-5 text-center heading-text fs-1"
-              >
-                The Minds Behind
-              </h3>
-              <div
-                class="swiper mySwiper6 mb-0 flex-wrap justify-content-between"
-              >
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide border-0 slides-employee">
-                    <div class="content-wrapper">
-                      <figure class="figure-stat-box">
-                        <img
-                          src="./assets/images/image 46.png"
-                          alt="Chairman"
-                          class="figure-stat"
-                          loading="lazy"
-                        />
-                        <p class="details text-start p-3 text-white para-txt">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Nobis nostrum est, cum temporibus magni ea at
-                          aperiam, molestias, ad soluta quo odio! Fuga, amet
-                          dolore! Lorem ipsum dolor sit amet consectetur
-                          adipisicing elit. Nobis nostrum est, cum temporibus
-                          magni ea at aperiam, molestias, ad soluta quo odio!
-                          Fuga, amet dolore!
-                        </p>
-                      </figure>
-                      <figcaption class="p-3">
-                        <h3 class="heading-text">Tom Cruise</h3>
-                        <p class="para-txt">Founder & Chairman</p>
-                        <span
-                          ><i class="fa-brands fa-x-twitter"></i>
-                          <i class="fa-brands fa-instagram"></i>
-                          <i class="fa-brands fa-linkedin-in"></i
-                        ></span>
-                      </figcaption>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide border-0 slides-employee">
-                    <div class="content-wrapper">
-                      <figure class="figure-stat-box">
-                        <img
-                          src="./assets/images/image 47.png"
-                          alt="CEO"
-                          class="figure-stat"
-                          loading="lazy"
-                        />
-                        <p class="details text-start p-3 text-white para-txt">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Nobis nostrum est, cum temporibus magni ea at
-                          aperiam, molestias, ad soluta quo odio! Fuga, amet
-                          dolore! Lorem ipsum dolor sit amet consectetur
-                          adipisicing elit. Nobis nostrum est, cum temporibus
-                          magni ea at aperiam, molestias, ad soluta quo odio!
-                          Fuga, amet dolore!
-                        </p>
-                      </figure>
-                      <figcaption class="p-3">
-                        <h3 class="heading-text">Sam Jason</h3>
-                        <p class="para-txt">CEO</p>
-                        <span
-                          ><i class="fa-brands fa-x-twitter"></i>
-                          <i class="fa-brands fa-instagram"></i>
-                          <i class="fa-brands fa-linkedin-in"></i
-                        ></span>
-                      </figcaption>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide border-0 slides-employee">
-                    <div class="content-wrapper">
-                      <figure class="figure-stat-box">
-                        <img
-                          src="./assets/images/image 51.png"
-                          alt="co-founder"
-                          class="figure-stat"
-                          loading="lazy"
-                        />
-                        <p class="details text-start p-3 text-white para-txt">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Nobis nostrum est, cum temporibus magni ea at
-                          aperiam, molestias, ad soluta quo odio! Fuga, amet
-                          dolore! Lorem ipsum dolor sit amet consectetur
-                          adipisicing elit. Nobis nostrum est, cum temporibus
-                          magni ea at aperiam, molestias, ad soluta quo odio!
-                          Fuga, amet dolore!
-                        </p>
-                      </figure>
-                      <figcaption class="p-3">
-                        <h3 class="heading-text">Alexa Robert</h3>
-                        <p class="para-txt">Co Fouder</p>
-                        <span
-                          ><i class="fa-brands fa-x-twitter"></i>
-                          <i class="fa-brands fa-instagram"></i>
-                          <img
-                            src="./assets/images/Icon-Linkedin.svg"
-                            alt=";Icon-Linkedin"
-                        /></span>
-                      </figcaption>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide border-0 slides-employee">
-                    <div class="content-wrapper">
-                      <figure class="figure-stat-box">
-                        <img
-                          src="./assets/images/image 46.png"
-                          alt="founder-chairman"
-                          class="figure-stat"
-                        />
-                        <p class="details text-start p-3 text-white para-txt">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Nobis nostrum est, cum temporibus magni ea at
-                          aperiam, molestias, ad soluta quo odio! Fuga, amet
-                          dolore! Lorem ipsum dolor sit amet consectetur
-                          adipisicing elit. Nobis nostrum est, cum temporibus
-                          magni ea at aperiam, molestias, ad soluta quo odio!
-                          Fuga, amet dolore!
-                        </p>
-                      </figure>
-                      <figcaption class="p-3">
-                        <h3 class="heading-text">Tom Cruise</h3>
-                        <p class="para-txt">Founder & Chairman</p>
-                        <span
-                          ><i class="fa-brands fa-x-twitter"></i>
-                          <i class="fa-brands fa-instagram"></i>
-                          <i class="fa-brands fa-linkedin-in"></i
-                        ></span>
-                      </figcaption>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide border-0 slides-employee">
-                    <div class="content-wrapper">
-                      <figure class="figure-stat-box">
-                        <img
-                          src="./assets/images/image 47.png"
-                          alt="Chairman"
-                          class="img-fluid figure-stat"
-                        />
-                        <p class="details text-start p-3 text-white para-txt">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Nobis nostrum est, cum temporibus magni ea at
-                          aperiam, molestias, ad soluta quo odio! Fuga, amet
-                          dolore! Lorem ipsum dolor sit amet consectetur
-                          adipisicing elit. Nobis nostrum est, cum temporibus
-                          magni ea at aperiam, molestias, ad soluta quo odio!
-                          Fuga, amet dolore!
-                        </p>
-                      </figure>
-                      <figcaption class="p-3">
-                        <h3 class="heading-text">Tom Cruise</h3>
-                        <p class="para-txt">Founder & Chairman</p>
-                        <span
-                          ><i class="fa-brands fa-x-twitter"></i>
-                          <i class="fa-brands fa-instagram"></i>
-                          <i class="fa-brands fa-linkedin-in"></i
-                        ></span>
-                      </figcaption>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide border-0 slides-employee">
-                    <div class="content-wrapper">
-                      <figure class="figure-stat-box">
-                        <img
-                          src="./assets/images/image 51.png"
-                          alt="founder-chairman"
-                          class="img-fluid figure-stat"
-                        />
-                        <p class="details text-start p-3 text-white para-txt">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Nobis nostrum est, cum temporibus magni ea at
-                          aperiam, molestias, ad soluta quo odio! Fuga, amet
-                          dolore! Lorem ipsum dolor sit amet consectetur
-                          adipisicing elit. Nobis nostrum est, cum temporibus
-                          magni ea at aperiam, molestias, ad soluta quo odio!
-                          Fuga, amet dolore!
-                        </p>
-                      </figure>
-                      <figcaption class="p-3">
-                        <h3 class="heading-text">Tom Cruise</h3>
-                        <p class="para-txt">Founder & Chairman</p>
-                        <span
-                          ><i class="fa-brands fa-x-twitter"></i>
-                          <i class="fa-brands fa-instagram"></i>
-                          <i class="fa-brands fa-linkedin-in"></i
-                        ></span>
-                      </figcaption>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination pb-2"></div>
-          </div>
-        </section>
-
-        <section class="brand-features pb-5 section">
+    <section id="testimonials" class="employee-slider pb-5 section">
+        <div class="position-relative">
           <div class="container w-100 overflow-hidden">
-            <h3 class="section-head fs-1 fw-bold mb-3 text-center heading-text">
-              Why Choose Us ?
+            <h3 class="section-head fw-bold my-5 text-center heading-text fs-1">
+              The Minds Behind
             </h3>
-            <div class="row gx-4 gy-5 justify-content-center pt-5">
-              <div class="col-md-4">
-                <div class="features">
-                  <div class="img-box">
-                    <img
-                      src="./assets/images/stats-bg.svg"
-                      alt="stats-bg"
-                      loading="lazy"
-                    />
-                    <img
-                      src="./assets/images/icon-delivery.svg"
-                      alt="icon-delivery"
-                      loading="lazy"
-                    />
+            <div class="swiper mySwiper6 mb-0 flex-wrap justify-content-between">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide border-0 slides-employee">
+                  <div class="content-wrapper">
+                    <figure class="figure-stat-box">
+                      <img src="./assets/images/image 46.png" alt="Chairman" class="figure-stat" loading="lazy" />
+                      <p class="details text-start p-3 text-white para-txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nobis nostrum est, cum temporibus magni ea at
+                        aperiam, molestias, ad soluta quo odio! Fuga, amet
+                        dolore! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Nobis nostrum est, cum temporibus
+                        magni ea at aperiam, molestias, ad soluta quo odio!
+                        Fuga, amet dolore!
+                      </p>
+                    </figure>
+                    <figcaption class="p-3">
+                      <h3 class="heading-text">Tom Cruise</h3>
+                      <p class="para-txt">Founder & Chairman</p>
+                      <span><i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin-in"></i></span>
+                    </figcaption>
                   </div>
-                  <h4 class="heading-text">FREE AND FAST DELIVERY</h4>
-                  <p class="mb-0 para-txt">
-                    Free delivery for all orders over $140
-                  </p>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="features">
-                  <div class="img-box">
-                    <img
-                      src="./assets/images/stats-bg.svg"
-                      alt="stats-bg"
-                    />
-                    <img
-                      src="./assets/images/Icon-Customer service.svg"
-                      alt="customer-service"
-                    />
+
+                <div class="swiper-slide border-0 slides-employee">
+                  <div class="content-wrapper">
+                    <figure class="figure-stat-box">
+                      <img src="./assets/images/image 47.png" alt="CEO" class="figure-stat" loading="lazy" />
+                      <p class="details text-start p-3 text-white para-txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nobis nostrum est, cum temporibus magni ea at
+                        aperiam, molestias, ad soluta quo odio! Fuga, amet
+                        dolore! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Nobis nostrum est, cum temporibus
+                        magni ea at aperiam, molestias, ad soluta quo odio!
+                        Fuga, amet dolore!
+                      </p>
+                    </figure>
+                    <figcaption class="p-3">
+                      <h3 class="heading-text">Sam Jason</h3>
+                      <p class="para-txt">CEO</p>
+                      <span><i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin-in"></i></span>
+                    </figcaption>
                   </div>
-                  <h4 class="heading-text">24/7 CUSTOMER SERVICE</h4>
-                  <p class="mb-0 para-txt">Friendly 24/7 customer support</p>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="features">
-                  <div class="img-box">
-                    <img
-                      src="./assets/images/stats-bg.svg"
-                      alt="stats-bg"
-                    />
-                    <img
-                      src="./assets/images/Icon-secure.svg"
-                      alt="icon-secure"
-                    />
+
+                <div class="swiper-slide border-0 slides-employee">
+                  <div class="content-wrapper">
+                    <figure class="figure-stat-box">
+                      <img src="./assets/images/image 51.png" alt="co-founder" class="figure-stat" loading="lazy" />
+                      <p class="details text-start p-3 text-white para-txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nobis nostrum est, cum temporibus magni ea at
+                        aperiam, molestias, ad soluta quo odio! Fuga, amet
+                        dolore! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Nobis nostrum est, cum temporibus
+                        magni ea at aperiam, molestias, ad soluta quo odio!
+                        Fuga, amet dolore!
+                      </p>
+                    </figure>
+                    <figcaption class="p-3">
+                      <h3 class="heading-text">Alexa Robert</h3>
+                      <p class="para-txt">Co Fouder</p>
+                      <span><i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <img src="./assets/images/Icon-Linkedin.svg" alt=";Icon-Linkedin" /></span>
+                    </figcaption>
                   </div>
-                  <h4 class="heading-text">MONEY BACK GUARANTEE</h4>
-                  <p class="mb-0 para-txt">We reurn money within 30 days</p>
+                </div>
+
+                <div class="swiper-slide border-0 slides-employee">
+                  <div class="content-wrapper">
+                    <figure class="figure-stat-box">
+                      <img src="./assets/images/image 46.png" alt="founder-chairman" class="figure-stat" />
+                      <p class="details text-start p-3 text-white para-txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nobis nostrum est, cum temporibus magni ea at
+                        aperiam, molestias, ad soluta quo odio! Fuga, amet
+                        dolore! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Nobis nostrum est, cum temporibus
+                        magni ea at aperiam, molestias, ad soluta quo odio!
+                        Fuga, amet dolore!
+                      </p>
+                    </figure>
+                    <figcaption class="p-3">
+                      <h3 class="heading-text">Tom Cruise</h3>
+                      <p class="para-txt">Founder & Chairman</p>
+                      <span><i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin-in"></i></span>
+                    </figcaption>
+                  </div>
+                </div>
+
+                <div class="swiper-slide border-0 slides-employee">
+                  <div class="content-wrapper">
+                    <figure class="figure-stat-box">
+                      <img src="./assets/images/image 47.png" alt="Chairman" class="img-fluid figure-stat" />
+                      <p class="details text-start p-3 text-white para-txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nobis nostrum est, cum temporibus magni ea at
+                        aperiam, molestias, ad soluta quo odio! Fuga, amet
+                        dolore! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Nobis nostrum est, cum temporibus
+                        magni ea at aperiam, molestias, ad soluta quo odio!
+                        Fuga, amet dolore!
+                      </p>
+                    </figure>
+                    <figcaption class="p-3">
+                      <h3 class="heading-text">Tom Cruise</h3>
+                      <p class="para-txt">Founder & Chairman</p>
+                      <span><i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin-in"></i></span>
+                    </figcaption>
+                  </div>
+                </div>
+
+                <div class="swiper-slide border-0 slides-employee">
+                  <div class="content-wrapper">
+                    <figure class="figure-stat-box">
+                      <img src="./assets/images/image 51.png" alt="founder-chairman" class="img-fluid figure-stat" />
+                      <p class="details text-start p-3 text-white para-txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nobis nostrum est, cum temporibus magni ea at
+                        aperiam, molestias, ad soluta quo odio! Fuga, amet
+                        dolore! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Nobis nostrum est, cum temporibus
+                        magni ea at aperiam, molestias, ad soluta quo odio!
+                        Fuga, amet dolore!
+                      </p>
+                    </figure>
+                    <figcaption class="p-3">
+                      <h3 class="heading-text">Tom Cruise</h3>
+                      <p class="para-txt">Founder & Chairman</p>
+                      <span><i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin-in"></i></span>
+                    </figcaption>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </main>
+          <div class="swiper-pagination pb-2"></div>
+        </div>
+      </section>
 
-      <footer>
-        <div class="footer-content-wrapper section">
-          <div class="container">
-            <div
-              class="row gy-4 row-cols-xxl-5 row-cols-lg-3 row-cols-md-2 row-cols-1"
-            >
-              <div class="col">
-                <div class="footer-content">
-                  <h3 class="heading-text">Exclusive</h3>
-                  <h4 class="heading-text">Subscribe</h4>
-                  <p class="para-txt">Get 10% off your first order</p>
-                  <form action>
-                    <input
-                      id="emailing"
-                      class="para-txt"
-                      type="email"
-                      placeholder="Enter your email"
-                    />
-                    <span class="m-0 mx-sm-2"
-                      ><img
-                        src="./assets/images/send.svg"
-                        alt="Send-icon"
-                    /></span>
-                  </form>
+      <section class="brand-features pb-5 section">
+        <div class="container w-100 overflow-hidden">
+          <h3 class="section-head fs-1 fw-bold mb-3 text-center heading-text">
+            Why Choose Us ?
+          </h3>
+          <div class="row gx-4 gy-5 justify-content-center pt-5">
+            <div class="col-md-4">
+              <div class="features">
+                <div class="img-box">
+                  <img src="./assets/images/stats-bg.svg" alt="stats-bg" loading="lazy" />
+                  <img src="./assets/images/icon-delivery.svg" alt="icon-delivery" loading="lazy" />
                 </div>
-              </div>
-              <div class="col">
-                <div class="footer-content">
-                  <h4 class="heading-text">Support</h4>
-                  <a href="#" class="text-white para-txt"
-                    >111 Bijoy sarani, West Bengal, DH 1515, India.</a
-                  >
-                  <a href="#" class="text-white para-txt"
-                    >ShopElegance@gmail.com</a
-                  >
-                  <a href="#" class="text-white para-txt">+91 015-88888-9999</a>
-                </div>
-              </div>
-              <div class="col">
-                <div class="footer-content">
-                  <h4 class="heading-text">Account</h4>
-                  <a href="#" class="text-white para-txt">My Account</a>
-                  <a href="#" class="text-white para-txt">Login / Register</a>
-                  <a href="#" class="text-white para-txt">Cart</a>
-                  <a href="#" class="text-white para-txt">Wishlist</a>
-                  <a href="#" class="text-white para-txt">Shop</a>
-                </div>
-              </div>
-              <div class="col">
-                <div class="footer-content">
-                  <h4 class="heading-text">Quick Link</h4>
-                  <a href="#" class="text-white para-txt">Privacy Policy</a>
-                  <a href="#" class="text-white para-txt">Terms Of Use</a>
-                  <a href="#" class="text-white para-txt">FAQ</a>
-                  <a href="#" class="text-white para-txt">Contact</a>
-                </div>
-              </div>
-              <div class="col">
-                <div class="footer-content">
-                  <h4 class="heading-text">Download App</h4>
-                  <span class="mb-2 para-txt"
-                    >Save $3 with App New User Only</span
-                  >
-                  <div class="img-box">
-                    <div class="left">
-                      <a href="#">
-                        <img
-                          src="./assets/images/Qr Code.svg"
-                          alt="qr-code-icon"
-                        />
-                      </a>
-                    </div>
-                    <div class="right">
-                      <a href="#">
-                        <img
-                          src="./assets/images/AppStore.svg"
-                          alt="AppStore-icon"
-                        />
-                      </a>
-                      <a href="#">
-                        <img
-                          src="./assets/images/google-play.svg"
-                          alt="google-play"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="icon-box text-white">
-                    <a href="#">
-                      <img
-                        src="./assets/images/Icon-Facebook.svg"
-                        alt="Icon-Facebook"
-                      />
-                    </a>
-
-                    <a href="#">
-                      <img
-                        class="ps-2"
-                        src="./assets/images/twitter-white.png"
-                        alt="twitter-icon"
-                      />
-                    </a>
-
-                    <a href="#">
-                      <img
-                        class="ps-2"
-                        src="./assets/images/instgaram-white.svg"
-                        alt="icon-instagram"
-                      />
-                    </a>
-
-                    <a href="#">
-                      <img
-                        class="ps-2"
-                        src="./assets/images/linkedin-white.svg"
-                        alt="Icon-Linkedin"
-                      />
-                    </a>
-                  </div>
-                </div>
+                <h4 class="heading-text">FREE AND FAST DELIVERY</h4>
+                <p class="mb-0 para-txt">
+                  Free delivery for all orders over $140
+                </p>
               </div>
             </div>
-            <div class="copyright-section d-flex justify-content-center pt-4">
-              <span class="para-txt">
-                &copy; Copyright Raza 2025. All right reserved
-              </span>
+            <div class="col-md-4">
+              <div class="features">
+                <div class="img-box">
+                  <img src="./assets/images/stats-bg.svg" alt="stats-bg" />
+                  <img src="./assets/images/Icon-Customer service.svg" alt="customer-service" />
+                </div>
+                <h4 class="heading-text">24/7 CUSTOMER SERVICE</h4>
+                <p class="mb-0 para-txt">Friendly 24/7 customer support</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="features">
+                <div class="img-box">
+                  <img src="./assets/images/stats-bg.svg" alt="stats-bg" />
+                  <img src="./assets/images/Icon-secure.svg" alt="icon-secure" />
+                </div>
+                <h4 class="heading-text">MONEY BACK GUARANTEE</h4>
+                <p class="mb-0 para-txt">We reurn money within 30 days</p>
+              </div>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
-    <!-- Preload critical JS -->
-    <link rel="preload" href="../src/Js/main.js" as="script" />
+      </section>
+    </main>
 
-    <!-- Performance optimization script -->
-    <script src="../src/js/performance.js" async></script>
+    <footer>
+      <div class="footer-content-wrapper section">
+        <div class="container">
+          <div class="row gy-4 row-cols-xxl-5 row-cols-lg-3 row-cols-md-2 row-cols-1">
+            <div class="col">
+              <div class="footer-content">
+                <h3 class="heading-text">Exclusive</h3>
+                <h4 class="heading-text">Subscribe</h4>
+                <p class="para-txt">Get 10% off your first order</p>
+                <form action>
+                  <input id="emailing" class="para-txt" type="email" placeholder="Enter your email" />
+                  <span class="m-0 mx-sm-2"><img src="./assets/images/send.svg" alt="Send-icon" /></span>
+                </form>
+              </div>
+            </div>
+            <div class="col">
+              <div class="footer-content">
+                <h4 class="heading-text">Support</h4>
+                <a href="#" class="text-white para-txt">111 Bijoy sarani, West Bengal, DH 1515, India.</a>
+                <a href="#" class="text-white para-txt">ShopElegance@gmail.com</a>
+                <a href="#" class="text-white para-txt">+91 015-88888-9999</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="footer-content">
+                <h4 class="heading-text">Account</h4>
+                <a href="#" class="text-white para-txt">My Account</a>
+                <a href="#" class="text-white para-txt">Login / Register</a>
+                <a href="#" class="text-white para-txt">Cart</a>
+                <a href="#" class="text-white para-txt">Wishlist</a>
+                <a href="#" class="text-white para-txt">Shop</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="footer-content">
+                <h4 class="heading-text">Quick Link</h4>
+                <a href="#" class="text-white para-txt">Privacy Policy</a>
+                <a href="#" class="text-white para-txt">Terms Of Use</a>
+                <a href="#" class="text-white para-txt">FAQ</a>
+                <a href="#" class="text-white para-txt">Contact</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="footer-content">
+                <h4 class="heading-text">Download App</h4>
+                <span class="mb-2 para-txt">Save $3 with App New User Only</span>
+                <div class="img-box">
+                  <div class="left">
+                    <a href="#">
+                      <img src="./assets/images/Qr Code.svg" alt="qr-code-icon" />
+                    </a>
+                  </div>
+                  <div class="right">
+                    <a href="#">
+                      <img src="./assets/images/AppStore.svg" alt="AppStore-icon" />
+                    </a>
+                    <a href="#">
+                      <img src="./assets/images/google-play.svg" alt="google-play" />
+                    </a>
+                  </div>
+                </div>
+                <div class="icon-box text-white">
+                  <a href="#">
+                    <img src="./assets/images/Icon-Facebook.svg" alt="Icon-Facebook" />
+                  </a>
 
-    <!-- Load scripts with defer for better performance -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/kursor" defer></script>
-    <script src="../src/Js/main.js" defer></script>
+                  <a href="#">
+                    <img class="ps-2" src="./assets/images/twitter-white.png" alt="twitter-icon" />
+                  </a>
 
-    <!-- CSS loading fallback script -->
-    <script>
-      !(function (e) {
-        "use strict";
-        var t = function (t, n, r) {
-            var o,
-              i = e.document,
-              c = i.createElement("link");
-            if (n) o = n;
-            else {
-              var a = (i.body || i.getElementsByTagName("head")[0]).childNodes;
-              o = a[a.length - 1];
-            }
-            var d = i.styleSheets;
-            (c.rel = "stylesheet"),
-              (c.href = t),
-              (c.media = "only x"),
-              (function e(t) {
-                if (i.body) return t();
-                setTimeout(function () {
-                  e(t);
-                });
-              })(function () {
-                o.parentNode.insertBefore(c, n ? o : o.nextSibling);
-              });
-            var f = function (e) {
-              for (var t = c.href, n = d.length; n--; )
-                if (d[n].href === t) return e();
-              setTimeout(function () {
-                f(e);
-              });
-            };
-            return (
-              c.addEventListener && c.addEventListener("load", r),
-              (c.onloadcssdefined = f),
-              f(r),
-              c
-            );
-          },
-          n = function (e, n) {
-            (e.onload = null), (e.media = n || "all");
-          };
-        (e.loadCSS = t), (e.onloadCSS = n);
-      })("undefined" != typeof global ? global : this);
-    </script>
-  </body>
+                  <a href="#">
+                    <img class="ps-2" src="./assets/images/instgaram-white.svg" alt="icon-instagram" />
+                  </a>
+
+                  <a href="#">
+                    <img class="ps-2" src="./assets/images/linkedin-white.svg" alt="Icon-Linkedin" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="copyright-section d-flex justify-content-center pt-4">
+            <span class="para-txt">
+              &copy; Copyright Raza 2025. All right reserved
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Preload critical JS -->
+  <link rel="preload" href="../src/Js/main.js" as="script" />
+
+  <!-- Performance optimization script -->
+  <script src="../src/js/performance.js" async></script>
+
+  <!-- Load scripts with defer for better performance -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/kursor" defer></script>
+  <script src="../src/Js/main.js" defer></script>
+
+  <!-- CSS loading fallback script -->
+  <script>
+    !(function (e) {
+      "use strict";
+      var t = function (t, n, r) {
+        var o,
+          i = e.document,
+          c = i.createElement("link");
+        if (n) o = n;
+        else {
+          var a = (i.body || i.getElementsByTagName("head")[0]).childNodes;
+          o = a[a.length - 1];
+        }
+        var d = i.styleSheets;
+        (c.rel = "stylesheet"),
+          (c.href = t),
+          (c.media = "only x"),
+          (function e(t) {
+            if (i.body) return t();
+            setTimeout(function () {
+              e(t);
+            });
+          })(function () {
+            o.parentNode.insertBefore(c, n ? o : o.nextSibling);
+          });
+        var f = function (e) {
+          for (var t = c.href, n = d.length; n--;)
+            if (d[n].href === t) return e();
+          setTimeout(function () {
+            f(e);
+          });
+        };
+        return (
+          c.addEventListener && c.addEventListener("load", r),
+          (c.onloadcssdefined = f),
+          f(r),
+          c
+        );
+      },
+        n = function (e, n) {
+          (e.onload = null), (e.media = n || "all");
+        };
+      (e.loadCSS = t), (e.onloadCSS = n);
+    })("undefined" != typeof global ? global : this);
+  </script>
+</body>
+
 </html>

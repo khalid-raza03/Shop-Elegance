@@ -159,3 +159,50 @@ function toggleLogin() {
     signupForm.classList.toggle('d-none');
   }
 }
+
+
+// flash sale slider initialization
+
+
+var swiperCB = new Swiper(".flashSaleSwiper", {
+  slidesPerView: 7,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+   
+    1200: {
+      slidesPerView: 4, // xl screens
+      spaceBetween: 30,
+    },
+
+    992: {
+      slidesPerView: 4, // lg screens
+      spaceBetween: 20,
+    },
+    568: {
+      slidesPerView: 3, // Smaller screens
+      spaceBetween: 15,
+    },
+
+        419: {
+      slidesPerView: 2, // Smaller screens
+      spaceBetween: 10,
+    },
+    319: {
+      slidesPerView: 1, // Smaller screens
+      spaceBetween: 5,
+    },
+  },
+});
+

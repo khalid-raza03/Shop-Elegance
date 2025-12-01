@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shop Elegance : Login-Signup</title>
 
+  <!-- preloaders -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
+
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="./public/assets/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="./public/assets/favicon-32x32.png" />
@@ -32,6 +35,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kursor/dist/kursor.css" />
   </noscript>
 
+  <!-- swiper js  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <!-- custom css -->
   <link rel="stylesheet" href="./src/css/main.css" />
 
@@ -52,14 +58,13 @@
       background-image: none !important;
     }
 
-
     @media (max-width: 992px) {
       .border-lg {
         border: none !important;
       }
     }
   </style>
-  <link rel="stylesheet" href="../src/css/responsive.css" />
+  <link rel="stylesheet" href="./src/css/responsive.css" />
 </head>
 
 <body>
@@ -289,7 +294,8 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <div class="content flex-sm-row flex-column row-gap-3 bg-black rounded-3 d-flex justify-content-between py-3 px-4 align-items-center">
+                    <div
+                      class="content flex-sm-row flex-column row-gap-3 bg-black rounded-3 d-flex justify-content-between py-3 px-4 align-items-center">
                       <div class="slide-info d-flex flex-column row-gap-3 align-items-start">
                         <div class="slide-title gap-2 d-flex align-items-center">
                           <img src="./public/assets/images/apple-icon.svg" alt="apple-icon" class="img-fluid" />
@@ -310,7 +316,8 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="content flex-sm-row flex-column row-gap-3 bg-black rounded-3 d-flex justify-content-between py-3 px-4 align-items-center">
+                    <div
+                      class="content flex-sm-row flex-column row-gap-3 bg-black rounded-3 d-flex justify-content-between py-3 px-4 align-items-center">
                       <div class="slide-info d-flex flex-column row-gap-3 align-items-start">
                         <div class="slide-title gap-2 d-flex align-items-center">
                           <img src="./public/assets/images/apple-icon.svg" alt="apple-icon" class="img-fluid" />
@@ -331,7 +338,8 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="content flex-sm-row flex-column row-gap-3 bg-black rounded-3 d-flex justify-content-between py-3 px-4 align-items-center">
+                    <div
+                      class="content flex-sm-row flex-column row-gap-3 bg-black rounded-3 d-flex justify-content-between py-3 px-4 align-items-center">
                       <div class="slide-info d-flex flex-column row-gap-3 align-items-start">
                         <div class="slide-title gap-2 d-flex align-items-center">
                           <img src="./public/assets/images/apple-icon.svg" alt="apple-icon" class="img-fluid" />
@@ -358,6 +366,178 @@
         </div>
       </div>
 
+      <section class="flash-sale-slider py-5 section">
+        <div class="container w-100 overflow-hidden position-relative ps-5 position-relative">
+
+          <!-- section header -->
+          <div class="d-flex flex-column align-items-start row-gap-3 mb-3">
+            <div class="top d-flex gap-3 align-items-center">
+              <div class="rectangle"></div>
+              <p class="m-0 top-txt">Today's</p>
+            </div>
+            <div class="bottom d-flex gap-5 align-items-center">
+              <div class="title">
+                <h2 class="head-txt fs-1 fw-bold">Flash Sales</h2>
+              </div>
+              <div class="countdown-timer d-flex gap-2 align-items-center">
+                <div class="time-box d-flex flex-column justify-content-center align-items-center p-2">
+                  <span class="label ">Days</span>
+                  <span id="hours" class="time fs-1 fw-bold">01</span>
+                </div>
+
+                <div class="time-box d-flex flex-column justify-content-center align-items-center p-2">
+                  <span class="label ">Hours</span>
+                  <span id="hours" class="time fs-1 fw-bold">03</span>
+                </div>
+
+                <div class="time-box d-flex flex-column justify-content-center align-items-center p-2">
+                  <span class="label ">Minutes</span>
+                  <span id="hours" class="time fs-1 fw-bold">23</span>
+                </div>
+                <div class="time-box d-flex flex-column justify-content-center align-items-center p-2">
+                  <span class="label ">Seconds</span>
+                  <span id="hours" class="time fs-1 fw-bold">43</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- slider-navigations -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- slider -->
+          <div class="flash-sale-slider-wrapper mx-0">
+            <div class="swiper flashSaleSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-custom2 bg-body-secondary overflow-y-hidden">
+                  <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute  z-2">- 40% </span>
+
+                  <span style="top: 10px;"
+                    class="add-wishlist rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
+                      class="fa-regular fa-heart"></i></span>
+
+                  <span style="top: 50px;"
+                    class="show-btn rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
+                      class="fa-regular fa-eye"></i></span>
+                  <div class=" py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                    <div class="slider-img">
+                      <img src="./public/assets/images/product1.svg" height="138" width="150" alt="product1" />
+                    </div>
+
+                  </div>
+
+                  <a href="" class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add
+                    to Cart</a>
+                </div>
+                <div class="swiper-slide swiper-custom2 bg-body-secondary overflow-y-hidden">
+                  <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute  z-2">- 40% </span>
+
+                  <span style="top: 10px;"
+                    class="add-wishlist rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
+                      class="fa-regular fa-heart"></i></span>
+
+                  <span style="top: 50px;"
+                    class="show-btn rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
+                      class="fa-regular fa-eye"></i></span>
+                  <div class=" py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                    <div class="slider-img">
+                      <img src="./public/assets/images/product2.svg" height="138" width="150" alt="product1" />
+                    </div>
+
+                  </div>
+
+                  <a href="" class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add
+                    to Cart</a>
+                </div>
+               <div class="swiper-slide swiper-custom2 bg-body-secondary overflow-y-hidden">
+                  <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute  z-2">- 40% </span>
+
+                  <span style="top: 10px;"
+                    class="add-wishlist rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
+                      class="fa-regular fa-heart"></i></span>
+
+                  <span style="top: 50px;"
+                    class="show-btn rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
+                      class="fa-regular fa-eye"></i></span>
+                  <div class=" py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                    <div class="slider-img">
+                      <img src="./public/assets/images/product3.svg" height="138" width="150" alt="product1" />
+                    </div>
+
+                  </div>
+
+                  <a href="" class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add
+                    to Cart</a>
+                </div>
+                <div class="swiper-slide swiper-custom2 bg-body-secondary overflow-y-hidden">
+                  <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute  z-2">- 40% </span>
+
+                  <span style="top: 10px;"
+                    class="add-wishlist rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
+                      class="fa-regular fa-heart"></i></span>
+
+                  <span style="top: 50px;"
+                    class="show-btn rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
+                      class="fa-regular fa-eye"></i></span>
+                  <div class=" py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                    <div class="slider-img">
+                      <img src="./public/assets/images/product4.svg" height="138" width="150" alt="product1" />
+                    </div>
+
+                  </div>
+
+                  <a href="" class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add
+                    to Cart</a>
+                </div>
+                <div class="swiper-slide swiper-custom2 bg-body-secondary overflow-y-hidden">
+                  <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute  z-2">- 40% </span>
+
+                  <span style="top: 10px;"
+                    class="add-wishlist rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
+                      class="fa-regular fa-heart"></i></span>
+
+                  <span style="top: 50px;"
+                    class="show-btn rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
+                      class="fa-regular fa-eye"></i></span>
+                  <div class=" py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                    <div class="slider-img">
+                      <img src="./public/assets/images/product1.svg" height="138" width="150" alt="product1" />
+                    </div>
+
+                  </div>
+
+                  <a href="" class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add
+                    to Cart</a>
+                </div>
+               <div class="swiper-slide swiper-custom2 bg-body-secondary overflow-y-hidden">
+                  <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute  z-2">- 40% </span>
+
+                  <span style="top: 10px;"
+                    class="add-wishlist rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
+                      class="fa-regular fa-heart"></i></span>
+
+                  <span style="top: 50px;"
+                    class="show-btn rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
+                      class="fa-regular fa-eye"></i></span>
+                  <div class=" py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                    <div class="slider-img">
+                      <img src="./public/assets/images/product2.svg" height="138" width="150" alt="product1" />
+                    </div>
+
+                  </div>
+
+                  <a href="" class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add
+                    to Cart</a>
+                </div>
+
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -452,6 +632,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/kursor" defer></script>
   <script src="./src/Js/main.js"></script>
 </body>

@@ -77,6 +77,10 @@
 
 @media screen and (max-width: 768px) {
 
+  .swiper-button-next , .swiper-button-prev {
+    display: none;
+  }
+
   .design-main-wrapper .wishlist-head{
     display: none !important;
   }
@@ -182,4 +186,20 @@
   .design-main-wrapper .footer-content-wrapper .copyright-section span {
     font-size: 12px;
 }
+}
+
+
+/* flash sale slider adjustments */
+
+
+@media (max-width: 350px) {
+  .slider-fig-caption div {
+    line-height: 14px !important;
+  }
+  .title-line span {
+    padding-right: 0 !important;
+  }
+  .title-line .view-all {
+    padding: 5px 10px !important;
+  }
 }
