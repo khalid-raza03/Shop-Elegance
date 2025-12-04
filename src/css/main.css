@@ -232,14 +232,15 @@
 
 .design-main-wrapper .theme-btn {
   background: linear-gradient(60deg, #db4444, #f7adad);
-  border-color: white;
+  border: 1.5px solid #db4444;
   color: #ffffff;
-  transition: background 0.5s ease-in-out, border 0.5s ease-in;
+  transition: all 0.5s ease-in-out;
 
   &:hover {
-    color: var(--btn-color1);
-    background: #ffffff;
-    border-color: var(--btn-color1);
+    color: var(--btn-color1) !important;
+     background: linear-gradient(120deg,  #f7adad, #ea5858);
+
+    border: 1.5px solid #ffffff;
   }
 }
 
@@ -308,6 +309,7 @@
 }
 
 .section.dark p,
+.section.dark del,
 .section.dark span,
 .section.dark h2,
 .section.dark h3,
@@ -886,35 +888,21 @@
 
 /* flash sale slider section */
 
-.flash-sale-slider .rectangle {
-  height: 40px;
-  width: 20px;
-  background-color: #db4444;
-}
 
-.flash-sale-slider .top-txt {
-  font-size: 16px;
-  font-weight: 600;
-  color: #db4444;
-}
 
-.flash-sale-slider .bottom .label {
-  font-size: 14px;
-}
-
-.flash-sale-slider figure {
+.custom-slider1 figure {
   margin: 0rem !important;
 }
 
-.flash-sale-slider {
+.custom-slider1 {
   overflow-x: hidden !important;
 }
 
-.flash-sale-slider .time-box {
+.custom-slider1 .time-box {
   position: relative;
 }
 
-.flash-sale-slider .time-box:not(:last-child)::after {
+.custom-slider1 .time-box:not(:last-child)::after {
   position: absolute;
   content: ":";
   font-size: 35px;
@@ -925,47 +913,47 @@
   padding: 0 5px;
 }
 
-.flash-sale-slider .swiper-button-prev, .flash-sale-slider .swiper-rtl .swiper-button-next {
-  right: 10% !important;
+.custom-slider1 .swiper-button-prev, .custom-slider1 .swiper-rtl .swiper-button-next {
+    right: calc(
+    10% + 4% * ((1920px - 100vw) / (1920px - 768px))
+  );
   left: auto !important; 
 }
 
-.flash-sale-slider .swiper-button-next, .flash-sale-slider .swiper-rtl .swiper-button-prev{
-  right: 6% !important;
+.custom-slider1 .swiper-button-next, .custom-slider1 .swiper-rtl .swiper-button-prev{
+  right: 6% ;
   left: auto !important; 
 }
 
-.flash-sale-slider .swiper-button-next, .swiper-button-prev{
-  top: 25% !important;
+.custom-slider1 .swiper-button-next, .swiper-button-prev{
+  top: 15% !important;
   color: #000000;
   background-color: #e1dada;
   border-radius: 50%;
   padding: 25px;
 }
 
-.flash-sale-slider .swiper-button-next:after, .swiper-button-prev:after{
+.custom-slider1 .swiper-button-next:after, .swiper-button-prev:after{
   font-size: 20px;
   font-weight: bold;
 }
 
-.flash-sale-slider .swiper {
+.custom-slider1 .swiper {
   width: 100%;
   height: 100%;
 }
-.flash-sale-slider .swiper .swiper-slide {
+.custom-slider1 .swiper .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
   display: block;
-  border-radius: 8px !important;
 }
-.flash-sale-slider .swiper .swiper-slide .content-wrapper {
+.custom-slider1 .swiper .swiper-slide .content-wrapper {
   position: relative;
    
   overflow: hidden !important;
 }
 
-.flash-sale-slider  .swiper-slide .discount {
+.custom-slider1  .swiper-slide .discount {
   top: 10px;
   left: 10px;
   font-size: 12px;
@@ -973,49 +961,70 @@
   color: #ffffff;
 }
 
-.flash-sale-slider  .swiper-slide .add-wishlist, .flash-sale-slider  .swiper-slide .show-btn {
+.custom-slider1  .swiper-slide .add-wishlist, .custom-slider1  .swiper-slide .show-btn {
   right: 10px;
   font-size: 16px;
   color: #000000;
+  background-color: #db4444;
   cursor: pointer;
 }
 
-.flash-sale-slider .add-cart-btn{
+.custom-slider1 .add-cart-btn{
   opacity: 0;
   visibility: hidden;
   transform: translateY(40px)
 }
 
-.flash-sale-slider .swiper .swiper-slide:hover .add-cart-btn{
+.custom-slider1 .swiper .swiper-slide:hover .add-cart-btn{
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
   transition: visibility 0.3s ease-in-out, opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.flash-sale-slider .swiper .swiper-slide .slider-img {
+.custom-slider1 .swiper .swiper-slide .slider-img {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-.flash-sale-slider .swiper .swiper-slide .slider-img img {
+.custom-slider1 .swiper .swiper-slide .slider-img img {
   border-radius: inherit;
   display: block;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
-.flash-sale-slider .swiper .swiper-slide .slider-fig-caption {
-  background: #fff;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-.flash-sale-slider .swiper .swiper-slide .slider-fig-caption div {
-  font-family: "Poppins", serif;
-  font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 18px;
-  letter-spacing: 0%;
-  text-align: center;
-  vertical-align: middle;
+.custom-slider1 .product-desc .old-price{
+  font-size: var(--font-size4);
 }
 
+.custom-slider1 .product-desc .product-name {
+  font-size: var(--font-size3);
+  font-weight: var(--font-weight2);
+  color: #000000;
+}
+.custom-slider1 .product-desc .rating-box,
+.custom-slider1 .product-desc .rating-count
+{
+  font-size: var(--font-size4);
+}
+
+.custom-slider1 .product-desc{
+  padding: 10px ;
+   border: 1px solid wheat;
+   border-radius: 12px;
+   margin-top: 5px; 
+}
+
+
+.browse-categories.dark .category{
+ box-shadow: 0 0.5rem 1rem #e2928f26 !important;
+}
+
+
+.browse-categories .category{
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.browse-categories .category:hover{
+  transform: scale(1.07);
+
+}

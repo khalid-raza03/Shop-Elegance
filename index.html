@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop Elegance : Login-Signup</title>
+  <title>Shop Elegance : Homepage</title>
 
   <!-- preloaders -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
@@ -37,6 +37,10 @@
 
   <!-- swiper js  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Material Symbols -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <!-- custom css -->
   <link rel="stylesheet" href="./src/css/main.css" />
@@ -203,8 +207,8 @@
                     class="fa-regular fs-4 fa-heart text-light"></i></span>
                 <span type="button" class="ps-3 border-0 btn-transparent"><i
                     class="fa-solid fa-cart-shopping fs-4 text-light"></i></span>
-                <span type="button" class="ps-3 border-0 btn-transparent"><i
-                    class="fa-regular fa-user fs-4 text-light"></i></span>
+                <a href="./public/login-signup.html" target="_blank" class="ps-3 border-0 btn-transparent"><i
+                    class="fa-regular fa-user fs-4 text-light"></i></a>
               </div>
             </div>
           </div>
@@ -366,37 +370,36 @@
         </div>
       </div>
 
-      <section class="flash-sale-slider py-5 section">
-        <div class="container w-100 overflow-hidden position-relative ps-5 position-relative">
-
+      <section class="custom-slider1 py-5 section ">
+        <div class="container  w-100 overflow-hidden position-relative ps-5 ">
           <!-- section header -->
-          <div class="d-flex flex-column align-items-start row-gap-3 mb-3">
+          <div class="section-header d-flex flex-column align-items-start gap-5 mb-3">
             <div class="top d-flex gap-3 align-items-center">
               <div class="rectangle"></div>
               <p class="m-0 top-txt">Today's</p>
             </div>
-            <div class="bottom d-flex gap-5 align-items-center">
+            <div class="bottom d-flex gap-2 gap-md-5 align-items-md-center align-items-start flex-md-row flex-column">
               <div class="title">
-                <h2 class="head-txt fs-1 fw-bold">Flash Sales</h2>
+                <h2 class="head-txt text-custom-larger   fw-bold">Flash Sales</h2>
               </div>
               <div class="countdown-timer d-flex gap-2 align-items-center">
-                <div class="time-box d-flex flex-column justify-content-center align-items-center p-2">
-                  <span class="label ">Days</span>
-                  <span id="hours" class="time fs-1 fw-bold">01</span>
+                <div class="time-box d-flex flex-column justify-content-center align-items-center pe-2">
+                  <span class="label">Days</span>
+                  <span id="days" class="time text-custom-large fw-bold">01</span>
                 </div>
 
                 <div class="time-box d-flex flex-column justify-content-center align-items-center p-2">
-                  <span class="label ">Hours</span>
-                  <span id="hours" class="time fs-1 fw-bold">03</span>
+                  <span class="label">Hours</span>
+                  <span id="hours" class="time text-custom-large fw-bold">03</span>
                 </div>
 
                 <div class="time-box d-flex flex-column justify-content-center align-items-center p-2">
-                  <span class="label ">Minutes</span>
-                  <span id="hours" class="time fs-1 fw-bold">23</span>
+                  <span class="label">Minutes</span>
+                  <span id="minutes" class="time text-custom-large fw-bold">23</span>
                 </div>
                 <div class="time-box d-flex flex-column justify-content-center align-items-center p-2">
-                  <span class="label ">Seconds</span>
-                  <span id="hours" class="time fs-1 fw-bold">43</span>
+                  <span class="label">Seconds</span>
+                  <span id="seconds" class="time text-custom-large fw-bold">43</span>
                 </div>
               </div>
             </div>
@@ -407,138 +410,748 @@
           <div class="swiper-button-prev"></div>
 
           <!-- slider -->
-          <div class="flash-sale-slider-wrapper mx-0">
+          <div class="custom-slider1-wrapper mx-0">
             <div class="swiper flashSaleSwiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide swiper-custom2 bg-body-secondary overflow-y-hidden">
-                  <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute  z-2">- 40% </span>
+                <div class="swiper-slide swiper-custom2">
+                  <div class="slide-wrapper rounded-3   bg-body-secondary overflow-y-hidden position-relative">
+                    <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute z-2">- 40%
+                    </span>
 
-                  <span style="top: 10px;"
-                    class="add-wishlist rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
-                      class="fa-regular fa-heart"></i></span>
+                    <span style="top: 10px" class="add-wishlist rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-heart"></i></span>
 
-                  <span style="top: 50px;"
-                    class="show-btn rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
-                      class="fa-regular fa-eye"></i></span>
-                  <div class=" py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
-                    <div class="slider-img">
-                      <img src="./public/assets/images/product1.svg" height="138" width="150" alt="product1" />
+                    <span style="top: 50px" class="show-btn rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-eye"></i></span>
+                    <div class="py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                      <div class="slider-img ">
+                        <img src="./public/assets/images/product1.svg" height="138" width="150" alt="product1" />
+                      </div>
                     </div>
-
+                    <a href=""
+                      class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add to
+                      Cart</a>
                   </div>
+                  <div class=" product-desc d-flex flex-column align-items-start gap-2">
+                    <span id="productName" class="fw-bold product-name">HAVIT HV-G92 Gamepad</span>
+                    <p id="productPrices" class="d-flex gap-3 align-items-center">
+                      <span id="actualPrice" class="actual-price">$120</span> <del
+                        class="fst-italic text-body-tertiary old-price">$160</del>
+                    </p>
+                    <div id="productRating"
+                      class="ratings d-flex gap-2 align-items-baseline w-100 justify-content-between">
 
-                  <a href="" class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add
-                    to Cart</a>
-                </div>
-                <div class="swiper-slide swiper-custom2 bg-body-secondary overflow-y-hidden">
-                  <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute  z-2">- 40% </span>
+                      <div class="rating-box ">
+                        <div class=" d-flex align-items-center justify-content-start gap-2 position-relative  mt-1">
 
-                  <span style="top: 10px;"
-                    class="add-wishlist rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
-                      class="fa-regular fa-heart"></i></span>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
 
-                  <span style="top: 50px;"
-                    class="show-btn rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
-                      class="fa-regular fa-eye"></i></span>
-                  <div class=" py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
-                    <div class="slider-img">
-                      <img src="./public/assets/images/product2.svg" height="138" width="150" alt="product1" />
+                          <div class="actual-rating d-flex gap-2 overflow-hidden position-absolute bottom-0 start-0  "
+                            style="width: 70%;">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <span id="ratingsCount" class="rating-count text-body-secondary">(891)</span>
                     </div>
-
                   </div>
-
-                  <a href="" class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add
-                    to Cart</a>
-                </div>
-               <div class="swiper-slide swiper-custom2 bg-body-secondary overflow-y-hidden">
-                  <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute  z-2">- 40% </span>
-
-                  <span style="top: 10px;"
-                    class="add-wishlist rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
-                      class="fa-regular fa-heart"></i></span>
-
-                  <span style="top: 50px;"
-                    class="show-btn rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
-                      class="fa-regular fa-eye"></i></span>
-                  <div class=" py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
-                    <div class="slider-img">
-                      <img src="./public/assets/images/product3.svg" height="138" width="150" alt="product1" />
-                    </div>
-
-                  </div>
-
-                  <a href="" class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add
-                    to Cart</a>
-                </div>
-                <div class="swiper-slide swiper-custom2 bg-body-secondary overflow-y-hidden">
-                  <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute  z-2">- 40% </span>
-
-                  <span style="top: 10px;"
-                    class="add-wishlist rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
-                      class="fa-regular fa-heart"></i></span>
-
-                  <span style="top: 50px;"
-                    class="show-btn rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
-                      class="fa-regular fa-eye"></i></span>
-                  <div class=" py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
-                    <div class="slider-img">
-                      <img src="./public/assets/images/product4.svg" height="138" width="150" alt="product1" />
-                    </div>
-
-                  </div>
-
-                  <a href="" class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add
-                    to Cart</a>
-                </div>
-                <div class="swiper-slide swiper-custom2 bg-body-secondary overflow-y-hidden">
-                  <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute  z-2">- 40% </span>
-
-                  <span style="top: 10px;"
-                    class="add-wishlist rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
-                      class="fa-regular fa-heart"></i></span>
-
-                  <span style="top: 50px;"
-                    class="show-btn rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
-                      class="fa-regular fa-eye"></i></span>
-                  <div class=" py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
-                    <div class="slider-img">
-                      <img src="./public/assets/images/product1.svg" height="138" width="150" alt="product1" />
-                    </div>
-
-                  </div>
-
-                  <a href="" class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add
-                    to Cart</a>
-                </div>
-               <div class="swiper-slide swiper-custom2 bg-body-secondary overflow-y-hidden">
-                  <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute  z-2">- 40% </span>
-
-                  <span style="top: 10px;"
-                    class="add-wishlist rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
-                      class="fa-regular fa-heart"></i></span>
-
-                  <span style="top: 50px;"
-                    class="show-btn rounded-circle px-2 pt-2 bg-white text-black position-absolute  z-2"><i
-                      class="fa-regular fa-eye"></i></span>
-                  <div class=" py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
-                    <div class="slider-img">
-                      <img src="./public/assets/images/product2.svg" height="138" width="150" alt="product1" />
-                    </div>
-
-                  </div>
-
-                  <a href="" class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add
-                    to Cart</a>
                 </div>
 
+                <div class="swiper-slide swiper-custom2">
+                  <div class="slide-wrapper rounded-3  bg-body-secondary overflow-y-hidden position-relative">
+                    <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute z-2">- 40%
+                    </span>
+
+                    <span style="top: 10px" class="add-wishlist rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-heart"></i></span>
+
+                    <span style="top: 50px" class="show-btn rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-eye"></i></span>
+                    <div class="py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                      <div class="slider-img ">
+                        <img src="./public/assets/images/product2.svg" height="138" width="150" alt="product1" />
+                      </div>
+                    </div>
+                    <a href=""
+                      class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add to
+                      Cart</a>
+                  </div>
+                  <div class=" product-desc d-flex flex-column align-items-start gap-2">
+                    <span id="productName" class="fw-bold product-name">HAVIT HV-G92 Gamepad</span>
+                    <p id="productPrices" class="d-flex gap-3 align-items-center">
+                      <span id="actualPrice" class="actual-price">$120</span> <del
+                        class="fst-italic text-body-tertiary old-price">$160</del>
+                    </p>
+                    <div id="productRating"
+                      class="ratings d-flex gap-2 align-items-baseline w-100 justify-content-between">
+
+                      <div class="rating-box ">
+                        <div class=" d-flex align-items-center justify-content-start gap-2 position-relative  mt-1">
+
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+
+                          <div class="actual-rating d-flex gap-2 overflow-hidden position-absolute bottom-0 start-0  "
+                            style="width: 70%;">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <span id="ratingsCount" class="rating-count text-body-secondary">(891)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-custom2">
+                  <div class="slide-wrapper rounded-3  bg-body-secondary overflow-y-hidden position-relative">
+                    <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute z-2">- 40%
+                    </span>
+
+                    <span style="top: 10px" class="add-wishlist rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-heart"></i></span>
+
+                    <span style="top: 50px" class="show-btn rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-eye"></i></span>
+                    <div class="py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                      <div class="slider-img ">
+                        <img src="./public/assets/images/product3.svg" height="138" width="150" alt="product1" />
+                      </div>
+                    </div>
+                    <a href=""
+                      class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add to
+                      Cart</a>
+                  </div>
+                  <div class=" product-desc d-flex flex-column align-items-start gap-2">
+                    <span id="productName" class="fw-bold product-name">HAVIT HV-G92 Gamepad</span>
+                    <p id="productPrices" class="d-flex gap-3 align-items-center">
+                      <span id="actualPrice" class="actual-price">$120</span> <del
+                        class="fst-italic text-body-tertiary old-price">$160</del>
+                    </p>
+                    <div id="productRating"
+                      class="ratings d-flex gap-2 align-items-baseline w-100 justify-content-between">
+
+                      <div class="rating-box ">
+                        <div class=" d-flex align-items-center justify-content-start gap-2 position-relative  mt-1">
+
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+
+                          <div class="actual-rating d-flex gap-2 overflow-hidden position-absolute bottom-0 start-0  "
+                            style="width: 70%;">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <span id="ratingsCount" class="rating-count text-body-secondary">(891)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-custom2">
+                  <div class="slide-wrapper rounded-3  bg-body-secondary overflow-y-hidden position-relative">
+                    <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute z-2">- 40%
+                    </span>
+
+                    <span style="top: 10px" class="add-wishlist rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-heart"></i></span>
+
+                    <span style="top: 50px" class="show-btn rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-eye"></i></span>
+                    <div class="py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                      <div class="slider-img ">
+                        <img src="./public/assets/images/product4.svg" height="138" width="150" alt="product1" />
+                      </div>
+                    </div>
+                    <a href=""
+                      class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add to
+                      Cart</a>
+                  </div>
+                  <div class=" product-desc d-flex flex-column align-items-start gap-2">
+                    <span id="productName" class="fw-bold product-name">HAVIT HV-G92 Gamepad</span>
+                    <p id="productPrices" class="d-flex gap-3 align-items-center">
+                      <span id="actualPrice" class="actual-price">$120</span> <del
+                        class="fst-italic text-body-tertiary old-price">$160</del>
+                    </p>
+                    <div id="productRating"
+                      class="ratings d-flex gap-2 align-items-baseline w-100 justify-content-between">
+
+                      <div class="rating-box ">
+                        <div class=" d-flex align-items-center justify-content-start gap-2 position-relative  mt-1">
+
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+
+                          <div class="actual-rating d-flex gap-2 overflow-hidden position-absolute bottom-0 start-0  "
+                            style="width: 70%;">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <span id="ratingsCount" class="rating-count text-body-secondary">(891)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-custom2">
+                  <div class="slide-wrapper rounded-3  bg-body-secondary overflow-y-hidden position-relative">
+                    <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute z-2">- 40%
+                    </span>
+
+                    <span style="top: 10px" class="add-wishlist rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-heart"></i></span>
+
+                    <span style="top: 50px" class="show-btn rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-eye"></i></span>
+                    <div class="py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                      <div class="slider-img ">
+                        <img src="./public/assets/images/product1.svg" height="138" width="150" alt="product1" />
+                      </div>
+                    </div>
+                    <a href=""
+                      class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add to
+                      Cart</a>
+                  </div>
+                  <div class=" product-desc d-flex flex-column align-items-start gap-2">
+                    <span id="productName" class="fw-bold product-name">HAVIT HV-G92 Gamepad</span>
+                    <p id="productPrices" class="d-flex gap-3 align-items-center">
+                      <span id="actualPrice" class="actual-price">$120</span> <del
+                        class="fst-italic text-body-tertiary old-price">$160</del>
+                    </p>
+                    <div id="productRating"
+                      class="ratings d-flex gap-2 align-items-baseline w-100 justify-content-between">
+
+                      <div class="rating-box ">
+                        <div class=" d-flex align-items-center justify-content-start gap-2 position-relative  mt-1">
+
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+
+                          <div class="actual-rating d-flex gap-2 overflow-hidden position-absolute bottom-0 start-0  "
+                            style="width: 70%;">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <span id="ratingsCount" class="rating-count text-body-secondary">(891)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-custom2">
+                  <div class="slide-wrapper rounded-3  bg-body-secondary overflow-y-hidden position-relative">
+                    <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute z-2">- 40%
+                    </span>
+
+                    <span style="top: 10px" class="add-wishlist rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-heart"></i></span>
+
+                    <span style="top: 50px" class="show-btn rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-eye"></i></span>
+                    <div class="py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                      <div class="slider-img ">
+                        <img src="./public/assets/images/product2.svg" height="138" width="150" alt="product1" />
+                      </div>
+                    </div>
+                    <a href=""
+                      class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add to
+                      Cart</a>
+                  </div>
+                  <div class=" product-desc d-flex flex-column align-items-start gap-2">
+                    <span id="productName" class="fw-bold product-name">HAVIT HV-G92 Gamepad</span>
+                    <p id="productPrices" class="d-flex gap-3 align-items-center">
+                      <span id="actualPrice" class="actual-price">$120</span> <del
+                        class="fst-italic text-body-tertiary old-price">$160</del>
+                    </p>
+                    <div id="productRating"
+                      class="ratings d-flex gap-2 align-items-baseline w-100 justify-content-between">
+
+                      <div class="rating-box ">
+                        <div class=" d-flex align-items-center justify-content-start gap-2 position-relative  mt-1">
+
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+
+                          <div class="actual-rating d-flex gap-2 overflow-hidden position-absolute bottom-0 start-0  "
+                            style="width: 70%;">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <span id="ratingsCount" class="rating-count text-body-secondary">(891)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center  view-all-btn pt-5 w-100 ">
+            <a href="http://" target="_blank" rel="noopener noreferrer"
+              class="theme-btn  px-4 py-2 rounded-3 fw-bold">View All Products</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="browse-categories section py-5">
+        <div class="container w-100 overflow-hidden position-relative ps-5">
+          <!-- section header -->
+          <div class="section-header d-flex flex-column align-items-start row-gap-3 mb-3">
+            <div class="top d-flex gap-3 align-items-center">
+              <div class="rectangle"></div>
+              <p class="m-0 top-txt">Categories</p>
+            </div>
+            <div class="bottom d-flex gap-5 align-items-center">
+              <div class="title">
+                <h2 class="head-txt text-custom-larger fw-bold">Browse By Category</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="py-3 categories">
+            <div class="d-flex justify-content-lg-between justify-content-center flex-wrap gap-md-3 gap-2 ">
+              <div class="mobiles d-flex px-5 py-4 flex-column gap-2 align-items-center shadow category">
+                <span class="category-icon   ">
+                  <i class="fa-solid fa-mobile-screen-button fs-3 "></i>
+                </span>
+                <span class="category-name">Phones</span>
 
               </div>
+              <div class="computers d-flex px-5 py-4 flex-column gap-2 align-items-center shadow category">
+                <span class="category-icon   ">
+                  <i class="fa-solid fa-desktop fs-3   "></i>
+                </span>
+                <span class="category-name">Phones</span>
+
+              </div>
+              <div class="watches d-flex px-5 py-4 flex-column gap-2 align-items-center shadow category">
+                <span class="category-icon   ">
+                  <span class="material-symbols-outlined fs-3 fw-bold">
+                    watch
+                  </span>
+                </span>
+                <span class="category-name">Watches</span>
+
+              </div>
+              <div class="Cameras d-flex px-5 py-4 flex-column gap-2 align-items-center shadow category">
+                <span class="category-icon   ">
+<i class="fa-solid fa-camera fs-3"></i>
+                </span>
+                <span class="category-name">Camera</span>
+
+              </div>
+              <div class="mobiles d-flex px-5 py-4 flex-column gap-2 align-items-center shadow category">
+                <span class="category-icon   ">
+                  <i class="fa-solid fa-headphones fs-3 "></i>
+                </span>
+                <span class="category-name">Headphones</span>
+
+              </div>
+              <div class="mobiles d-flex px-5 py-4 flex-column gap-2 align-items-center shadow category">
+                <span class="category-icon   ">
+                  <i class="fa-solid fa-gamepad fs-3 "></i>
+                </span>
+                <span class="category-name">Gaming</span>
+
+              </div>
+
 
             </div>
           </div>
         </div>
       </section>
+
+
+      
+      <section class="custom-slider1 py-5 section ">
+        <div class="container  w-100 overflow-hidden position-relative ps-5 ">
+          <!-- section header -->
+          <div class="section-header d-flex flex-column align-items-start row-gap-3 mb-3">
+            <div class="top d-flex gap-3 align-items-center">
+              <div class="rectangle"></div>
+              <p class="m-0 top-txt">This Month</p>
+            </div>
+
+              <div class="title d-flex gap-2 gap-md-5 align-items-md-center align-items-start flex-md-row flex-column w-100 justify-content-between">
+                <h2 class="head-txt text-custom-larger fw-bold">Best Selling Products</h2>
+
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+              class="theme-btn  px-4 py-2 rounded-3 fw-bold align-self-end">View All </a>
+              </div>
+
+          </div>
+
+          <!-- slider -->
+          <div class="custom-slider1-wrapper mx-0">
+            <div class="swiper flashSaleSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-custom2">
+                  <div class="slide-wrapper rounded-3   bg-body-secondary overflow-y-hidden position-relative">
+                    <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute z-2">- 40%
+                    </span>
+
+                    <span style="top: 10px" class="add-wishlist rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-heart"></i></span>
+
+                    <span style="top: 50px" class="show-btn rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-eye"></i></span>
+                    <div class="py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                      <div class="slider-img ">
+                        <img src="./public/assets/images/product5.svg" height="138" width="150" alt="product1" />
+                      </div>
+                    </div>
+                    <a href=""
+                      class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add to
+                      Cart</a>
+                  </div>
+                  <div class=" product-desc d-flex flex-column align-items-start gap-2">
+                    <span id="productName" class="fw-bold product-name">HAVIT HV-G92 Gamepad</span>
+                    <p id="productPrices" class="d-flex gap-3 align-items-center">
+                      <span id="actualPrice" class="actual-price">$120</span> <del
+                        class="fst-italic text-body-tertiary old-price">$160</del>
+                    </p>
+                    <div id="productRating"
+                      class="ratings d-flex gap-2 align-items-baseline w-100 justify-content-between">
+
+                      <div class="rating-box ">
+                        <div class=" d-flex align-items-center justify-content-start gap-2 position-relative  mt-1">
+
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+
+                          <div class="actual-rating d-flex gap-2 overflow-hidden position-absolute bottom-0 start-0  "
+                            style="width: 70%;">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <span id="ratingsCount" class="rating-count text-body-secondary">(891)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide swiper-custom2">
+                  <div class="slide-wrapper rounded-3  bg-body-secondary overflow-y-hidden position-relative">
+                    <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute z-2">- 40%
+                    </span>
+
+                    <span style="top: 10px" class="add-wishlist rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-heart"></i></span>
+
+                    <span style="top: 50px" class="show-btn rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-eye"></i></span>
+                    <div class="py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                      <div class="slider-img ">
+                        <img src="./public/assets/images/product6.svg" height="138" width="150" alt="product1" />
+                      </div>
+                    </div>
+                    <a href=""
+                      class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add to
+                      Cart</a>
+                  </div>
+                  <div class=" product-desc d-flex flex-column align-items-start gap-2">
+                    <span id="productName" class="fw-bold product-name">HAVIT HV-G92 Gamepad</span>
+                    <p id="productPrices" class="d-flex gap-3 align-items-center">
+                      <span id="actualPrice" class="actual-price">$120</span> <del
+                        class="fst-italic text-body-tertiary old-price">$160</del>
+                    </p>
+                    <div id="productRating"
+                      class="ratings d-flex gap-2 align-items-baseline w-100 justify-content-between">
+
+                      <div class="rating-box ">
+                        <div class=" d-flex align-items-center justify-content-start gap-2 position-relative  mt-1">
+
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+
+                          <div class="actual-rating d-flex gap-2 overflow-hidden position-absolute bottom-0 start-0  "
+                            style="width: 70%;">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <span id="ratingsCount" class="rating-count text-body-secondary">(891)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-custom2">
+                  <div class="slide-wrapper rounded-3  bg-body-secondary overflow-y-hidden position-relative">
+                    <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute z-2">- 40%
+                    </span>
+
+                    <span style="top: 10px" class="add-wishlist rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-heart"></i></span>
+
+                    <span style="top: 50px" class="show-btn rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-eye"></i></span>
+                    <div class="py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                      <div class="slider-img ">
+                        <img src="./public/assets/images/product7.svg" height="138" width="150" alt="product1" />
+                      </div>
+                    </div>
+                    <a href=""
+                      class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add to
+                      Cart</a>
+                  </div>
+                  <div class=" product-desc d-flex flex-column align-items-start gap-2">
+                    <span id="productName" class="fw-bold product-name">HAVIT HV-G92 Gamepad</span>
+                    <p id="productPrices" class="d-flex gap-3 align-items-center">
+                      <span id="actualPrice" class="actual-price">$120</span> <del
+                        class="fst-italic text-body-tertiary old-price">$160</del>
+                    </p>
+                    <div id="productRating"
+                      class="ratings d-flex gap-2 align-items-baseline w-100 justify-content-between">
+
+                      <div class="rating-box ">
+                        <div class=" d-flex align-items-center justify-content-start gap-2 position-relative  mt-1">
+
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+
+                          <div class="actual-rating d-flex gap-2 overflow-hidden position-absolute bottom-0 start-0  "
+                            style="width: 70%;">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <span id="ratingsCount" class="rating-count text-body-secondary">(891)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-custom2">
+                  <div class="slide-wrapper rounded-3  bg-body-secondary overflow-y-hidden position-relative">
+                    <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute z-2">- 40%
+                    </span>
+
+                    <span style="top: 10px" class="add-wishlist rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-heart"></i></span>
+
+                    <span style="top: 50px" class="show-btn rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-eye"></i></span>
+                    <div class="py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                      <div class="slider-img ">
+                        <img src="./public/assets/images/product8.svg" height="138" width="150" alt="product1" />
+                      </div>
+                    </div>
+                    <a href=""
+                      class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add to
+                      Cart</a>
+                  </div>
+                  <div class=" product-desc d-flex flex-column align-items-start gap-2">
+                    <span id="productName" class="fw-bold product-name">HAVIT HV-G92 Gamepad</span>
+                    <p id="productPrices" class="d-flex gap-3 align-items-center">
+                      <span id="actualPrice" class="actual-price">$120</span> <del
+                        class="fst-italic text-body-tertiary old-price">$160</del>
+                    </p>
+                    <div id="productRating"
+                      class="ratings d-flex gap-2 align-items-baseline w-100 justify-content-between">
+
+                      <div class="rating-box ">
+                        <div class=" d-flex align-items-center justify-content-start gap-2 position-relative  mt-1">
+
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+
+                          <div class="actual-rating d-flex gap-2 overflow-hidden position-absolute bottom-0 start-0  "
+                            style="width: 70%;">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <span id="ratingsCount" class="rating-count text-body-secondary">(891)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-custom2">
+                  <div class="slide-wrapper rounded-3  bg-body-secondary overflow-y-hidden position-relative">
+                    <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute z-2">- 40%
+                    </span>
+
+                    <span style="top: 10px" class="add-wishlist rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-heart"></i></span>
+
+                    <span style="top: 50px" class="show-btn rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-eye"></i></span>
+                    <div class="py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                      <div class="slider-img ">
+                        <img src="./public/assets/images/product1.svg" height="138" width="150" alt="product1" />
+                      </div>
+                    </div>
+                    <a href=""
+                      class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add to
+                      Cart</a>
+                  </div>
+                  <div class=" product-desc d-flex flex-column align-items-start gap-2">
+                    <span id="productName" class="fw-bold product-name">HAVIT HV-G92 Gamepad</span>
+                    <p id="productPrices" class="d-flex gap-3 align-items-center">
+                      <span id="actualPrice" class="actual-price">$120</span> <del
+                        class="fst-italic text-body-tertiary old-price">$160</del>
+                    </p>
+                    <div id="productRating"
+                      class="ratings d-flex gap-2 align-items-baseline w-100 justify-content-between">
+
+                      <div class="rating-box ">
+                        <div class=" d-flex align-items-center justify-content-start gap-2 position-relative  mt-1">
+
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+
+                          <div class="actual-rating d-flex gap-2 overflow-hidden position-absolute bottom-0 start-0  "
+                            style="width: 70%;">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <span id="ratingsCount" class="rating-count text-body-secondary">(891)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-custom2">
+                  <div class="slide-wrapper rounded-3  bg-body-secondary overflow-y-hidden position-relative">
+                    <span class="discount bg-danger px-3 py-2 rounded-3 position-absolute z-2">- 40%
+                    </span>
+
+                    <span style="top: 10px" class="add-wishlist rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-heart"></i></span>
+
+                    <span style="top: 50px" class="show-btn rounded-circle px-2 pt-2 position-absolute z-2"><i
+                        class="fa-regular fa-eye"></i></span>
+                    <div class="py-5 content-wrapper d-flex justify-content-center align-items-center rounded-2">
+                      <div class="slider-img ">
+                        <img src="./public/assets/images/product2.svg" height="138" width="150" alt="product1" />
+                      </div>
+                    </div>
+                    <a href=""
+                      class="add-cart-btn text-white bg-black position-absolute w-100 bottom-0 start-0 py-2">Add to
+                      Cart</a>
+                  </div>
+                  <div class=" product-desc d-flex flex-column align-items-start gap-2">
+                    <span id="productName" class="fw-bold product-name">HAVIT HV-G92 Gamepad</span>
+                    <p id="productPrices" class="d-flex gap-3 align-items-center">
+                      <span id="actualPrice" class="actual-price">$120</span> <del
+                        class="fst-italic text-body-tertiary old-price">$160</del>
+                    </p>
+                    <div id="productRating"
+                      class="ratings d-flex gap-2 align-items-baseline w-100 justify-content-between">
+
+                      <div class="rating-box ">
+                        <div class=" d-flex align-items-center justify-content-start gap-2 position-relative  mt-1">
+
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+                          <i class="fa-solid fa-star text-light"></i>
+
+                          <div class="actual-rating d-flex gap-2 overflow-hidden position-absolute bottom-0 start-0  "
+                            style="width: 70%;">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <span id="ratingsCount" class="rating-count text-body-secondary">(891)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center  view-all-btn pt-5 w-100 ">
+            <a href="http://" target="_blank" rel="noopener noreferrer"
+              class="theme-btn  px-4 py-2 rounded-3 fw-bold">View All Products</a>
+          </div>
+        </div>
+      </section>
     </main>
+
 
     <footer>
       <div class="footer-content-wrapper section">

@@ -1,23 +1,23 @@
 // Initialize Swiper only if it exists and the element is present
-if (typeof Swiper !== 'undefined' && document.querySelector('.mySwiper6')) {
+if (typeof Swiper !== "undefined" && document.querySelector(".mySwiper6")) {
   var swiper6 = new Swiper(".mySwiper6", {
     spaceBetween: 30,
-    loop: true, 
+    loop: true,
     loopFillGroupWithBlank: false,
     speed: 700,
-    centeredSlides: false, 
-  
+    centeredSlides: false,
+
     breakpoints: {
       1200: {
-        slidesPerView:4, //larger screens (tablets, etc.)
+        slidesPerView: 4, //larger screens (tablets, etc.)
       },
-  
+
       768: {
         slidesPerView: 2, // Medium screens (tablets, etc.)
         spaceBetween: 20,
       },
       576: {
-        slidesPerView:2, // Smaller screens (mobile)
+        slidesPerView: 2, // Smaller screens (mobile)
         spaceBetween: 10,
       },
       320: {
@@ -25,73 +25,69 @@ if (typeof Swiper !== 'undefined' && document.querySelector('.mySwiper6')) {
       },
     },
     autoplay: {
-      delay:2500, 
-      disableOnInteraction: false, 
+      delay: 2500,
+      disableOnInteraction: false,
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
-        dynamicBullets: false,
-      }
+      dynamicBullets: false,
+    },
   });
 }
 
+// menu open and close script - wait for DOM to be ready
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    const menu = document.getElementById("menu-icon");
+    const cancel = document.getElementById("cancel-icon");
+    const offcanvas = document.getElementById("navbarOffcanvasLg");
 
-
-  // menu open and close script - wait for DOM to be ready
-  document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(() => {
-      const menu = document.getElementById("menu-icon");
-      const cancel = document.getElementById("cancel-icon");
-      const offcanvas = document.getElementById("navbarOffcanvasLg");
-
-      window.changeIcon = function() {
-          if (menu && cancel) {
-            menu.style.display = "none";
-            cancel.style.display = "inline";
-          }
+    window.changeIcon = function () {
+      if (menu && cancel) {
+        menu.style.display = "none";
+        cancel.style.display = "inline";
       }
+    };
 
-      // Listen for when the offcanvas is closed and reset the icons
-      if (offcanvas) {
-        offcanvas.addEventListener("hidden.bs.offcanvas", function () {
-            if (menu && cancel) {
-              menu.style.display = "inline";
-              cancel.style.display = "none";
-            }
-        });
-      }
-    }, 100);
-  });
-
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const dropdownBtn = document.getElementById('languageDropdown');
-    const menuItems = document.querySelectorAll('.my-menu-items a');
-    
-    // Handle click on dropdown items
-    if (dropdownBtn && menuItems.length > 0) {
-      menuItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-          e.preventDefault();
-          const selectedLanguage = this.getAttribute('data-language');
-          dropdownBtn.innerHTML = selectedLanguage + ' <i class="dropdown-icon px-2"></i>';
-        
-        });
+    // Listen for when the offcanvas is closed and reset the icons
+    if (offcanvas) {
+      offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+        if (menu && cancel) {
+          menu.style.display = "inline";
+          cancel.style.display = "none";
+        }
       });
     }
-  });
+  }, 100);
+});
 
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownBtn = document.getElementById("languageDropdown");
+  const menuItems = document.querySelectorAll(".my-menu-items a");
+
+  // Handle click on dropdown items
+  if (dropdownBtn && menuItems.length > 0) {
+    menuItems.forEach((item) => {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+        const selectedLanguage = this.getAttribute("data-language");
+        dropdownBtn.innerHTML =
+          selectedLanguage + ' <i class="dropdown-icon px-2"></i>';
+      });
+    });
+  }
+});
 
 //dark mode feature - wait for components to load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   setTimeout(() => {
     var darkModeBtn = document.getElementById("darkMode");
-    var sections = document.querySelectorAll(".section"); 
+    var sections = document.querySelectorAll(".section");
 
     if (darkModeBtn) {
       // Load saved dark mode preference
-      const isDarkMode = localStorage.getItem('darkMode') === 'true';
+      const isDarkMode = localStorage.getItem("darkMode") === "true";
       if (isDarkMode) {
         darkModeBtn.classList.add("turn-on");
         sections.forEach((section) => {
@@ -102,18 +98,17 @@ document.addEventListener('DOMContentLoaded', function() {
       darkModeBtn.addEventListener("click", () => {
         darkModeBtn.classList.toggle("turn-on");
         const isNowDark = darkModeBtn.classList.contains("turn-on");
-        
+
         sections.forEach((section) => {
           section.classList.toggle("dark");
         });
-        
+
         // Save preference to localStorage
-        localStorage.setItem('darkMode', isNowDark);
+        localStorage.setItem("darkMode", isNowDark);
       });
     }
   }, 100);
 });
-
 
 // scroll to top button
 document.addEventListener("DOMContentLoaded", function () {
@@ -146,27 +141,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-  // animate.css overriding
-  document.documentElement.style.setProperty('--animate-duration', '3s');
+// animate.css overriding
+document.documentElement.style.setProperty("--animate-duration", "3s");
 
 // Login/Signup toggle function
 function toggleLogin() {
-  const loginForm = document.getElementById('loginForm');
-  const signupForm = document.getElementById('signupForm');
-  
+  const loginForm = document.getElementById("loginForm");
+  const signupForm = document.getElementById("signupForm");
+
   if (loginForm && signupForm) {
-    loginForm.classList.toggle('d-none');
-    signupForm.classList.toggle('d-none');
+    loginForm.classList.toggle("d-none");
+    signupForm.classList.toggle("d-none");
   }
 }
 
-
 // flash sale slider initialization
-
 
 var swiperCB = new Swiper(".flashSaleSwiper", {
   slidesPerView: 7,
   loop: true,
+freeMode: {
+    enabled: true,
+    momentum: true,
+    momentumBounce: true,
+    momentumBounceRatio: 1, // Default value
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -180,7 +179,6 @@ var swiperCB = new Swiper(".flashSaleSwiper", {
     disableOnInteraction: false,
   },
   breakpoints: {
-   
     1200: {
       slidesPerView: 4, // xl screens
       spaceBetween: 30,
@@ -195,7 +193,7 @@ var swiperCB = new Swiper(".flashSaleSwiper", {
       spaceBetween: 15,
     },
 
-        419: {
+    419: {
       slidesPerView: 2, // Smaller screens
       spaceBetween: 10,
     },
@@ -206,3 +204,42 @@ var swiperCB = new Swiper(".flashSaleSwiper", {
   },
 });
 
+// Home page timer
+function salesCountdown(targetDate = "December 4, 2025 23:59:59", elementIds = {days: "days", hours: "hours", minutes: "minutes", seconds: "seconds"}) {
+  const endDate = new Date(targetDate).getTime();
+  const now = new Date().getTime();
+  const timeRemaining = endDate - now;
+
+  if (timeRemaining > 0) {
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor(
+      (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+    document.getElementById(elementIds.days) &&
+      (document.getElementById(elementIds.days).textContent = days
+        .toString()
+        .padStart(2, "0"));
+    document.getElementById(elementIds.hours) &&
+      (document.getElementById(elementIds.hours).textContent = hours
+        .toString()
+        .padStart(2, "0"));
+    document.getElementById(elementIds.minutes) &&
+      (document.getElementById(elementIds.minutes).textContent = minutes
+        .toString()
+        .padStart(2, "0"));
+    document.getElementById(elementIds.seconds) &&
+      (document.getElementById(elementIds.seconds).textContent = seconds
+        .toString()
+        .padStart(2, "0"));
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  salesCountdown();
+  setInterval(salesCountdown, 1000);
+});

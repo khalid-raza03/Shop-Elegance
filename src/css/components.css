@@ -40,6 +40,29 @@
 
 .text-custom-large{
   font-size: calc(
-  16px + (26 - 16) * ((100vw - 320px) / (1920 - 320))
+  16px + (28 - 16) * ((100vw - 320px) / (1600 - 320))
 );
+}
+
+.text-custom-larger{
+  font-size: calc(
+  18px + (35 - 18) * ((100vw - 320px) / (1600 - 320))
+);
+}
+
+
+.design-main-wrapper .section-header .rectangle {
+  height: 40px;
+  width: 20px;
+  background-color: #db4444;
+}
+
+.design-main-wrapper .section-header .top-txt {
+  font-size: 16px;
+  font-weight: 600;
+  color: #db4444;
+}
+
+.design-main-wrapper .section-header .bottom .label {
+  font-size: 14px;
 }
